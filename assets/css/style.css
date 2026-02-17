@@ -27,20 +27,20 @@
     z-index: 10;
   }
 
-  /* タブレットサイズ（画面幅 768px以下） */
-  @media (max-width: 768px) {
+/* タブレットサイズ（画面幅 768px以下） */
+@media (max-width: 768px) {
     .bottom-left-img {
-      width: 250px;
-      bottom: 15px;
-      left: 15px;
+        width: 250px;
+        bottom: 15px;
+        left: 15px;
     }
-  }
+}
 
-  /* スマホサイズ（画面幅 480px以下） */
-  @media (max-width: 480px) {
+/* スマホサイズ（画面幅 480px以下） */
+@media (max-width: 480px) {
     .bottom-left-img {
-      width: 200px;
-      bottom: 10px;
-      left: 10px;
+        width: 200px;
+        bottom: 10px;
+        left: 10px;
     }
-  }
+}
