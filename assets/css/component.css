@@ -14,3 +14,19 @@
 /* ==================================
 汎用パーツ (再利用するもの)
 ================================== */
+
+
+.floating--button {
+    position: fixed;
+    z-index: 1000; /* --- === 1000 === --- */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    display: block;
+    text-transform: uppercase;
+}
+

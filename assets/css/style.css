@@ -4,18 +4,17 @@
 ========================================= */
 
 
-.section--mainvisual { height: 100vh; }
-
-.mainvisual--character {
+.main-visual--character {
     position: absolute;
     top: 50%;
     left: 35%;
     transform: translate(-50%, -50%);
 }
 
-.mainvisual--character img {
+.main-visual--character img {
     height: 80vh;
     min-height: 400px;
+    object-fit: cover;
 }
 
 
