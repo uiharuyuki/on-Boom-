@@ -5,11 +5,11 @@
 
 
 :root {
-    --color-background__white: rgb(255 255 255 / 1);
+    --color-background__white: rgb(255 255 255 / 1);/* white */
     --color-background__black-grey: rgb(51 51 51 / 1);/* #333 */
 
-    --color-text__white: rgb(255 255 255 / 1);
-    --color-text__black: rgb(0 0 0 / 1);
+    --color-text__white: rgb(255 255 255 / 1);/* white */
+    --color-text__black: rgb(0 0 0 / 1);/* black */
 }
 
 html { overflow-y: scroll; }

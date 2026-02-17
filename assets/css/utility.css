@@ -5,11 +5,7 @@
 
 /* 自己流 */
 
-.flex--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.flex--center { display: flex; justify-content: center; align-items: center; }
 
 
 
@@ -20,4 +16,16 @@
 /* 【推奨】 Dynamic Viewport。スマホのアドレスバー伸縮に合わせて自動調整される。 */
 .h-dvh { height: 100dvh; }
 
+
+
+.gap-5 { gap: 0.3125rem; }
+
+.gap-10 { gap: 0.625rem; }
+
+.gap-15 { gap: 0.9375rem; }
+
 .gap-20 { gap: 1.25rem; }
+
+.gap-25 { gap: 1.5625rem; }
+
+.gap-30 { gap: 1.875rem; }
