@@ -32,10 +32,8 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .floating--button {
-        width: 150px;
-        bottom: 10px;
-        left: 10px;
+        display: none;
     }
 }
