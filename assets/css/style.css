@@ -19,21 +19,19 @@
 
 
 .bottom-left-img {
-    position: absolute; /* 親要素に対して絶対配置 */
-    bottom: 20px;       /* 下からの距離 */
-    left: 20px;         /* 左からの距離 */
-    width: 150px;       /* PCでの基本サイズ */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 250px;
     height: auto;
-    z-index: 10;        /* 他の要素より手前に表示 */
+    z-index: 10;
   }
 
-  /* --- デバイスごとの調整（レスポンシブ対応） --- */
-  
   /* タブレットサイズ（画面幅 768px以下） */
   @media (max-width: 768px) {
     .bottom-left-img {
-      width: 100px; /* サイズを少し小さく */
-      bottom: 15px; /* 位置を微調整 */
+      width: 200px;
+      bottom: 15px;
       left: 15px;
     }
   }
@@ -41,8 +39,8 @@
   /* スマホサイズ（画面幅 480px以下） */
   @media (max-width: 480px) {
     .bottom-left-img {
-      width: 80px;  /* スマホ用にさらに小さく */
-      bottom: 10px; /* 端に寄せすぎないよう調整 */
+      width: 150px;
+      bottom: 10px;
       left: 10px;
     }
   }

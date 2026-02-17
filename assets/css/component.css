@@ -31,3 +31,11 @@
     text-transform: uppercase;
 }
 
+
+@media (max-width: 480px) {
+    .floating--button {
+        width: 150px;
+        bottom: 10px;
+        left: 10px;
+    }
+}
