@@ -1,0 +1,21 @@
+/* =========================================
+    ファイル: assets/css/style.css
+    説明: component.cssの固有バーツ（一度しか使用しないもの）を記載
+========================================= */
+
+
+.section--mainvisual { height: 100vh; }
+
+.mainvisual--character {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.mainvisual--character img {
+    height: 80vh;
+    min-height: 400px;
+}
+
+

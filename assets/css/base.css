@@ -1,0 +1,17 @@
+/* =========================================
+    ファイル: assets/css/base.css
+    説明: 基本文字、配色、全体のスタイル
+========================================= */
+
+
+:root {
+    --color-background: rgb(255 255 255 / 1);
+    --color-text: rgb(0 0 0 / 1);
+}
+
+html { overflow-y: scroll; }
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
