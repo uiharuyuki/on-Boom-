@@ -15,22 +15,3 @@
 汎用パーツ (再利用するもの)
 ================================== */
 
-
-/* ナビゲーション */
-.floating--button {
-    position: fixed;
-    z-index: 1000; /* --- === 1000 === --- */
-    background-color: var(--color-background__white-a);
-    border-radius: 50px;
-    box-shadow: 0 4px 6px var(--color-box-shadow);
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    display: block;
-    text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    .floating--button { display: none; }
-}

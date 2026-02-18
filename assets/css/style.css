@@ -4,7 +4,7 @@
 ========================================= */
 
 
-/* ファストビュー */
+/* --- ファストビュー --- */
 
 .main-visual--character {
     position: absolute;
@@ -46,5 +46,61 @@
     }
 }
 
-/* about */
+/* --- about --- */
 
+.section--about {
+    text-align: center;
+}
+
+.section--about p {
+    line-height: 2.5;
+}
+
+/* --- news --- */
+
+.carousel-container {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  /* 100%を3で割った幅に固定する */
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 0 10px; /* スライド間の余白を作る */
+}
+
+.slide-content {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 8px; /* 角を丸くする */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(115, 115, 115, 0.6);
+    color: white;
+    border: 2px solid #6362c4;
+    border-radius: 50%;
+}
+.prev-btn { left: 0px; }
+.next-btn { right: 0px; }

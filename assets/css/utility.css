@@ -5,16 +5,8 @@
 ========================================= */
 
 
-/* 自己流 */
 
 .flex--all-center { display: flex; justify-content: center; align-items: center; text-align: center; }
-.inline--all-center { display: inline; justify-content: center; align-items: center; text-align: center; }
-
-.leading-2_5 { line-height: 2.5; }
-
-
-/* Tailwind CSS 命名規則 */
-
 
 /* Dynamic Viewport。スマホのアドレスバー伸縮に合わせて自動調整される。 */
 .h-dvh { height: 100dvh; }
@@ -24,6 +16,7 @@
 
 
 /* ギャップ */
+
 .gap-5 { gap: 0.3125rem; }
 
 .gap-10 { gap: 0.625rem; }
@@ -73,6 +66,8 @@
 .py-24 { padding: 96px 0; }
 
 .py-28 { padding: 112px 0; }
+
+.py-14-28 { padding: 56px 0 112px 0; }
 
 /* ---------- */
 

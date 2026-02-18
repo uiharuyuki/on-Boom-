@@ -3,10 +3,27 @@
     説明: 全ページで共通して使用するCSS設定
 ========================================= */
 
-
 /* ナビゲーション */
+.floating--button {
+    position: fixed;
+    z-index: 1000; /* --- === 1000 === --- */
+    background-color: var(--color-background__white-a);
+    border-radius: 50px;
+    box-shadow: 0 4px 6px var(--color-box-shadow);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    display: block;
+    text-transform: uppercase;
+}
+
 .floating--nav { top: 20px; right: 280px; }
 .floating--office-shop { top: 20px; right: 120px; }
+
+@media (max-width: 768px) {
+    .floating--button { display: none; }
+}
 
 
 /* --- ハンバーガーボタンのスタイル --- */
