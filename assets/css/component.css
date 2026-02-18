@@ -20,9 +20,9 @@
 .floating--button {
     position: fixed;
     z-index: 1000; /* --- === 1000 === --- */
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--color-background__white-a);
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--color-box-shadow);
     padding: 10px 20px;
     font-weight: bold;
     font-size: 14px;
@@ -32,7 +32,5 @@
 }
 
 @media (max-width: 768px) {
-    .floating--button {
-        display: none;
-    }
+    .floating--button { display: none; }
 }
