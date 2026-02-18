@@ -4,6 +4,8 @@
 ========================================= */
 
 
+/* ファストビュー */
+
 .main-visual--character {
     position: absolute;
     top: 50%;
@@ -28,7 +30,6 @@
     object-fit: contain;
 }
 
-/* タブレットサイズ（画面幅 768px以下） */
 @media (max-width: 768px) {
     .bottom-left-img {
         width: 250px;
@@ -37,11 +38,22 @@
     }
 }
 
-/* スマホサイズ（画面幅 480px以下） */
 @media (max-width: 480px) {
     .bottom-left-img {
         width: 200px;
         bottom: 10px;
         left: 10px;
     }
+}
+
+/* about */
+
+.section--about h2 {
+    font-size: 6rem;
+}
+
+.section--about p {
+    white-space: pre-wrap;
+    line-height: 2.5;
+    font-size: 1rem;
 }
