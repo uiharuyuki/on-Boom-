@@ -9,12 +9,17 @@
 .flex--all-center { display: flex; justify-content: center; align-items: center; text-align: center; }
 .inline--all-center { display: inline; justify-content: center; align-items: center; text-align: center; }
 
+.leading-2_5 { line-height: 2.5; }
+
 
 /* Tailwind CSS 命名規則 */
 
 
 /* Dynamic Viewport。スマホのアドレスバー伸縮に合わせて自動調整される。 */
 .h-dvh { height: 100dvh; }
+
+
+.whitespace-pre-wrap { white-space: pre-wrap; }
 
 
 /* ギャップ */
