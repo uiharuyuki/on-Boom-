@@ -24,18 +24,19 @@ body {
 
 /* 全体に適用（基本はMediumになります） */
 body {
-  font-family: 'Corporate Logo', sans-serif;
-  font-weight: 500; /* ここでMediumファイルが使われます */
+    font-family: 'Corporate Logo', sans-serif;
+    font-weight: 500; /* ここでMediumファイルが使われます */
 }
 
 /* 見出しなどは太字にする */
 h1, h2, strong {
-  font-weight: 700; /* ここで自動的にBoldファイルに切り替わります */
+    font-weight: 700; /* ここで自動的にBoldファイルに切り替わります */
 }
 
 
 h2 {
     font-size: 6rem;
+    text-transform: uppercase;
 }
 
 p {
