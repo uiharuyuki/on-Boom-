@@ -89,18 +89,23 @@
 .carousel-btn {
     position: absolute;
     top: 50%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(115, 115, 115, 0.6);
-    color: white;
-    border: 2px solid #6362c4;
+    background-color: var(--color-background__grey-a);
+    color: var(--color-text__white);
     border-radius: 50%;
+    border: none;
 }
-.prev-btn { left: 0px; }
-.next-btn { right: 0px; }
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+.icon--triangle {
+  width: auto;   /* ここで横幅を指定します */
+  height: 15px;  /* ここで高さを指定します（widthと同じ数値にするときれいです） */
+}
