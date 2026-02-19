@@ -1,3 +1,4 @@
+// バーガーメニュー
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.menu');
 
@@ -10,7 +11,7 @@ hamburger.addEventListener('click', () => {
 
 
 
-
+// カルーセル
 const track = document.querySelector('.carousel-track');
 const slides = document.querySelectorAll('.slide');
 const nextBtn = document.querySelector('.next-btn');
