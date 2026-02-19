@@ -19,6 +19,9 @@
 }
 
 .floating--nav { top: 20px; right: 280px; }
+
+.floating--nav ul { display: flex; justify-content: center; align-items: center; text-align: center; }
+
 .floating--office-shop { top: 20px; right: 120px; }
 
 @media (max-width: 768px) {

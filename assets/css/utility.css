@@ -4,105 +4,22 @@
     説明: 単一または少数のCSSプロパティを持つ、再利用可能なCSSクラスのセット
 ========================================= */
 
-
-
-.flex--all-center { display: flex; justify-content: center; align-items: center; text-align: center; }
+.text-align-center { text-align: center; }
 
 /* Dynamic Viewport。スマホのアドレスバー伸縮に合わせて自動調整される。 */
 .h-dvh { height: 100dvh; }
 
-
 .whitespace-pre-wrap { white-space: pre-wrap; }
 
 
-/* ギャップ */
-
-.gap-5 { gap: 0.3125rem; }
-
-.gap-10 { gap: 0.625rem; }
-
-.gap-15 { gap: 0.9375rem; }
-
+/* --- ギャップ --- */
 .gap-20 { gap: 1.25rem; }
 
-.gap-25 { gap: 1.5625rem; }
-
-.gap-30 { gap: 1.875rem; }
 
 
-/* パディング */
-.py-0 { padding: 0px 0; }
+/* --- パディング --- */
+/* 上下 */
+.py-56-112 { padding: 56px 0 112px 0; }
 
-.py-1 { padding: 4px 0; }
-
-.py-2 { padding: 8px 0; }
-
-.py-3 { padding: 12px 0; }
-
-.py-4 { padding: 16px 0; }
-
-.py-5 { padding: 20px 0; }
-
-.py-6 { padding: 24px 0; }
-
-.py-7 { padding: 28px 0; }
-
-.py-8 { padding: 32px 0; }
-
-.py-9 { padding: 36px 0; }
-
-.py-10 { padding: 40px 0; }
-
-.py-11 { padding: 44px 0; }
-
-.py-12 { padding: 48px 0; }
-
-.py-14 { padding: 56px 0; }
-
-.py-16 { padding: 64px 0; }
-
-.py-20 { padding: 80px 0; }
-
-.py-24 { padding: 96px 0; }
-
-.py-28 { padding: 112px 0; }
-
-.py-14-28 { padding: 56px 0 112px 0; }
-
-/* ---------- */
-
-.px-0 { padding: 0 0px; }
-
-.px-1 { padding: 0 4px; }
-
-.px-2 { padding: 0 8px; }
-
-.px-3 { padding: 0 12px; }
-
-.px-4 { padding: 0 16px; }
-
-.px-5 { padding: 0 20px; }
-
-.px-6 { padding: 0 24px; }
-
-.px-7 { padding: 0 28px; }
-
-.px-8 { padding: 0 32px; }
-
-.px-9 { padding: 0 36px; }
-
-.px-10 { padding: 0 40px; }
-
-.px-11 { padding: 0 44px; }
-
-.px-12 { padding: 0 48px; }
-
-.px-14 { padding: 0 56px; }
-
-.px-16 { padding: 0 64px; }
-
-.px-20 { padding: 0 80px; }
-
-.px-24 { padding: 0 96px; }
-
-.px-28 { padding: 0 112px; }
+/* 左右 */
+.px- { padding: 0 0; }
