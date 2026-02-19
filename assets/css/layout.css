@@ -14,7 +14,7 @@
 main { flex-grow: 1; }
 
 .container {
-    max-inline-size: 900px;
+    max-inline-size: 1000px;
     inline-size: 90%;
     margin-inline: auto;
 }

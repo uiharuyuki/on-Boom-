@@ -43,3 +43,22 @@ prevBtn.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', updateCarousel);
+
+// --- ボタンの位置を .slide-content の中央に合わせる処理 ---
+const targetSlideContent = document.querySelector('.slide-content');
+const targetCarouselContainer = document.querySelector('.carousel-container');
+
+if (targetSlideContent && targetCarouselContainer) {
+  // ResizeObserverを使用して、要素のサイズ変更をリアルタイムに検知
+  const resizeObserver = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      // 実際の描画領域の高さ（padding等を含む）を取得
+      const contentHeight = entry.borderBoxSize[0].blockSize;
+      // 取得した高さをCSS変数としてセット
+      targetCarouselContainer.style.setProperty('--slide-image-height', `${contentHeight}px`);
+    }
+  });
+
+  // .slide-contentのサイズ監視を開始
+  resizeObserver.observe(targetSlideContent);
+}

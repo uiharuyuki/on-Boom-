@@ -15,3 +15,28 @@
 汎用パーツ (再利用するもの)
 ================================== */
 
+
+/*
+<a href="" class="view-all-link">view all</a>
+*/
+
+.view-all-link {
+    margin: 40px auto 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid #333;
+    border-radius: 999px;
+    padding: 10px 60px;
+    text-decoration: none;
+    color: #111;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+}
+
+.view-all-link:hover { background-color: #f5f5f5; }
+
