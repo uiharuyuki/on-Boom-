@@ -4,7 +4,7 @@
 =========================================*/
 
 /* ナビゲーション */
-.floating--button {
+.floating-button {
     position: fixed;
     z-index: 1000; /* --- === 1000 === --- */
     background-color: var(--color-background__white-a);
@@ -18,11 +18,11 @@
     text-transform: uppercase;
 }
 
-.floating--nav { top: 20px; right: 280px; }
+.floating-nav { top: 20px; right: 280px; }
 
-.floating--nav ul { display: flex; justify-content: center; align-items: center; text-align: center; }
+.floating-nav ul { display: flex; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; }
 
-.floating--office-shop { top: 20px; right: 120px; }
+.floating-office-shop { top: 20px; right: 120px; }
 
 @media (max-width: 768px) {
     .floating--button { display: none; }

@@ -4,22 +4,5 @@
 説明: 単一または少数のCSSプロパティを持つ、再利用可能なCSSクラスのセット
 =========================================*/
 
-.text-align-center { text-align: center; }
-
 /* Dynamic Viewport。スマホのアドレスバー伸縮に合わせて自動調整される。 */
 .h-dvh { height: 100dvh; }
-
-.whitespace-pre-wrap { white-space: pre-wrap; }
-
-
-/* --- ギャップ --- */
-.gap-20 { gap: 1.25rem; }
-
-
-
-/* --- パディング --- */
-/* 上下 */
-.py-56-112 { padding: 56px 0 112px 0; }
-
-/* 左右 */
-.px- { padding: 0 0; }

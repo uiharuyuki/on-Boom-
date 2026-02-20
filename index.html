@@ -41,13 +41,16 @@
     <div id="wrapper">
 
 <!--****************************** HEADER ******************************-->
+        <!--loading view-->
         <div class="loading_wrap blur">
         </div>
+        <!--loading view-->
 
         <header>
 
-            <nav class="floating--button floating--nav">
-                <ul class="gap-20">
+            <!--navigation-->
+            <nav class="floating-button floating-nav">
+                <ul>
                     <li><a href="">about</a></li>
                     <li><a href="">news</a></li>
                     <li><a href="">talents</a></li>
@@ -56,14 +59,18 @@
                     <li><a href="">faq</a></li>
                 </ul>
             </nav>
-            <a class="floating--button floating--office-shop" href="" target="_blank">office shop</a>
 
+            <!--shop-->
+            <a class="floating-button floating-office-shop" href="" target="_blank">office shop</a>
+
+            <!--hamburger button-->
             <button class="hamburger" aria-label="メニューを開く">
                 <span></span>
             </button>
 
+            <!--hamburger menu-->
             <div class="menu">
-                <a href="#">Home</a>
+                <a href="">Home</a>
             </div>
 
         </header>
@@ -75,33 +82,40 @@
 
             <!--main visual-->
             <section class="h-dvh">
-                    <div class="main-visual--character">
+
+                    <!--main visual character-->
+                    <div class="main-visual__character">
                         <img src="assets/images/aa.png" alt="">
                     </div>
+
+                    <!--site rogo-->
                     <div class="first-view">
-                        <!-- <a href="/"> -->
-                        <a href="index.html"><img src="assets/images/on-boom.svg" alt="サイトロゴ" class="bottom-left-img"></a>
+                        <a href="index.html"><img src="assets/images/on-boom.svg" alt="サイトロゴ"></a>
                     </div>
+
             </section>
             <!--main visual-->
 
             <!--about-->
-            <section id="section--about" class="section--about py-14-28">
+            <section id="section--about" class="section--about">
                 <div class="container text-align-center">
+
+                    <!--section about title-->
                     <h2>about</h2>
-                        <p class="whitespace-pre-wrap">
-    バーチャルをもっと身近に。
-    自由な創作で「好き」が生まれる。
+                    <!--section about title-->
 
-    「好き」でつながる、
-    「好き」を楽しむ。
-    もっと自由に。
-    そんな場所って、最高だ。
+                    <!--section about text-->
+<p>バーチャルをもっと身近に。
+自由な創作で「好き」が生まれる。
+「好き」でつながる、
+「好き」を楽しむ。
+もっと自由に。
+そんな場所って、最高だ。
+個性を爆発させる
+最高のプロジェクト。
+個性の爆発を重ねよう。</p>
+                    <!--section about text-->
 
-    個性を爆発させる
-    最高のプロジェクト。
-    個性の爆発を重ねよう。
-                        </p>
                 </div>
             </section>
             <!--about-->
@@ -110,9 +124,14 @@
             <section id="section--news" class="section--news">
                 <div class="container text-align-center">
 
+                    <!--section news title-->
                     <h2>news</h2>
+                    <!--section news title-->
 
+                    <!--carousel container-->
                     <div class="carousel-container">
+
+                        <!--left-button-->
                         <button class="carousel-btn prev-btn">
                             <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <polygon 
@@ -124,7 +143,23 @@
                                 />
                             </svg>
                         </button>
+                        <!--left-button-->
 
+                        <!--light-button-->
+                        <button class="carousel-btn next-btn">
+                            <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon 
+                                    points="7,6 7,18 19,12" 
+                                    fill="#fff" 
+                                    stroke="#fff" 
+                                    stroke-width="4" 
+                                    stroke-linejoin="round" 
+                                />
+                            </svg>
+                        </button>
+                        <!--light-button-->
+
+                        <!--carousel-->
                         <div class="carousel-track">
 
                             <!---1--->
@@ -211,20 +246,15 @@
                                 </div>
                             </div>
 
-                        <button class="carousel-btn next-btn">
-                            <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <polygon 
-                                    points="7,6 7,18 19,12" 
-                                    fill="#fff" 
-                                    stroke="#fff" 
-                                    stroke-width="4" 
-                                    stroke-linejoin="round" 
-                                />
-                            </svg>
-                        </button>
-                    </div>
+                        </div>
+                        <!--carousel-->
 
-                    <a href="" class="view-all-link">view all</a>
+                        <!--view all button-->
+                        <a href="" class="view-all-link">view all</a>
+                        <!--view all button-->
+
+                    </div>
+                    <!--carousel container-->
 
                 </div>
             </section>
