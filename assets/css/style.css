@@ -74,9 +74,11 @@
 @media (max-width: 767px) { .slide { flex: 0 0 100%; } }
 
 .slide-content {
-    background-image: url(../images/back.jpg);
-    height: auto;
-    aspect-ratio: 5 / 3;
+    background-image: url(../images/001.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
     display: flex;
     font-size: 32px;
     font-weight: bold;
