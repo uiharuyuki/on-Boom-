@@ -85,21 +85,47 @@
 @media (max-width: 767px) { .slide { flex: 0 0 100%; } }
 
 .slide-content {
-    background-size: contain;
+    /* coverに変更した場合は contain に戻します */
+    background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
     aspect-ratio: 16 / 9;
     display: flex;
     border-radius: 6px;
-    border: 2px solid var(--color-border__black);
+    
+    /* ★変更1：直接ボーダーを引くのをやめる */
+    /* border: 2px solid var(--color-border__black); */
+    
     text-transform: uppercase;
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
     overflow: hidden;
+    
+    /* ★変更2：前回のこれは不要になるので削除してOKです */
+    /* background-clip: padding-box; */
+
+    /* ★追加：上に枠線を重ねるための基準点にします */
+    position: relative;
 }
 
-.slide-content__001 { background-image: url(../images/carousel-track_001.png); }
+/* ★新規追加：透明なレイヤー（疑似要素）を作って枠線だけを描画する */
+.slide-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--color-border__black); /* ここで枠線を引く */
+    border-radius: inherit; /* 親要素と同じ角丸（6px）を自動で引き継ぐ */
+    pointer-events: none; /* テキストの選択やクリックの邪魔をしないようにする */
+    box-sizing: border-box;
+}
+
+.slide-content__001 {
+    background-image: url(../images/carousel-track_001.png);
+}
 
 .slide-content__002 { background-image: url(../images/carousel-track_002.png); }
 
