@@ -90,12 +90,11 @@
     background-repeat: no-repeat;
     aspect-ratio: 16 / 9;
     display: flex;
-    font-weight: bold;
-    border-radius: 8px;
+    border-radius: 20px;
+    border: 2px solid var(--color-border__black);
     text-transform: uppercase;
-
-    align-items: flex-start;     /* 上揃え */
-    justify-content: flex-start; /* 左揃え */
+    align-items: flex-start;
+    justify-content: flex-start;
     box-sizing: border-box;
 }
 
@@ -112,13 +111,12 @@
 .slide-content__006 { background-image: url(../images/carousel-track_006.png); }
 
 .slide-content p {
-    margin: 0;
-    font-size: 5cqw; 
-
-    /* 画像に重なっても読みやすくするための装飾（必要に応じて調整してください） */
+    font-size: 3.6cqw; 
+    font-weight: 700;
     color: var(--color-text__white);
-    background-color: var(--color-background__black-grey);
-    border-radius: 4px;
+    background-color: var(--color-background__carousel-banner);
+    padding: 3px 9px;
+    border-radius: 18px 0;
 }
 
 .slide-text-wrapper {
