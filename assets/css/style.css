@@ -60,6 +60,8 @@
 
 
 /*---news---*/
+.section--news { text-align: center; }
+
 .carousel-container {
     position: relative;
     margin: 0 auto;
