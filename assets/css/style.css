@@ -7,40 +7,38 @@
 /*---main visual--*/
 
 /*   ---main visual character--*/
-.main-visual__character {
+.main-visual__character-sp {
     position: absolute;
-    top: 80%;
-    left: 35%;
+    top: 65%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .main-visual__character {
+/* @media (max-width: 1080px) and (min-width: 768.50px) {
+    .main-visual__character-sp {
     top: 65%;
     }
-}
+} */
 
 @media (max-width: 767.49px) {
-    .main-visual__character {
-    top: 50%;
+    .main-visual__character-sp {
+    opacity: 1;
     }
 }
 
-.main-visual__character img {
+.main-visual__character-sp img {
     height: 120vh;
     min-height: 400px;
+    max-inline-size: none;
     object-fit: cover;
 }
 
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .main-visual__character img {
-    height: 110h;
-    }
-}
+
 
 @media (max-width: 767.49px) {
-    .main-visual__character img {
-    height: 85vh;
+    .main-visual__character-sp img {
+    height: 105vh;
     }
 }
 /*   ---main visual character--*/
@@ -57,17 +55,9 @@
     object-fit: contain;
 }
 
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .first-view img {
-        width: 250px;
-        bottom: 15px;
-        left: 15px;
-    }
-}
-
 @media (max-width: 767.49px) {
     .first-view img {
-        width: 200px;
+        width: 120px;
         bottom: 10px;
         left: 10px;
     }
@@ -81,22 +71,9 @@
     margin-bottom: 100px;
 }
 
-
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .section--main-visual {
-        margin-bottom: 50px;
-    }
-}
-
-@media (max-width: 767.49px) {
-    .section--main-visual {
-        margin-bottom: 0px;
-    }
-}
-
 .scroll-indicator {
     position: absolute;
-    bottom: -120px; 
+    bottom: -80px; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -105,15 +82,10 @@
     z-index: 20; /* --- === 20 === --- */
 }
 
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .scroll-indicator {
-        bottom: -60px; 
-    }
-}
 
 @media (max-width: 767.49px) {
     .scroll-indicator {
-        bottom: 0px; 
+        bottom: -60px; 
     }
 }
 
@@ -126,21 +98,15 @@
 
 .scroll-line {
     width: 1px;
-    height: 200px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     background-color: var(--color-scroll-indicator);
 }
 
-@media (max-width: 1080px) and (min-width: 768.50px) {
-    .scroll-line {
-        height: 150px;
-    }
-}
-
 @media (max-width: 767.49px) {
     .scroll-line {
-        height: 100px;
+        height: 180px;
     }
 }
 
@@ -261,7 +227,7 @@
     font-size: 3.6cqw; 
     font-weight: 700;
     color: var(--color-text__white);
-    background-color: var(--color-background__carousel-banner);
+    background-color: var(--color-scroll-indicator);
     padding: 2px 15px 2px 7px;
     border-radius: 0 0 5cqw 0;
 }
