@@ -90,12 +90,13 @@
     background-repeat: no-repeat;
     aspect-ratio: 16 / 9;
     display: flex;
-    border-radius: 20px;
+    border-radius: 6px;
     border: 2px solid var(--color-border__black);
     text-transform: uppercase;
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .slide-content__001 { background-image: url(../images/carousel-track_001.png); }
@@ -115,8 +116,8 @@
     font-weight: 700;
     color: var(--color-text__white);
     background-color: var(--color-background__carousel-banner);
-    padding: 3px 9px;
-    border-radius: 18px 0;
+    padding: 2px 15px 2px 7px;
+    border-radius: 0 0 5cqw 0;
 }
 
 .slide-text-wrapper {
