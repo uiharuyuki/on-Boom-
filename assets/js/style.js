@@ -1,3 +1,27 @@
+window.addEventListener('scroll', () => {
+  // 現在のスクロール位置を取得
+  const scrollY = window.scrollY;
+  const image = document.querySelector('.fast-scroll-image');
+  
+  // 動かすスピードの調整（数値が大きいほど早く動きます）
+  const speed = 0.2; 
+  
+  // 画像の位置をY軸方向にずらす
+  if (image) {
+    image.style.transform = `translateY(${scrollY * -speed}px)`;
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 // バーガーメニュー
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.menu');
