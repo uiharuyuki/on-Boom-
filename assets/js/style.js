@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
   const image = document.querySelector('.fast-scroll-image');
   
   // 動かすスピードの調整（数値が大きいほど早く動きます）
-  const speed = 0.2; 
+  const speed = 0.25; 
   
   // 画像の位置をY軸方向にずらす
   if (image) {

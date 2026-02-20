@@ -5,19 +5,48 @@
 
 
 /*---main visual--*/
+
+/*   ---main visual character--*/
 .main-visual__character {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 35%;
     transform: translate(-50%, -50%);
 }
 
+@media (max-width: 1080px) and (min-width: 768.50px) {
+    .main-visual__character {
+    top: 65%;
+    }
+}
+
+@media (max-width: 767.49px) {
+    .main-visual__character {
+    top: 50%;
+    }
+}
+
 .main-visual__character img {
-    height: 105vh;
+    height: 120vh;
     min-height: 400px;
     object-fit: cover;
 }
 
+@media (max-width: 1080px) and (min-width: 768.50px) {
+    .main-visual__character img {
+    height: 110h;
+    }
+}
+
+@media (max-width: 767.49px) {
+    .main-visual__character img {
+    height: 85vh;
+    }
+}
+/*   ---main visual character--*/
+
+
+/*   ---site rogo---*/
 .first-view img {
     position: absolute;
     bottom: 20px;
@@ -43,6 +72,72 @@
         left: 10px;
     }
 }
+/*   ---site rogo---*/
+
+
+/*   ---SCROLL Indicator---*/
+.section--main-visual {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: -120px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20; /* --- === 20 === --- */
+}
+
+.scroll-text {
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    color: var(--color-text__black);
+    padding: 0 0 8px 0;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-scroll-indicator);
+}
+
+.scroll-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-text__black); 
+    animation: scroll-line-anim 2s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+@keyframes scroll-line-anim {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    50.1% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+/*   ---SCROLL Indicator---*/
+
 /*---main visual--*/
 
 

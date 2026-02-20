@@ -16,8 +16,10 @@
     --color-box-shadow: rgb(0 0 0 / 0.1);/* black透過 */
 
     --color-border__black: rgba(255, 255, 255, 0.3);/* black透過 */
+    
+    --color-border__blackw: rgb(0 0 0 / 0.1);/* black透過 */
 
-    --color-background__carousel-banner: rgb(21 132 184 / 1);
+    --color-scroll-indicator: rgb(21 132 184 / 1);
 }
 
 html { overflow-y: scroll; }

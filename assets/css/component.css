@@ -20,7 +20,7 @@
 <a href="" class="view-all-link">view all</a>
 ==================================*/
 .view-all-link {
-    margin: 40px auto 0 auto;
+    margin: 40px 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
