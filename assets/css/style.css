@@ -1,7 +1,7 @@
-/* =========================================
-    ファイル: assets/css/style.css
-    説明: component.cssの固有バーツ（一度しか使用しないもの）を記載
-========================================= */
+/*=========================================
+ファイル: assets/css/style.css
+説明: component.cssの固有バーツ（一度しか使用しないもの）を記載
+=========================================*/
 
 
 /*---main visual--*/
@@ -67,6 +67,7 @@
     flex: 0 0 calc(100% / 3);
     box-sizing: border-box;
     padding: 0 10px;
+    container-type: inline-size;
 }
 
 @media (max-width: 1200px) { .slide { flex: 0 0 calc(100% / 2); } }
@@ -74,16 +75,40 @@
 @media (max-width: 767px) { .slide { flex: 0 0 100%; } }
 
 .slide-content {
-    background-image: url(../images/001.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     aspect-ratio: 16 / 9;
     display: flex;
-    font-size: 32px;
     font-weight: bold;
     border-radius: 8px;
     text-transform: uppercase;
+
+    align-items: flex-start;     /* 上揃え */
+    justify-content: flex-start; /* 左揃え */
+    box-sizing: border-box;
+}
+
+.slide-content__001 { background-image: url(../images/carousel-track_001.png); }
+
+.slide-content__002 { background-image: url(../images/carousel-track_002.png); }
+
+.slide-content__003 { background-image: url(../images/carousel-track_003.png); }
+
+.slide-content__004 { background-image: url(../images/carousel-track_004.png); }
+
+.slide-content__005 { background-image: url(../images/carousel-track_005.png); }
+
+.slide-content__006 { background-image: url(../images/carousel-track_006.png); }
+
+.slide-content p {
+    margin: 0;
+    font-size: 5cqw; 
+
+    /* 画像に重なっても読みやすくするための装飾（必要に応じて調整してください） */
+    color: var(--color-text__white);
+    background-color: var(--color-background__black-grey);
+    border-radius: 4px;
 }
 
 .slide-text-wrapper {
