@@ -81,6 +81,19 @@
     margin-bottom: 100px;
 }
 
+
+@media (max-width: 1080px) and (min-width: 768.50px) {
+    .section--main-visual {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 767.49px) {
+    .section--main-visual {
+        margin-bottom: 0px;
+    }
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: -120px; 
@@ -90,6 +103,18 @@
     flex-direction: column;
     align-items: center;
     z-index: 20; /* --- === 20 === --- */
+}
+
+@media (max-width: 1080px) and (min-width: 768.50px) {
+    .scroll-indicator {
+        bottom: -60px; 
+    }
+}
+
+@media (max-width: 767.49px) {
+    .scroll-indicator {
+        bottom: 0px; 
+    }
 }
 
 .scroll-text {
@@ -106,6 +131,19 @@
     overflow: hidden;
     background-color: var(--color-scroll-indicator);
 }
+
+@media (max-width: 1080px) and (min-width: 768.50px) {
+    .scroll-line {
+        height: 150px;
+    }
+}
+
+@media (max-width: 767.49px) {
+    .scroll-line {
+        height: 100px;
+    }
+}
+
 
 .scroll-line::before {
     content: "";
