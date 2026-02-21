@@ -123,6 +123,19 @@
                     <!--section about text-->
 
                 </div>
+
+                <div class="wave-text-wrapper">
+                    <svg viewBox="0 0 5000 200" preserveAspectRatio="xMinYMin slice" class="wave-svg">
+                        <path
+                            id="textWavePath"
+                            d="M0,100 Q250,50 500,100 T1000,100 T1500,100 T2000,100 T2500,100 T3000,100 T3500,100 T4000,100 T4500,100 T5000,100"
+                            fill="none"
+                        />
+                        <text class="moving-text" id="waveText">
+                            <textPath href="#textWavePath" startOffset="0"></textPath>
+                        </text>
+                    </svg>
+                </div>
             </section>
             <!--about-->
 
