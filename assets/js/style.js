@@ -23,7 +23,7 @@ if (hamburger && navMenu) {
 }
 
 
-
+// テキスト無限ループ
 const textPath = document.querySelector("#waveText textPath");
 const phrase = "on boom ! . "; // ループさせたい1フレーズ
 

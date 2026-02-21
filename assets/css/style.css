@@ -156,11 +156,7 @@
     line-height: 3.5;
 }
 
-
-
-
-
-
+/* テキスト無限ループ */
 .wave-text-wrapper {
     width: 100%;
     padding: 50px 0 0 0;
@@ -180,6 +176,8 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+/* テキスト無限ループ */
+
 /*---about---*/
 
 
