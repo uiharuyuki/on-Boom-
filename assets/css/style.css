@@ -169,7 +169,7 @@
 .moving-text {
     fill: #dfdfdf;
     font-family: sans-serif;
-    font-size: 5rem;
+    font-size: clamp(3rem, 5.3333vw + 1.4rem, 5rem);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
