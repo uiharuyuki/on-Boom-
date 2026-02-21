@@ -13,12 +13,12 @@
 
 .top-main { flex-grow: 1; }
 
-.section--news { padding: 0 0 40px 0; }
+.section--news { padding: 0 0 clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
 
 .section--talents,
 .section--goods,
 .section--audition,
-.section--faq { padding: 40px 0; }
+.section--faq { padding: clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
 
 .container {
     max-inline-size: 1000px;
