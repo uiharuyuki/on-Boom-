@@ -1,7 +1,7 @@
 // --- パララックス ---
 // スクロールのたびに変わらない値はイベントの外で定義する（パフォーマンス対策）
 const image = document.querySelector('.fast-scroll-image');
-const speed = 0.25; // 動かすスピードの調整（数値が大きいほど早く動きます）
+const speed = 0.22; // 動かすスピードの調整（数値が大きいほど早く動きます）
 
 window.addEventListener('scroll', () => {
   if (image) {
