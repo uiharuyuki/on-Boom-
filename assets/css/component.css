@@ -20,7 +20,6 @@
 <a href="" class="view-all-link">view all</a>
 ==================================*/
 .view-all-link {
-    margin: 40px 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +29,7 @@
     color: var(--color-text__black);
     border-radius: 999px;
     padding: 10px 60px;
+    margin: 0 auto;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 0.5px;

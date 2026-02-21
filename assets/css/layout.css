@@ -11,7 +11,14 @@
     overflow: hidden;
 }
 
-main { flex-grow: 1; }
+.top-main { flex-grow: 1; }
+
+.section--news { padding: 0 0 40px 0; }
+
+.section--talents,
+.section--goods,
+.section--audition,
+.section--faq { padding: 40px 0; }
 
 .container {
     max-inline-size: 1000px;

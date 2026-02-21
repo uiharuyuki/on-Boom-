@@ -47,3 +47,7 @@ h2 {
     text-transform: uppercase;
 }
 
+
+.small {
+    font-size: clamp(0.625rem, 0.6667vw + 0.425rem, 0.875rem);
+}

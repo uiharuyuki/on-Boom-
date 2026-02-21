@@ -154,7 +154,7 @@
 /* テキスト無限ループ */
 .wave-text-wrapper {
     width: 100%;
-    padding: clamp(3.125rem, 3.3333vw + 2.125rem, 4.375rem) 0 clamp(0rem, 8.3333vw - 2.5rem, 3.125rem) 0;
+    padding: clamp(3.125rem, 3.3333vw + 2.125rem, 4.375rem) 0 clamp(0rem, 7.5vw - 2.25rem, 2.8125rem) 0;
 }
 
 .wave-svg {
@@ -179,9 +179,15 @@
 /*---news---*/
 .section--news { text-align: center; }
 
+.section--news .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+}
+
 .carousel-container {
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
 }
 
