@@ -17,7 +17,7 @@
 
 @media (max-width: 767.49px) {
     .main-visual__character-sp {
-    opacity: 1;
+        opacity: 1;
     }
 }
 
@@ -32,13 +32,13 @@
 
 @media (max-width: 767.49px) {
     .main-visual__character-sp img {
-    height: 105vh;
+        height: 105vh;
     }
 }
 /*   ---main visual character--*/
 
 
-/*   ---site rogo---*/
+/*   ---site logo---*/
 .first-view img {
     position: absolute;
     bottom: 20px;
@@ -62,18 +62,18 @@
 /*   ---SCROLL Indicator---*/
 .section--main-visual {
     position: relative;
-    margin-bottom: 180px;
+    margin-bottom: 180px;/*--- 下余白にはみ出るデザイン ---*/
 }
 
 @media (max-width: 767.49px) {
     .section--main-visual {
-        margin-bottom: 100px; 
+        margin-bottom: 100px;/*--- 下余白にはみ出るデザイン ---*/
     }
 }
 
 .scroll-indicator {
     position: absolute;
-    bottom: -110px; 
+    bottom: -110px; /*--- 下余白にはみ出るデザイン ---*/
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -90,7 +90,7 @@
 }
 
 .scroll-text {
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: -0.03em;
     color: var(--color-text__black);
     padding: 0 0 8px 0;
@@ -101,7 +101,7 @@
     height: 210px;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-scroll-indicator);
+    background-color: var(--color-background__grey-a);
 }
 
 @media (max-width: 767.49px) {
@@ -151,8 +151,12 @@
     text-align: center;
 }
 
+/* 後で修正 */
+.section--about h2 {
+    font-size: 2rem;
+}
+
 .section--about p {
-    white-space: pre-wrap;
     line-height: 3.5;
 }
 /*---about---*/

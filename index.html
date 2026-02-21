@@ -7,21 +7,22 @@
 
     <meta name="description" content="○○株式会社が運営するVTuber/バーチャルタレントグループ「on boom!」公式サイトです。on boom!の最新情報やタレント紹介などを掲載しています。">
 
-    <!-- おもにモバイル端末で電話番号やメールアドレス、住所を自動的にリンクにしない -->
+    <!--おもにモバイル端末で電話番号やメールアドレス、住所を自動的にリンクにしない-->
     <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <!-- 作成者 -->
+    <!--作成者-->
     <meta name="author" content="yuki">
 
     <link rel="canonical" href="https://uiharuyuki.github.io/on-Boom-/">
 
-    <link rel="icon" href="assets/images/icon128.png" sizes="any">
+    <!--SVGの画像を使用する-->
+    <link rel="icon" href="" sizes="any">
 
-    <!-- google fonts -->
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- css -->
+    <!--css-->
     <link rel="stylesheet" href="assets/css/kiso.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="assets/css/base.css">
@@ -31,7 +32,7 @@
     <link rel="stylesheet" href="assets/css/utility.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- js -->
+    <!--js-->
     <script src="assets/js/style.js" defer></script>
 </head>
 
@@ -42,7 +43,7 @@
 
 <!--****************************** HEADER ******************************-->
         <!--loading view-->
-        <div class="loading_wrap blur">
+        <div class="loading-wrap blur">
         </div>
         <!--loading view-->
 
@@ -51,17 +52,18 @@
             <!--navigation-->
             <nav class="floating-button floating-nav">
                 <ul>
-                    <li><a href="">about</a></li>
-                    <li><a href="">news</a></li>
-                    <li><a href="">talents</a></li>
-                    <li><a href="">goods</a></li>
-                    <li><a href="">audition</a></li>
-                    <li><a href="">faq</a></li>
+                    <li><a href="about/index.html">about</a></li>
+                    <li><a href="news/index.html">news</a></li>
+                    <li><a href="talents/index.html">talents</a></li>
+                    <li><a href="goods/index.html">goods</a></li>
+                    <li><a href="audition/index.html">audition</a></li>
+                    <li><a href="faq/index.html">faq</a></li>
                 </ul>
             </nav>
 
             <!--shop-->
-            <a class="floating-button floating-office-shop" href="" target="_blank">office shop</a>
+            <!--rel="noopener noreferrer" タブナビング（Tabnabbing）攻撃対策-->
+            <a class="floating-button floating-office-shop" rel="noopener noreferrer" href="office-shop/index.html" target="_blank">office shop</a>
 
             <!--hamburger button-->
             <button class="hamburger" aria-label="メニューを開く">
@@ -70,7 +72,7 @@
 
             <!--hamburger menu-->
             <div class="menu">
-                <a href="">Home</a>
+                <a href="/">Home</a>
             </div>
 
         </header>
@@ -85,7 +87,7 @@
 
                     <!--main visual character-->
                     <div class="main-visual__character-sp">
-                        <img class="fast-scroll-image" src="assets/images/aa.png" alt="">
+                        <img class="fast-scroll-image" src="assets/images/aa.png" alt="momoka">
                     </div>
 
                     <!--site logo-->
@@ -106,19 +108,18 @@
                 <div class="container text-align-center">
 
                     <!--section about title-->
-                    <!-- <h2>about</h2> -->
-                    <h3>自由な発想で「好き」が生まれる。</h3>
+                    <h2>自由な発想で「好き」が生まれる。</h2>
                     <!--section about title-->
 
                     <!--section about text-->
-<p>バーチャルをもっと身近に。
-「好き」でつながる、
-「好き」を楽しむ。
-もっと自由に。
-そんな場所って、最高だ。
-個性を爆発させる
-最高のプロジェクト。
-個性の爆発を重ねよう。</p>
+                    <p>バーチャルをもっと身近に。</p>
+                    <p>「好き」でつながる、</p>
+                    <p>「好き」を楽しむ。</p>
+                    <p>もっと自由に。</p>
+                    <p>そんな場所って、最高だ。</p>
+                    <p>個性を爆発させる</p>
+                    <p>最高のプロジェクト。</p>
+                    <p>個性の爆発を重ねよう。</p>
                     <!--section about text-->
 
                 </div>
@@ -150,7 +151,7 @@
                         </button>
                         <!--left-button-->
 
-                        <!--light-button-->
+                        <!--right-button-->
                         <button class="carousel-btn next-btn">
                             <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <polygon 
@@ -162,7 +163,7 @@
                                 />
                             </svg>
                         </button>
-                        <!--light-button-->
+                        <!--right-button-->
 
                         <!--carousel-->
                         <div class="carousel-track">
@@ -223,7 +224,7 @@
                                 </div>
                             </div>
 
-                            <!--5--->
+                            <!---5--->
                             <div class="slide">
                                 <div class="slide-content slide-content__005">
                                     <p>official shop</p>
@@ -255,7 +256,7 @@
                         <!--carousel-->
 
                         <!--view all button-->
-                        <a href="" class="view-all-link">view all</a>
+                        <a href="news/index.html" class="view-all-link">view all</a>
                         <!--view all button-->
 
                     </div>

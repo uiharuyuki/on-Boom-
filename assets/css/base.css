@@ -5,21 +5,21 @@
 
 
 :root {
-    --color-background__white: rgb(255 255 255 / 1);
+    --color-background__white: rgb(255 255 255);
     --color-background__white-a: rgb(255 255 255 / 0.8);
-    --color-background__black-grey: rgb(51 51 51 / 1);
-    --color-background__grey-a: rgb(157 157 255 / 1);
+    --color-background__black-grey: rgb(51 51 51);
+    --color-background__grey-a: rgb(157 157 157);
 
-    --color-text__white: rgb(255 255 255 / 1);
-    --color-text__black: rgb(0 0 0 / 1);
+    --color-text__white: rgb(255 255 255);
+    --color-text__black: rgb(0 0 0);
 
     --color-box-shadow: rgb(0 0 0 / 0.1);
 
-    --color-view-all-link-hover: rgb(245 245 245 / 1);
+    --color-background__hover: rgb(245 245 245);
 
     --color-border: rgb(255 255 255 / 0.3);
 
-    --color-scroll-indicator: rgb(21 132 184 / 1);
+    --color-scroll-indicator: rgb(21 132 184);
 }
 
 html { overflow-y: scroll; }
@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     font-size: clamp(4rem, 4.7059vw + 3.0588rem, 6rem);
-    font-weight: 700;
     text-transform: uppercase;
 }
 

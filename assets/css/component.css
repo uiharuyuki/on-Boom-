@@ -31,11 +31,10 @@
     border-radius: 999px;
     padding: 10px 60px;
     text-decoration: none;
-    font-family: sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     transition: background-color 0.2s ease;
 }
 
-.view-all-link:hover { background-color: var(--color-view-all-link-hover) }
+.view-all-link:hover { background-color: var(--color-background__hover); }
 
