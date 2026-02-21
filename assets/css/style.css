@@ -152,9 +152,7 @@
 /*ここのh2特有の設定*/
 .section--about h2 { font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem); }
 
-.section--about p {
-    line-height: 3.5;
-}
+.section--about p { line-height: 3.5; }
 
 /* テキスト無限ループ */
 .wave-text-wrapper {

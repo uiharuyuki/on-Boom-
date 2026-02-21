@@ -6,7 +6,7 @@ const speed = 0.25; // 動かすスピードの調整（数値が大きいほど
 window.addEventListener('scroll', () => {
   if (image) {
     // 現在のスクロール位置を取得し、画像の位置をY軸方向にずらす
-    image.style.transform = `translate(-50%, calc(-50% + ${window.scrollY * -speed}px))`;
+    image.style.transform = `translateY(${window.scrollY * -speed}px)`;
   }
 });
 
