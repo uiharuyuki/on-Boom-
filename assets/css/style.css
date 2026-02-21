@@ -268,7 +268,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-background__grey-a);
+    background-color: var(--color-background__button);
     color: var(--color-text__white);
     border-radius: 50%;
     border: none;
