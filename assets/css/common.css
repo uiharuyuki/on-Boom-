@@ -24,7 +24,7 @@
 
 .floating-office-shop { top: 20px; right: 120px; }
 
-@media (max-width: 768px) {
+@media (max-width: 767.49px) {
     .floating-button { display: none; }
 }
 

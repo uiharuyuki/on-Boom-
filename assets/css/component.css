@@ -26,16 +26,16 @@
     align-items: center;
     background-color: transparent;
     text-transform: uppercase;
-    border: 1px solid #333;
+    border: 1px solid var(--color-background__black-grey);
+    color: var(--color-text__black);
     border-radius: 999px;
     padding: 10px 60px;
     text-decoration: none;
-    color: #111;
     font-family: sans-serif;
     font-size: 16px;
     letter-spacing: 0.5px;
     transition: background-color 0.2s ease;
 }
 
-.view-all-link:hover { background-color: #f5f5f5; }
+.view-all-link:hover { background-color: var(--color-view-all-link-hover) }
 
