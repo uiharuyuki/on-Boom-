@@ -60,12 +60,12 @@
 /*   ---SCROLL Indicator---*/
 .section--main-visual {
     position: relative;
-    margin-bottom: 180px;/*--- 下余白にはみ出るデザイン ---*/
+    margin-bottom: 230px;/*--- 下余白にはみ出るデザイン ---*/
 }
 
 @media (max-width: 767.49px) {
     .section--main-visual {
-        margin-bottom: 100px;/*--- 下余白にはみ出るデザイン ---*/
+        margin-bottom: 150px;/*--- 下余白にはみ出るデザイン ---*/
     }
 }
 
@@ -144,10 +144,7 @@
 
 
 /*---about---*/
-.section--about {
-    padding: 50px 0;
-    text-align: center;
-}
+.section--about { text-align: center; }
 
 /*ここのh2特有の設定*/
 .section--about h2 { font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem); }
@@ -157,7 +154,7 @@
 /* テキスト無限ループ */
 .wave-text-wrapper {
     width: 100%;
-    padding: 50px 0 0 0;
+    padding: clamp(3.125rem, 3.3333vw + 2.125rem, 4.375rem) 0 clamp(0rem, 8.3333vw - 2.5rem, 3.125rem) 0;
 }
 
 .wave-svg {
