@@ -182,7 +182,7 @@
 .section--news .container {
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
+    row-gap: clamp(2.25rem, 4vw + 1.05rem, 3.75rem);
 }
 
 .carousel-container {
