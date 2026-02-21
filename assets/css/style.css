@@ -28,8 +28,6 @@
     object-fit: cover;
 }
 
-
-
 @media (max-width: 767.49px) {
     .main-visual__character-sp img {
         height: 105vh;
@@ -56,7 +54,7 @@
         left: 10px;
     }
 }
-/*   ---site rogo---*/
+/*   ---site logo---*/
 
 
 /*   ---SCROLL Indicator---*/
@@ -85,7 +83,7 @@
 
 @media (max-width: 767.49px) {
     .scroll-indicator {
-        bottom: -60px; 
+        bottom: -60px;
     }
 }
 
@@ -151,10 +149,8 @@
     text-align: center;
 }
 
-/* 後で修正 */
-.section--about h2 {
-    font-size: 2rem;
-}
+/*ここのh2特有の設定*/
+.section--about h2 { font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem); }
 
 .section--about p {
     line-height: 3.5;
