@@ -7,32 +7,20 @@
 /*---main visual--*/
 
 /*   ---main visual character--*/
-.main-visual__character-sp {
-    position: absolute;
-    top: 60%;
-    left: 50%;
+
+.main-visual__character {                                                                            position: absolute;
+    top: 60%;                                                                                  
+    left: 50%;  
     transform: translate(-50%, -50%);
-    opacity: 0;
 }
 
-@media (max-width: 767.49px) {
-    .main-visual__character-sp {
-        opacity: 1;
-    }
-}
-
-.main-visual__character-sp img {
-    height: 120vh;
+.main-visual__character img {
+    height: 105vh;
     min-height: 400px;
     max-inline-size: none;
     object-fit: cover;
 }
 
-@media (max-width: 767.49px) {
-    .main-visual__character-sp img {
-        height: 105vh;
-    }
-}
 /*   ---main visual character--*/
 
 
@@ -47,10 +35,10 @@
     object-fit: contain;
 }
 
-@media (max-width: 767.49px) {
+@media (width < 767px) {
     .first-view img {
         width: 120px;
-        bottom: 10px;
+        top: 10px;
         left: 10px;
     }
 }
@@ -60,12 +48,12 @@
 /*   ---SCROLL Indicator---*/
 .section--main-visual {
     position: relative;
-    margin-bottom: 230px;/*--- 下余白にはみ出るデザイン ---*/
+    margin-bottom: 200px;/*--- 下余白にはみ出るデザイン ---*/
 }
 
-@media (max-width: 767.49px) {
+@media (width < 767px) {
     .section--main-visual {
-        margin-bottom: 150px;/*--- 下余白にはみ出るデザイン ---*/
+        margin-bottom: 150px;
     }
 }
 
@@ -81,7 +69,7 @@
 }
 
 
-@media (max-width: 767.49px) {
+@media (width < 767px) {
     .scroll-indicator {
         bottom: -60px;
     }
@@ -96,18 +84,17 @@
 
 .scroll-line {
     width: 1px;
-    height: 210px;
+    height: 230px;
     position: relative;
     overflow: hidden;
     background-color: var(--color-background__grey-a);
 }
 
-@media (max-width: 767.49px) {
+@media (width < 767px) {
     .scroll-line {
         height: 180px;
     }
 }
-
 
 .scroll-line::before {
     content: "";
@@ -147,9 +134,14 @@
 .section--about { text-align: center; }
 
 /*ここのh2特有の設定*/
-.section--about h2 { font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem); }
+.section--about h2 {
+    font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem);
+    padding: 0 0 clamp(2.1875rem, 0.8333vw + 1.9375rem, 2.5rem) 0;
+}
 
-.section--about p { line-height: 3.5; }
+.section--about p {
+    line-height: 3.2;
+}
 
 /* テキスト無限ループ */
 .wave-text-wrapper {

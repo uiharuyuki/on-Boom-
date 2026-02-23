@@ -11,6 +11,11 @@
     overflow: hidden;
 }
 
+footer {
+    position: sticky;
+    top: 100%;
+}
+
 .top-main { flex-grow: 1; }
 
 .section--news { padding: 0 0 clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
