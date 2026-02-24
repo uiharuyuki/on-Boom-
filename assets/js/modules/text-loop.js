@@ -1,7 +1,5 @@
 export function initTextLoop() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const textPath = document.querySelector("#wave-text__svg textPath");
+  const textPath = document.querySelector("#wave-text__text textPath");
 
   if (!textPath) return;
 
@@ -11,6 +9,8 @@ export function initTextLoop() {
   const unitLength = textPath.getComputedTextLength();
 
   textPath.textContent = phrase.repeat(10);
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const duration = 10;
   const scrollSpeed = unitLength / (duration * 60);
