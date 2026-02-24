@@ -4,7 +4,7 @@
 =========================================*/
 
 
-#wrapper {
+#page-layout__wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
@@ -17,16 +17,16 @@ footer {
     top: 100%;
 }
 
-.top-main { flex-grow: 1; }
+.page-layout__main { flex-grow: 1; }
 
-.section--news { padding: 0 0 clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
+.page-section__news { padding: 0 0 clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
 
-.section--talents,
-.section--goods,
-.section--audition,
-.section--faq { padding: clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
+.page-section__talents,
+.page-section__goods,
+.page-section__audition,
+.page-section__faq { padding: clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
 
-.container {
+.page-layout__container {
     max-inline-size: 1000px;
     inline-size: 90%;
     margin-inline: auto;

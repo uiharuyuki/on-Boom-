@@ -4,7 +4,7 @@
 =========================================*/
 
 /* ナビゲーション */
-.floating-button {
+.nav-float__btn {
     position: fixed;
     z-index: 1000; /* --- === 1000 === --- */
     background-color: var(--color-background__white-a);
@@ -18,32 +18,32 @@
     text-transform: uppercase;
 }
 
-.floating-nav { top: 20px; right: 280px; }
+.nav-float__nav { top: 20px; right: 280px; }
 
-.floating-nav ul { display: flex; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; }
+.nav-float__nav ul { display: flex; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; }
 
-.floating-office-shop { top: 20px; right: 120px; }
+.nav-float__shop { top: 20px; right: 120px; }
 
 @media (max-width: 767.49px) {
-    .floating-button { display: none; }
+    .nav-float__btn { display: none; }
 }
 
 
 
 /* --- ハンバーガーボタンのスタイル --- */
-.hamburger { z-index: 1002; /* --- === 1002 === --- */ position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background: transparent; border: none; cursor: pointer; }
-.hamburger span, .hamburger span::before, .hamburger span::after { content: ''; display: block; height: 3px; background-color: var(--color-background__black-grey); position: absolute; right: 0; left: auto; transform: none; transition: 0.3s ease-in-out; }
-.hamburger span::before { width: 50px; }
-.hamburger span::after {  width: 20px; }
-.hamburger span { width: 35px; top: 50%; transform: translate(-50%, -50%); }
-.hamburger span::before { top: -10px; }
-.hamburger span::after { top: 10px; }
-.hamburger[aria-expanded="true"] span,
-.hamburger[aria-expanded="true"] span::before,
-.hamburger[aria-expanded="true"] span::after { opacity: 0; }
+.nav-toggle__btn { z-index: 1002; /* --- === 1002 === --- */ position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background: transparent; border: none; cursor: pointer; }
+.nav-toggle__btn span, .nav-toggle__btn span::before, .nav-toggle__btn span::after { content: ''; display: block; height: 3px; background-color: var(--color-background__black-grey); position: absolute; right: 0; left: auto; transform: none; transition: 0.3s ease-in-out; }
+.nav-toggle__btn span::before { width: 50px; }
+.nav-toggle__btn span::after {  width: 20px; }
+.nav-toggle__btn span { width: 35px; top: 50%; transform: translate(-50%, -50%); }
+.nav-toggle__btn span::before { top: -10px; }
+.nav-toggle__btn span::after { top: 10px; }
+.nav-toggle__btn[aria-expanded="true"] span,
+.nav-toggle__btn[aria-expanded="true"] span::before,
+.nav-toggle__btn[aria-expanded="true"] span::after { opacity: 0; }
 
 /* --- ドロワーメニュー（dialog） --- */
-.menu {
+.nav-drawer__dialog {
     margin: 0;
     padding: 0;
     border: none;
@@ -68,32 +68,32 @@
 
 
 /* メニューが開いたとき */
-.menu[open] {
+.nav-drawer__dialog[open] {
     opacity: 1;
     visibility: visible;
 }
 
 /* 開き始めの状態 */
  @starting-style {
-    .menu[open] {
+    .nav-drawer__dialog[open] {
         opacity: 0;
         visibility: hidden;
     }
 }
 
 /* バックドロップ */
-.menu::backdrop {
+.nav-drawer__dialog::backdrop {
     display: none;
 }
 
 /* --- メニュー内部のレイアウト --- */
 
-.menu__inner {
+.nav-drawer__inner {
     display: flex;
     height: 100%;
 }
 
-.menu__close {
+.nav-drawer__close {
     position: fixed;
     top: 28px;
     right: 28px;
@@ -103,58 +103,58 @@
     cursor: pointer;
 }
 
-.menu__left,
-.menu__right {
+.nav-drawer__left,
+.nav-drawer__right {
     flex: 1;
     overflow-y: auto;
     scrollbar-width: none;
     padding: 80px 0;
 }
 
-.menu__left::-webkit-scrollbar,
-.menu__right::-webkit-scrollbar {
+.nav-drawer__left::-webkit-scrollbar,
+.nav-drawer__right::-webkit-scrollbar {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .menu {
+    .nav-drawer__dialog {
         overflow-y: auto;
     }
 
-    .menu__inner {
+    .nav-drawer__inner {
         flex-direction: column;
         height: auto;
     }
 
-    .menu__left,
-    .menu__right {
+    .nav-drawer__left,
+    .nav-drawer__right {
         overflow-y: visible;
     }
 }
 
-.menu__nav a {
+.nav-drawer__nav a {
     color: var(--color-text__white);
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    line-height: 1.15;
 }
 
-.menu-ul {
-    padding-top: 30px;
+.nav-drawer__link {
+    display: block;
+    padding: 30px 0 20px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
-.menu-ul a {
-    line-height: 1.6;
-}
-
-@scope (.menu-ul) to (.menu__right) {
-    a {line-height: 1.6;}
+.nav-drawer__list a {
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 /*---footer---*/
 
-.footer-copy {
+.site-footer__copy {
     text-align: center;
     padding: 10px 0;
 }

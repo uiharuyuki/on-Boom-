@@ -42,18 +42,18 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="page-layout__wrapper">
 
 <!--****************************** HEADER ******************************-->
         <!--loading view-->
-        <div class="loading-wrap blur">
+        <div class="site-loading__wrap site-loading__blur">
         </div>
         <!--loading view-->
 
         <header>
 
             <!--navigation-->
-            <nav class="floating-button floating-nav">
+            <nav class="nav-float__btn nav-float__nav">
                 <ul>
                     <li><a href="about/index.html">about</a></li>
                     <li><a href="news/index.html">news</a></li>
@@ -66,22 +66,22 @@
 
             <!--shop-->
             <!--rel="noopener noreferrer" タブナビング（Tabnabbing）攻撃対策-->
-            <a class="floating-button floating-office-shop" rel="noopener noreferrer" href="office-shop/index.html" target="_blank">office shop</a>
+            <a class="nav-float__btn nav-float__shop" rel="noopener noreferrer" href="office-shop/index.html" target="_blank">office shop</a>
 
             <!--hamburger button-->
-            <button id="menu-open" class="hamburger" type="button" aria-expanded="false" aria-controls="menu-dialog" aria-label="メニューを開く">
+            <button id="nav-drawer__open" class="nav-toggle__btn" type="button" aria-expanded="false" aria-controls="nav-drawer__dialog" aria-label="メニューを開く">
                 <span></span>
             </button>
 
             <!--hamburger menu-->
-            <dialog id="menu-dialog" class="menu" aria-label="メニュー">
-                <div class="menu__inner container">
-                    <button id="menu-close" class="menu__close" type="button">
+            <dialog id="nav-drawer__dialog" class="nav-drawer__dialog" aria-label="メニュー">
+                <div class="nav-drawer__inner page-layout__container">
+                    <button id="nav-drawer__close" class="nav-drawer__close" type="button">
                         閉じる
                     </button>
 
-                    <div class="menu__left">
-                        <nav class="menu__nav">
+                    <div class="nav-drawer__left">
+                        <nav class="nav-drawer__nav">
                             <ul>
                                 <li><a href="about/index.html">about</a></li>
                                 <li><a href="news/index.html">news</a></li>
@@ -92,9 +92,9 @@
                             </ul>
                         </nav>
 
-                        <ul class="menu-ul">
-                            <li><a href="">OFFICIAL SHOP</a></li>
-                            <li><a href="">SUPPORT ADVERTISING</a></li>
+                        <a class="nav-drawer__link" href="">OFFICIAL SHOP</a>
+
+                        <ul class="nav-drawer__list">
                             <li><a href="">会社概要</a></li>
                             <li><a href="">プライバシーポリシー</a></li>
                             <li><a href="">未成年の方々へのお願い</a></li>
@@ -104,7 +104,7 @@
                         </ul>
                     </div>
 
-                    <div class="menu__right">
+                    <div class="nav-drawer__right">
                         <p>text</p><p>text</p><p>text</p><p>text</p>
                         <p>text</p><p>text</p><p>text</p><p>text</p>
                         <p>text</p><p>text</p><p>text</p><p>text</p>
@@ -127,34 +127,34 @@
 
 <!--****************************** MAIN ******************************-->
 
-        <main class="top-main">
+        <main class="page-layout__main">
             <!--main visual-->
-            <section class="h-dvh section--main-visual">
+            <section class="util-height__dvh page-section__main-visual">
 
                     <!--main visual character-->
                     <div class="main-visual__character">
                         <picture>
                             <source media="(width < 767px)" srcset="assets/images/aa.png">
-                            <img class="fast-scroll-image" src="assets/images/bb.png" alt="top-character">
+                            <img class="main-visual__parallax" src="assets/images/bb.png" alt="top-character">
                         </picture>
                     </div>
 
                     <!--site logo-->
-                    <div class="first-view">
+                    <div class="main-visual__logo">
                         <a href="index.html"><img src="assets/images/on-boom.svg" alt="on boom!"></a>
                     </div>
 
-                    <div class="scroll-indicator">
-                        <span class="scroll-text">SCROLL</span>
-                        <div class="scroll-line"></div>
+                    <div class="scroll-guide__indicator">
+                        <span class="scroll-guide__text">SCROLL</span>
+                        <div class="scroll-guide__line"></div>
                     </div>
 
             </section>
             <!--main visual-->
 
             <!--about-->
-            <section id="section--about" class="section--about">
-                <div class="container">
+            <section id="page-section__about" class="page-section__about">
+                <div class="page-layout__container">
 
                     <!--section about title-->
                     <h2>自由な発想で「好き」が生まれる。</h2>
@@ -173,15 +173,15 @@
 
                 </div>
 
-                <div class="wave-text-wrapper">
-                    <svg viewBox="0 0 5000 200" preserveAspectRatio="xMinYMin slice" class="wave-svg">
+                <div class="wave-text__wrapper">
+                    <svg viewBox="0 0 5000 200" preserveAspectRatio="xMinYMin slice" class="wave-text__svg">
                         <path
-                            id="textWavePath"
+                            id="wave-text__path"
                             d="M0,100 Q250,50 500,100 T1000,100 T1500,100 T2000,100 T2500,100 T3000,100 T3500,100 T4000,100 T4500,100 T5000,100"
                             fill="none"
                         />
-                        <text class="moving-text" id="waveText">
-                            <textPath href="#textWavePath" startOffset="0"></textPath>
+                        <text class="wave-text__moving" id="wave-text__svg">
+                            <textPath href="#wave-text__path" startOffset="0"></textPath>
                         </text>
                     </svg>
                 </div>
@@ -189,131 +189,131 @@
             <!--about-->
 
             <!--news-->
-            <section id="section--news" class="section--news">
-                <div class="container">
+            <section id="page-section__news" class="page-section__news">
+                <div class="page-layout__container">
 
                     <!--section news title-->
                     <h2>news</h2>
                     <!--section news title-->
 
                     <!--carousel container-->
-                    <div class="carousel-container">
+                    <div class="news-carousel__container">
 
                         <!--left-button-->
-                        <button class="carousel-btn prev-btn">
-                            <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <polygon 
-                                    points="17,6 17,18 5,12" 
-                                    fill="#fff" 
-                                    stroke="#fff" 
-                                    stroke-width="4" 
-                                    stroke-linejoin="round" 
+                        <button class="news-carousel__btn news-carousel__prev">
+                            <svg class="news-carousel__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon
+                                    points="17,6 17,18 5,12"
+                                    fill="#fff"
+                                    stroke="#fff"
+                                    stroke-width="4"
+                                    stroke-linejoin="round"
                                 />
                             </svg>
                         </button>
                         <!--left-button-->
 
                         <!--right-button-->
-                        <button class="carousel-btn next-btn">
-                            <svg class="icon--triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <polygon 
-                                    points="7,6 7,18 19,12" 
-                                    fill="#fff" 
-                                    stroke="#fff" 
-                                    stroke-width="4" 
-                                    stroke-linejoin="round" 
+                        <button class="news-carousel__btn news-carousel__next">
+                            <svg class="news-carousel__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <polygon
+                                    points="7,6 7,18 19,12"
+                                    fill="#fff"
+                                    stroke="#fff"
+                                    stroke-width="4"
+                                    stroke-linejoin="round"
                                 />
                             </svg>
                         </button>
                         <!--right-button-->
 
                         <!--carousel-->
-                        <div class="carousel-track">
+                        <div class="news-carousel__track">
 
                             <!---1--->
-                            <div class="slide">
-                                <div class="slide-content slide-content__001">
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content news-carousel__content-001">
                                     <p>official shop</p>
                                 </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
                                         <time datetime="2026-02-14">2026.02.14</time>
-                                        <span class="slide-category">goods</span>
+                                        <span class="news-carousel__category">goods</span>
                                     </div>
-                                    <p class="slide-title">バレンタイン記念グッズ発売！</p>
+                                    <p class="news-carousel__title">バレンタイン記念グッズ発売！</p>
                                 </div>
                             </div>
 
                             <!---2--->
-                            <div class="slide">
+                            <div class="news-carousel__slide">
                                 <!--後で変更-->
                                 <a href="index.html">
-                                    <div class="slide-content slide-content__002">
+                                    <div class="news-carousel__content news-carousel__content-002">
                                         <p>official shop</p>
                                     </div>
-                                    <div class="slide-text-wrapper">
-                                        <div class="slide-meta">
+                                    <div class="news-carousel__text-wrap">
+                                        <div class="news-carousel__meta">
                                             <time datetime="2026-02-14">0000.00.00</time>
-                                            <span class="slide-category">goods</span>
+                                            <span class="news-carousel__category">goods</span>
                                         </div>
-                                        <p class="slide-title">○○</p>
+                                        <p class="news-carousel__title">○○</p>
                                     </div>
                                 </a>
                             </div>
 
                             <!---3--->
-                            <div class="slide">
-                                <div class="slide-content slide-content__003">
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content news-carousel__content-003">
                                     <p>official shop</p>
                                 </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
                                         <time datetime="2026-02-14">0000.00.00</time>
-                                        <span class="slide-category">goods</span>
+                                        <span class="news-carousel__category">goods</span>
                                     </div>
-                                    <p class="slide-title">○○</p>
+                                    <p class="news-carousel__title">○○</p>
                                 </div>
                             </div>
 
                             <!---4--->
-                            <div class="slide">
-                                <div class="slide-content slide-content__004">
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content news-carousel__content-004">
                                     <p>official shop</p>
                                 </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
                                         <time datetime="2026-02-14">0000.00.00</time>
-                                        <span class="slide-category">goods</span>
+                                        <span class="news-carousel__category">goods</span>
                                     </div>
-                                    <p class="slide-title">○○</p>
+                                    <p class="news-carousel__title">○○</p>
                                 </div>
                             </div>
 
                             <!---5--->
-                            <div class="slide">
-                                <div class="slide-content slide-content__005">
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content news-carousel__content-005">
                                     <p>official shop</p>
                                 </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
                                         <time datetime="2026-02-14">0000.00.00</time>
-                                        <span class="slide-category">goods</span>
+                                        <span class="news-carousel__category">goods</span>
                                     </div>
-                                    <p class="slide-title">○○</p>
+                                    <p class="news-carousel__title">○○</p>
                                 </div>
                             </div>
 
                             <!---6--->
-                            <div class="slide">
-                                <div class="slide-content slide-content__006">
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content news-carousel__content-006">
                                     <p>official shop</p>
                                 </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
                                         <time datetime="2026-02-14">0000.00.00</time>
-                                        <span class="slide-category">goods</span>
+                                        <span class="news-carousel__category">goods</span>
                                     </div>
-                                    <p class="slide-title">○○</p>
+                                    <p class="news-carousel__title">○○</p>
                                 </div>
                             </div>
 
@@ -324,7 +324,7 @@
                     <!--carousel container-->
 
                     <!--view all button-->
-                    <a href="news/index.html" class="view-all-link">view all</a>
+                    <a href="news/index.html" class="view-all__link">view all</a>
                     <!--view all button-->
 
                 </div>
@@ -332,7 +332,7 @@
             <!--news-->
 
             <!--talents-->
-            <section id="section--talents" class="section--talents">
+            <section id="page-section__talents" class="page-section__talents">
 
                 <h1 style="font-size: 3rem; position: absolute; left: 50%; transform: translateX(-50%);">
                     <span style="font-size: 1rem;">now 2026 02 24</span>coming soon...
@@ -342,25 +342,25 @@
             <!--talents-->
 
             <!--goods-->
-            <section id="section--goods" class="section--goods">
-                <div class="container">
-                    
+            <section id="page-section__goods" class="page-section__goods">
+                <div class="page-layout__container">
+
                 </div>
             </section>
             <!--goods-->
 
             <!--audition-->
-            <section id="section--audition" class="section--audition">
-                <div class="container">
-                    
+            <section id="page-section__audition" class="page-section__audition">
+                <div class="page-layout__container">
+
                 </div>
             </section>
             <!--audition-->
 
             <!--faq-->
-            <section id="section--faq" class="section--faq">
-                <div class="container">
-                    
+            <section id="page-section__faq" class="page-section__faq">
+                <div class="page-layout__container">
+
                 </div>
             </section>
             <!--faq-->
@@ -371,9 +371,9 @@
 <!--****************************** FOOTER ******************************-->
         <footer>
 
-            <div class="container">
+            <div class="page-layout__container">
 
-                <div class="small footer-copy">
+                <div class="text-util__small site-footer__copy">
                     <p>Some illustrations are generated by AI.</p>
                     <p>© 2026 on boom! Production inc.</p>
                 </div>

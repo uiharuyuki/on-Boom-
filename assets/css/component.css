@@ -15,7 +15,7 @@
 汎用パーツ (再利用するもの)
 ==================================*/
 
-.view-all-link {
+.view-all__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,8 @@
     transition: background-color 0.3s ease;
 }
 
-.view-all-link:focus-visible { background-color: var(--color-background__hover); }
+.view-all__link:focus-visible { background-color: var(--color-background__hover); }
 
 @media (any-hover: hover) {
-    .view-all-link:hover { background-color: var(--color-background__hover); }
+    .view-all__link:hover { background-color: var(--color-background__hover); }
 }

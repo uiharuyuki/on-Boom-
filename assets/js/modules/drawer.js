@@ -1,7 +1,7 @@
 export function initDrawer() {
-  const dialog = document.getElementById('menu-dialog');
-  const openBtn = document.getElementById('menu-open');
-  const closeBtn = document.getElementById('menu-close');
+  const dialog = document.getElementById('nav-drawer__dialog');
+  const openBtn = document.getElementById('nav-drawer__open');
+  const closeBtn = document.getElementById('nav-drawer__close');
 
   if (!dialog || !openBtn || !closeBtn) return;
 

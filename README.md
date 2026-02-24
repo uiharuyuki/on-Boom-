@@ -64,8 +64,8 @@ https://uiharuyuki.github.io/on-Boom-/
 
 <!-- CLAUDE.md推奨 -->
 # claudeCode
-- JavaScript コーディング全般
-- Codeをすべて読み込み、点数評価とレビューによるhtml、cssのコードのブラッシュアップ。
+- JavaScript コーディング全般。
+- cssのclass命名形式一括変更「○○-○○__○○の形式にすべて変更」など。
 
 
 

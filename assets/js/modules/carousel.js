@@ -1,8 +1,8 @@
 export function initCarousel() {
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.querySelector('.next-btn');
-  const prevBtn = document.querySelector('.prev-btn');
+  const track = document.querySelector('.news-carousel__track');
+  const slides = document.querySelectorAll('.news-carousel__slide');
+  const nextBtn = document.querySelector('.news-carousel__next');
+  const prevBtn = document.querySelector('.news-carousel__prev');
 
   if (!track || slides.length === 0 || !nextBtn || !prevBtn) return;
 
@@ -49,8 +49,8 @@ export function initCarousel() {
   updateButtons();
 
 
-  const targetSlideContent = document.querySelector('.slide-content');
-  const targetCarouselContainer = document.querySelector('.carousel-container');
+  const targetSlideContent = document.querySelector('.news-carousel__content');
+  const targetCarouselContainer = document.querySelector('.news-carousel__container');
 
   if (targetSlideContent && targetCarouselContainer) {
     const resizeObserver = new ResizeObserver(entries => {

@@ -1,7 +1,7 @@
 export function initTextLoop() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const textPath = document.querySelector("#waveText textPath");
+  const textPath = document.querySelector("#wave-text__svg textPath");
 
   if (!textPath) return;
 
