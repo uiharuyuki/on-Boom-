@@ -29,7 +29,7 @@
     color: var(--color-text__black);
     border-radius: 999px;
     padding: 10px 60px;
-    margin: 0 auto;
+    margin-inline: auto;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 0.5px;
