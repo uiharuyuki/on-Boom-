@@ -8,7 +8,7 @@
     position: fixed;
     z-index: 1000; /* --- === 1000 === --- */
     background-color: var(--color-background__white-a);
-    border-radius: 999px;
+    border-radius: 100vmax;
     box-shadow: 0 4px 6px var(--color-box-shadow);
     padding: 10px 20px;
     font-weight: bold;
@@ -63,8 +63,9 @@
     visibility 0.4s,
     display 0.4s allow-discrete,
     overlay 0.4s allow-discrete;
-    overflow: hidden;   
+    overflow: hidden;
 }
+
 
 /* メニューが開いたとき */
 .menu[open] {
@@ -85,11 +86,39 @@
     display: none;
 }
 
-/* --- メニュー内部のレイアウト --- */     
+/* --- メニュー内部のレイアウト --- */
 
 .menu__inner {
-    position: relative;
-    block-size: 160%;
+    display: flex;
+    height: 100%;
+}
+
+.menu__left,
+.menu__right {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.menu__left::-webkit-scrollbar,
+.menu__right::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        overflow-y: auto;
+    }
+
+    .menu__inner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu__left,
+    .menu__right {
+        overflow-y: visible;
+    }
 }
 
 .menu__close {
@@ -116,6 +145,19 @@
       font-weight: 700;
       letter-spacing: 0.1em;
   }
+
+/* --- アニメーション軽減設定 --- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 /*---footer---*/
 

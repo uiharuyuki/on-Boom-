@@ -1,20 +1,54 @@
-# Always communicate in Japanese.
+## Always communicate in Japanese.
 
-# ユーザーの学習方針と実装ルール
+## Workflow Orchestration
 
-ユーザーは「写経（自らコードを手打ちすること）」を通じてWebサイト制作のコーディングスキルを向上させることを目的としています。以下のルールを厳守してサポートを行ってください。
+### 1. Plan Node Default
+- Enter plan mode for ANY non-trivial task (3+ steps or architectural decisions)
+- If something goes sideways, STOP and re-plan immediately - don't keep pushing
+- Use plan mode for verification steps, not just building
+- Write detailed specs upfront to reduce ambiguity
 
-## 1. 担当範囲と編集権限の厳密な制限
-* **HTMLとCSS:** ユーザーが自力でコーディングします。**あなたは絶対にコードの自動実装やファイルの書き換えを行わないでください。** ユーザーが手打ちできるように、変更内容のコードをチャット上で提示するのみに留めてください。
-* **JavaScript:** `github/on-boom/assets/js` フォルダ内のJSファイルに限り、ファイルの新規作成、およびすべてのコードの書き換えをあなたが実行して構いません。
-* **HTML内のスクリプト読み込み (唯一の例外):** HTMLファイル内の `` コメント直下にある `<script src="assets/js/..."></script>` のファイルパスの追加・削除のみ、あなたが直接書き換えることが許可されています。それ以外のHTML部分には絶対に触れないでください。
+### 2. Subagent Strategy
+- Use subagents liberally to keep main context window clean
+- Offload research, exploration, and parallel analysis to subagents
+- For complex problems, throw more compute at it via subagents
+- One tack per subagent for focused execution
 
-## 2. サポートの進め方
-**コードを教え、学習をナビゲートすることに専念してください。**
-作業は必ず以下のステップで進めてください。
+### 3. Self-Improvement Loop
+- After ANY correction from the user: update `tasks/lessons.md` with the pattern
+- Write rules for yourself that prevent the same mistake
+- Ruthlessly iterate on these lessons until mistake rate drops
+- Review lessons at session start for relevant project
 
-1.  **現状の同期:** まず、対象となる現在のファイルをユーザーと一緒に確認し、現状を把握してください。
-<!--2.  **段階的な提示:** 変更箇所を一度にすべて提示するのではなく、順番に一つずつ教えてください。-->
-2.  **解説のフォーマット:** 各変更箇所を教える際は、必ず以下の流れで伝えてください。
-    * **変更後のCodeを提示:** (ユーザーが写経しやすく、どこに追加・変更すべきか明確に)
-    * **なぜこう変更するのかを説明:** (動作の仕組みや、そのコードが必要な理由をわかりやすく解説)
+### 4. Verification Before Done
+- Never mark a task complete without proving it works
+- Diff behavior between main and your changes when relevant
+- Ask yourself: "Would a staff engineer approve this?"
+- Run tests, check logs, demonstrate correctness
+
+### 5. Demand Elegance (Balanced)
+- For non-trivial changes: pause and ask "is there a more elegant way?"
+- If a fix feels hacky: "Knowing everything I know now, implement the elegant solution"
+- Skip this for simple, obvious fixes - don't over-engineer
+- Challenge your own work before presenting it
+
+### 6. Autonomous Bug Fixing
+- When given a bug report: just fix it. Don't ask for hand-holding
+- Point at logs, errors, failing tests - then resolve them
+- Zero context switching required from the user
+- Go fix failing CI tests without being told how
+
+## Task Management
+
+1. **Plan First**: Write plan to `tasks/todo.md` with checkable items
+2. **Verify Plan**: Check in before starting implementation
+3. **Track Progress**: Mark items complete as you go
+4. **Explain Changes**: High-level summary at each step
+5. **Document Results**: Add review section to `tasks/todo.md`
+6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
+
+## Core Principles
+
+- **Simplicity First**: Make every change as simple as possible. Impact minimal code.
+- **No Laziness**: Find root causes. No temporary fixes. Senior developer standards.
+- **Minimat Impact**: Changes should only touch what's necessary. Avoid introducing bugs.

@@ -1,4 +1,6 @@
 export function initTextLoop() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const textPath = document.querySelector("#waveText textPath");
 
   if (!textPath) return;
