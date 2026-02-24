@@ -35,7 +35,7 @@
     object-fit: contain;
 }
 
-@media (width < 767px) {
+@media (width < 768px) {
     .first-view img {
         width: 120px;
         top: 10px;
@@ -51,7 +51,7 @@
     margin-bottom: 200px;/*--- 下余白にはみ出るデザイン ---*/
 }
 
-@media (width < 767px) {
+@media (width < 768px) {
     .section--main-visual {
         margin-bottom: 150px;
     }
@@ -69,7 +69,7 @@
 }
 
 
-@media (width < 767px) {
+@media (width < 768px) {
     .scroll-indicator {
         bottom: -60px;
     }
@@ -90,7 +90,7 @@
     background-color: var(--color-background__grey-a);
 }
 
-@media (width < 767px) {
+@media (width < 768px) {
     .scroll-line {
         height: 180px;
     }
@@ -195,9 +195,9 @@
     container-type: inline-size;
 }
 
-@media (max-width: 1200px) { .slide { flex: 0 0 calc(100% / 2); } }
+@media (width < 1200px) { .slide { flex: 0 0 calc(100% / 2); } }
 
-@media (max-width: 767.49px) { .slide { flex: 0 0 100%; } }
+@media (width < 768px) { .slide { flex: 0 0 100%; } }
 
 .slide-content {
     background-size: contain; 

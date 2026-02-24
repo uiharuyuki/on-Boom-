@@ -24,7 +24,10 @@
     --color-scroll-indicator: rgb(21 132 184);
 }
 
-html { overflow-y: scroll; }
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 /* font 480 - 1080 可変 */
 body {
