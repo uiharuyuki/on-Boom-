@@ -93,11 +93,22 @@
     height: 100%;
 }
 
+.menu__close {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+    border: none;
+    color: var(--color-text__white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .menu__left,
 .menu__right {
     flex: 1;
     overflow-y: auto;
     scrollbar-width: none;
+    padding: 80px 0;
 }
 
 .menu__left::-webkit-scrollbar,
@@ -121,42 +132,24 @@
     }
 }
 
-.menu__close {
-    position: fixed;
-    top: 28px;
-    right: 28px;
-    border: none;
+.menu__nav a {
     color: var(--color-text__white);
-    font-size: 1rem;
-    cursor: pointer;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
-.menu__nav ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
-  }
+.menu-ul {
+    padding-top: 30px;
+}
 
-  .menu__nav a {
-      color: var(--color-text__white);
-      font-size: clamp(1.25rem, 1.5vw + 0.8rem, 2rem);
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-  }
+.menu-ul a {
+    line-height: 1.6;
+}
 
-/* --- アニメーション軽減設定 --- */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    ::before,
-    ::after {
-        transition-duration: 1ms !important;
-        animation-duration: 1ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-    }
+@scope (.menu-ul) to (.menu__right) {
+    a {line-height: 1.6;}
 }
 
 /*---footer---*/

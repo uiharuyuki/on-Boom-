@@ -54,3 +54,17 @@ h2 {
 .small {
     font-size: clamp(0.625rem, 0.6667vw + 0.425rem, 0.875rem);
 }
+
+
+/* --- アニメーション軽減設定 --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* --- アニメーション軽減設定 --- */

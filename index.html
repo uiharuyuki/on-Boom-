@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--375pxの表示で320pxまでそのまま縮小-->
     <meta name="viewport-extra" content="min-width=375"/>
-    <script src="https://cdn.jsdelivr.net/npm/viewport-extra@2.0.1/dist/iife/viewport-extra.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/viewport-extra@2.0.1/dist/iife/viewport-extra.min.js"></script>
 
     <title>on boom! | 公式サイト</title>
 
@@ -75,10 +75,11 @@
 
             <!--hamburger menu-->
             <dialog id="menu-dialog" class="menu" aria-label="メニュー">
-                <div class="menu__inner">
+                <div class="menu__inner container">
                     <button id="menu-close" class="menu__close" type="button">
                         閉じる
                     </button>
+
                     <div class="menu__left">
                         <nav class="menu__nav">
                             <ul>
@@ -90,7 +91,19 @@
                                 <li><a href="faq/index.html">faq</a></li>
                             </ul>
                         </nav>
+
+                        <ul class="menu-ul">
+                            <li><a href="">OFFICIAL SHOP</a></li>
+                            <li><a href="">SUPPORT ADVERTISING</a></li>
+                            <li><a href="">会社概要</a></li>
+                            <li><a href="">プライバシーポリシー</a></li>
+                            <li><a href="">未成年の方々へのお願い</a></li>
+                            <li><a href="">二次創作ガイドライン</a></li>
+                            <li><a href="">よくある質問</a></li>
+                            <li><a href="">サポーターガイドライン</a></li>
+                        </ul>
                     </div>
+
                     <div class="menu__right">
                         <p>text</p><p>text</p><p>text</p><p>text</p>
                         <p>text</p><p>text</p><p>text</p><p>text</p>
@@ -104,7 +117,6 @@
                         <p>text</p><p>text</p><p>text</p><p>text</p>
                         <p>text</p><p>text</p><p>text</p><p>text</p>
                         <p>text</p><p>text</p><p>text</p><p>text</p>
-                        <!-- 右カラムのコンテンツ -->
                     </div>
                 </div>
             </dialog>
@@ -234,16 +246,19 @@
 
                             <!---2--->
                             <div class="slide">
-                                <div class="slide-content slide-content__002">
-                                    <p>official shop</p>
-                                </div>
-                                <div class="slide-text-wrapper">
-                                    <div class="slide-meta">
-                                        <time datetime="2026-02-14">0000.00.00</time>
-                                        <span class="slide-category">goods</span>
+                                <!--後で変更-->
+                                <a href="index.html">
+                                    <div class="slide-content slide-content__002">
+                                        <p>official shop</p>
                                     </div>
-                                    <p class="slide-title">○○</p>
-                                </div>
+                                    <div class="slide-text-wrapper">
+                                        <div class="slide-meta">
+                                            <time datetime="2026-02-14">0000.00.00</time>
+                                            <span class="slide-category">goods</span>
+                                        </div>
+                                        <p class="slide-title">○○</p>
+                                    </div>
+                                </a>
                             </div>
 
                             <!---3--->
@@ -318,6 +333,10 @@
 
             <!--talents-->
             <section id="section--talents" class="section--talents">
+
+                <h1 style="font-size: 3rem; position: absolute; left: 50%; transform: translateX(-50%);">
+                    <span style="font-size: 1rem;">now 2026 02 24</span>coming soon...
+                </h1>
 
             </section>
             <!--talents-->
