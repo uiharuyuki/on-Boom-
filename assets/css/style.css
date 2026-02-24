@@ -179,7 +179,6 @@
 
 .carousel-container {
     position: relative;
-    margin: 0;
     overflow: hidden;
 }
 
@@ -270,7 +269,6 @@
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.4;
-    margin: 0;
 }
 
 .carousel-btn {
