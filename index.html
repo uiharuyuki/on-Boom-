@@ -19,7 +19,7 @@
     <link rel="canonical" href="https://uiharuyuki.github.io/on-Boom-/">
 
     <!--SVGの画像を使用する-->
-    <link rel="icon" href="" sizes="any">
+    <link rel="icon" href="aaa" sizes="any">
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,10 +34,9 @@
     <link rel="stylesheet" href="assets/css/component.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/utility.css">
-    <link rel="stylesheet" href="assets/css/style.css">
 
     <!--js-->
-    <script src="assets/js/style.js" defer></script>
+    <script type="module" src="assets/js/main.js"></script>
 </head>
 
 
@@ -70,19 +69,35 @@
             <a class="floating-button floating-office-shop" rel="noopener noreferrer" href="office-shop/index.html" target="_blank">office shop</a>
 
             <!--hamburger button-->
-            <button class="hamburger" aria-label="メニューを開く">
+            <button id="menu-open" class="hamburger" type="button" aria-expanded="false" aria-controls="menu-dialog" aria-label="メニューを開く">
                 <span></span>
             </button>
 
             <!--hamburger menu-->
-            <div class="menu">
-                <a href="/">Home</a>
-            </div>
+            <dialog id="menu-dialog" class="menu" aria-label="メニュー">
+                <div class="menu__inner">
+                    <button id="menu-close" class="menu__close" type="button">
+                        閉じる
+                    </button>
+                    <nav class="menu__nav">
+                        <ul>
+                            <li><a href="about/index.html">about</a></li>
+                            <li><a href="news/index.html">news</a></li>
+                            <li><a href="talents/index.html">talents</a></li>
+                            <li><a href="goods/index.html">goods</a></li>
+                            <li><a href="audition/index.html">audition</a></li>
+                            <li><a href="faq/index.html">faq</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </dialog>
 
         </header>
+
 <!--****************************** HEADER ******************************-->
 
 <!--****************************** MAIN ******************************-->
+
         <main class="top-main">
             <!--main visual-->
             <section class="h-dvh section--main-visual">
