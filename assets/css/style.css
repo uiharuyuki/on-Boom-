@@ -295,3 +295,28 @@
     height: 25px;
 }
 /*---news---*/
+
+
+/*--talents--*/
+
+.talents-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0rem;
+}
+
+.talents iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/*--talents--*/
+
+
+/*--goods--*/
+
+
+
+/*--goods--*/
