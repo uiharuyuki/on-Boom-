@@ -301,11 +301,22 @@
 
 .talents-item {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0rem;
 }
 
-.talents iframe {
+@media (width < 768px) {
+.talents-item {
+    grid-template-columns: 1fr;
+}
+}
+
+.talents-item > div {
+    min-width: 0;
+}
+
+.talents-item iframe {
+    display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
