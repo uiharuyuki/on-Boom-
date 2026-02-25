@@ -334,19 +334,34 @@
             <!--talents-->
             <section id="page-section__talents" class="page-section__talents">
                 <div class="page-layout__container">
-                    <h2>talents</h2>
-                    <div class="button-group" id="sub-nav"></div>
-                    <div class="content-grid">
-                        <div>
-                            <div class="text-area">
+                    <div class="text-area__talents">
+                        <h2>talents</h2>
+                        <div class="text-area">
                             <p id="main-text">テキスト読み込み中...</p>
-                            </div>
-                        </div>
-
-                        <div class="image-area">
-                            <img id="display-image" src="" alt="表示画像">
+                            <dl class="talent-profile">
+                                <div class="talent-profile__item">
+                                    <dt>誕生日</dt>
+                                    <dd id="talent-birthday">-</dd>
+                                </div>
+                                <div class="talent-profile__item">
+                                    <dt>年齢</dt>
+                                    <dd id="talent-age">-</dd>
+                                </div>
+                                <div class="talent-profile__item">
+                                    <dt>身長</dt>
+                                    <dd id="talent-height">-</dd>
+                                </div>
+                            </dl>
+                            <div id="talent-links" class="talent-links"></div>
                         </div>
                     </div>
+
+                    <div class="button-group" id="sub-nav"></div>
+
+                    <div class="image-area">
+                        <img id="display-image" src="" alt="表示画像">
+                    </div>
+
                     <div class="button-group" id="main-nav"></div>
                 </div>
 

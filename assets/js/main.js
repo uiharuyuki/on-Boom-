@@ -15,6 +15,12 @@ initCarousel();
     const appData = [
       {
         id: 'main1', label: 'カテゴリ 1', text: 'カテゴリ1の詳細な説明テキストです。',
+        birthday: '1月1日',
+        age: 18,
+        height: '160cm',
+        websites: [
+          { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
+        ],
         subItems: [
           { label: '画像 1-A', img: 'assets/images/aa.png' },
           { label: '画像 1-B', img: 'https://placehold.co/600x400/1d4ed8/FFF?text=Image+1-B' },
@@ -23,6 +29,12 @@ initCarousel();
       },
       {
         id: 'main2', label: 'カテゴリ 2', text: 'カテゴリ2に関するテキストデータです。ここも切り替わります。',
+        birthday: '3月15日',
+        age: 20,
+        height: '155cm',
+        websites: [
+          { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
+        ],
         subItems: [
           { label: '画像 2-A', img: 'https://placehold.co/600x400/16a34a/FFF?text=Image+2-A' },
           { label: '画像 2-B', img: 'https://placehold.co/600x400/15803d/FFF?text=Image+2-B' },
@@ -31,6 +43,12 @@ initCarousel();
       },
       {
         id: 'main3', label: 'カテゴリ 3', text: 'カテゴリ3が選択されています。サブボタンも再生成されます。',
+        birthday: '7月7日',
+        age: 22,
+        height: '165cm',
+        websites: [
+          { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
+        ],
         subItems: [
           { label: '画像 3-A', img: 'https://placehold.co/600x400/dc2626/FFF?text=Image+3-A' },
           { label: '画像 3-B', img: 'https://placehold.co/600x400/b91c1c/FFF?text=Image+3-B' },
@@ -39,6 +57,12 @@ initCarousel();
       },
       {
         id: 'main4', label: 'カテゴリ 4', text: '最後のカテゴリ4です。データ構造の規則性に従って処理されます。',
+        birthday: '11月30日',
+        age: 19,
+        height: '158cm',
+        websites: [
+          { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
+        ],
         subItems: [
           { label: '画像 4-A', img: 'https://placehold.co/600x400/9333ea/FFF?text=Image+4-A' },
           { label: '画像 4-B', img: 'https://placehold.co/600x400/7e22ce/FFF?text=Image+4-B' },
@@ -56,6 +80,10 @@ initCarousel();
     const subNav = document.getElementById('sub-nav');
     const mainText = document.getElementById('main-text');
     const displayImage = document.getElementById('display-image');
+    const talentBirthday = document.getElementById('talent-birthday');
+    const talentAge = document.getElementById('talent-age');
+    const talentHeight = document.getElementById('talent-height');
+    const talentLinks = document.getElementById('talent-links');
 
     // 4. 画面描画関数（ 状態に基づいてUIを構築する ）
     function render() {
@@ -66,6 +94,27 @@ initCarousel();
       // テキストと画像の更新
       mainText.textContent = currentMain.text;
       displayImage.src = currentSub.img;
+
+      // プロフィール情報の更新
+      talentBirthday.textContent = currentMain.birthday;
+      talentAge.textContent = currentMain.age + '歳';
+      talentHeight.textContent = currentMain.height;
+
+      // ウェブサイトリンクの更新
+      talentLinks.innerHTML = '';
+      currentMain.websites.forEach(site => {
+        const a = document.createElement('a');
+        a.href = site.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'talent-links__item';
+        const img = document.createElement('img');
+        img.src = site.icon;
+        img.alt = site.label;
+        img.className = 'talent-links__icon';
+        a.appendChild(img);
+        talentLinks.appendChild(a);
+      });
 
       // --- メインボタンの生成とレンダリング ---
       mainNav.innerHTML = ''; // 一度クリアする
