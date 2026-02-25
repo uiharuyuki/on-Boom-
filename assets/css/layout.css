@@ -27,7 +27,7 @@ footer {
 .page-section__faq { padding: clamp(1.5625rem, 2.5vw + 0.8125rem, 2.5rem) 0; }
 
 .page-layout__container {
-    max-inline-size: 1000px;
+    max-inline-size: 1200px;
     inline-size: 90%;
     margin-inline: auto;
 }

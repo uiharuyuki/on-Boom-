@@ -1,22 +1,78 @@
-import { initParallax } from './modules/parallax.js';
-import { initDrawer } from './modules/drawer.js';
-import { initTextLoop } from './modules/text-loop.js';
-import { initCarousel } from './modules/carousel.js';
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State-Driven UI Demo</title>
+  <style>
+    /* 構造を把握するための最低限のスタイリング */
+    :root {
+      --primary-color: #2563eb;
+      --bg-color: #f8fafc;
+      --border-color: #e2e8f0;
+    }
 
-initParallax();
-initDrawer();
-initTextLoop();
-initCarousel();
+    .button-group {
+      display: flex;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:hover {
+      background: #f1f5f9;
+    }
+    /* 選択中のボタンのスタイル */
+    button.active {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .text-area {
+      padding: 1rem;
+      background: var(--bg-color);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .image-area img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 4px;
+      background: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
 
+    <div class="button-group" id="main-nav"></div>
 
+    <div class="content-grid">
+      <div>
+        <div class="text-area">
+          <p id="main-text">テキスト読み込み中...</p>
+        </div>
+        <div class="button-group" id="sub-nav"></div>
+      </div>
 
+      <div class="image-area">
+        <img id="display-image" src="" alt="表示画像">
+      </div>
+    </div>
+
+  <script>
     // 1. データの定義（ UIの構造を決定する唯一の情報源 ）
     // ※画像URLはプレースホルダーサービスを使用
     const appData = [
       {
         id: 'main1', label: 'カテゴリ 1', text: 'カテゴリ1の詳細な説明テキストです。',
         subItems: [
-          { label: '画像 1-A', img: 'assets/images/aa.png' },
+          { label: '画像 1-A', img: 'https://placehold.co/600x400/2563eb/FFF?text=Image+1-A' },
           { label: '画像 1-B', img: 'https://placehold.co/600x400/1d4ed8/FFF?text=Image+1-B' },
           { label: '画像 1-C', img: 'https://placehold.co/600x400/1e40af/FFF?text=Image+1-C' }
         ]
@@ -99,3 +155,7 @@ initCarousel();
 
     // 5. 初回読み込み時の実行
     render();
+
+  </script>
+</body>
+</html>

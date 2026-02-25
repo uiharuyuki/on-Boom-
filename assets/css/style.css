@@ -170,7 +170,7 @@
 
 
 /*---news---*/
-.page-section__news { text-align: center; }
+.page-section__news { text-align: center; overflow: hidden; }
 
 .page-section__news .page-layout__container {
     display: flex;
@@ -180,7 +180,8 @@
 
 .news-carousel__container {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    /* overflow: hidden; */
 }
 
 .news-carousel__track {
@@ -299,31 +300,55 @@
 
 /*--talents--*/
 
-.talents-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
+.page-section__talents .page-layout__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (width < 768px) {
-.talents-item {
-    grid-template-columns: 1fr;
-}
-}
-
-.talents-item > div {
-    min-width: 0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.talents-item iframe {
-    display: block;
+.page-section__talents .content-grid {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border: none;
 }
+
+    :root {
+      --primary-color: #2563eb;
+      --bg-color: #f8fafc;
+      --border-color: #e2e8f0;
+    }
+
+    .button-group {
+    display: flex;
+    align-items: center;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:hover {
+      background: #f1f5f9;
+    }
+    /* 選択中のボタンのスタイル */
+    button.active {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .text-area {
+      padding: 1rem;
+      background: var(--bg-color);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .image-area img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+    }
 
 /*--talents--*/
 
