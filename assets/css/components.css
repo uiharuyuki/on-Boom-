@@ -18,8 +18,9 @@
     border: 1px solid var(--color-background__black-grey);
     color: var(--color-text__black);
     border-radius: 100vmax;
-    padding: 10px 60px;
+    padding: 5px 40px;
     margin-inline: auto;
+    margin-top: 2cap;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 0.5px;
