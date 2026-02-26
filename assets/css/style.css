@@ -301,6 +301,23 @@
 
 /*--talents--*/
 
+.page-section__talents .page-layout__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-area__talents {
+    align-self: flex-start;
+    position: absolute;
+}
+
+    .text-area {
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
 /*---ボタン共通---*/
 .button-group {
     display: flex;
@@ -329,58 +346,6 @@
 }
 /*---衣装切り替えボタン---*/
 
-
-/*---キャラクター切り替えボタン---*/
-#main-nav button {
-    border: 3px solid transparent;
-    background: none;
-    border-radius: 6px;
-    overflow: hidden;
-    flex-shrink: 0;
-    transition: border-color 0.2s;
-}
-
-#main-nav button img {
-    width: 120px;
-    height: 56px;
-    object-fit: cover;
-    display: block;
-}
-/*---キャラクター切り替えボタン---*/
-
-
-.page-section__talents .page-layout__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.page-section__talents .page-layout__container > .text-area__talents {
-    align-self: flex-start;
-    position: absolute;
-    pointer-events: none;
-}
-
-.page-section__talents .talent-links__item { pointer-events: auto; }
-
-.page-section__talents .page-layout__container > .shape-container {
-    align-self: flex-end;
-    position: absolute;
-}
-
-
-
-    .text-area {
-      padding: 1rem;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-    }
-
-    .image-area img {
-      height: 700px;
-      aspect-ratio: 9/16;
-      object-fit: cover;
-    }
 
     .talent-profile {
         display: flex;
@@ -423,16 +388,30 @@
         object-fit: contain;
     }
 
-/*--talents--*/
+#main-text {
+    font-size: 1rem;
+}
+
+    .image-area img {
+      height: 700px;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+    }
+
+.shape-container {
+    align-self: flex-end;
+    position: absolute;
+}
+
 .shape-container {
   width: 300px;
   height: 700px;
   transform: skewX(-15deg);
   border-radius: 20px;
   overflow: hidden;
-  
+
   /* 修正：背景色（または背景画像）は「形状を作る親要素」に持たせる */
-  background-color: #3b82f6; 
+  background-color: #3b82f6;
 }
 
 .shape-content {
@@ -440,11 +419,31 @@
   transform: skewX(15deg);
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+/*---キャラクター切り替えボタン---*/
+#main-nav button {
+    border: 3px solid transparent;
+    background: none;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+
+#main-nav button img {
+    width: 120px;
+    height: 56px;
+    object-fit: cover;
+    display: block;
+}
+/*---キャラクター切り替えボタン---*/
+
+/*--talents--*/
 /*--goods--*/
 
 

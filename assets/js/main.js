@@ -14,11 +14,12 @@ initCarousel();
     // ※画像URLはプレースホルダーサービスを使用
     const appData = [
       {
-        id: 'main1', label: 'カテゴリ 1', text: 'カテゴリ1の詳細な説明テキストです。',
+        id: 'main1', label: '小鳥遊ももか',
+        text: 'おっとりとしたマイペースな性格、「ドジっ子」な一面と、やるべきことには真摯に向き合う真面目な努力家の一面を持っている。勉強や作業の時間を、ももかが隣で一緒に支えます。',
         thumbnail: 'assets/images/aa.png', // #main-nav 横長ボタン用
-        birthday: '1月1日',
-        age: 18,
-        height: '160cm',
+        birthday: '2月11日',
+        age: 17,
+        height: '162cm',
         websites: [
           { url: '#', icon: 'assets/images/aa.png', label: 'ウェブサイト' }
         ],
