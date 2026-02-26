@@ -66,8 +66,3 @@ https://uiharuyuki.github.io/on-Boom-/
 # claudeCode
 - JavaScript コーディング全般。
 - cssのclass命名形式一括変更「○○-○○__○○の形式にすべて変更」など。
-
-
-
-<!--拝借したコード-->
-<!--https://github.com/bac7220/animation-demo/tree/main/wave-text-->

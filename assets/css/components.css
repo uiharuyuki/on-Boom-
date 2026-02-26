@@ -9,7 +9,8 @@
    ===================== */
 
 .view-all__link {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
     justify-content: center;
     align-items: center;
     background-color: transparent;
