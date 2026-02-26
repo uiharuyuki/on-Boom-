@@ -34,6 +34,7 @@ footer {
 /*---talents専用コンテナ---*/
 .page-layout__container-talents {
     max-inline-size: 1200px;
+    inline-size: 90%;
     margin-inline: auto;
     position: relative;
 }

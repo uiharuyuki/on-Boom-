@@ -410,7 +410,10 @@
 
 .shape-container {
     position: absolute;
-    right: 0;
+    /* skewX(-15deg) はデフォルト transform-origin(中心)から変形するため、
+       上辺の右端が height/2 * tan(15deg) だけ右にはみ出す。
+       その分だけ right をずらしてコンテナ右端（5%余白の内側）に収める。 */
+    right: calc(700px / 2 * tan(15deg));
 }
 
 .shape-container {
