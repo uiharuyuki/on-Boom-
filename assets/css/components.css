@@ -347,16 +347,15 @@
 #sub-nav button {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid url(--color-border);
+    border: none;
     background: none;
+    padding: 0;
 }
 
 #sub-nav button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
     display: block;
 }
 

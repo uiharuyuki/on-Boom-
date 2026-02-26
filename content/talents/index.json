@@ -11,7 +11,7 @@
       { "url": "#", "icon": "assets/images/aa.png", "label": "ウェブサイト" }
     ],
     "subItems": [
-      { "label": "画像 1-A", "img": "assets/images/aa.png", "icon": "assets/images/aa.png" },
+      { "label": "画像 1-A", "img": "assets/images/aa.png", "icon": "assets/images/talents-icon_001.png" },
       { "label": "画像 1-B", "img": "https://placehold.co/600x400/1d4ed8/FFF?text=Image+1-B", "icon": "https://placehold.co/56x56/1e40af/FFF?text=1B" },
       { "label": "画像 1-C", "img": "https://placehold.co/600x400/1e40af/FFF?text=Image+1-C", "icon": "https://placehold.co/56x56/1e3a8a/FFF?text=1C" }
     ]
