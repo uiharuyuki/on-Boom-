@@ -1,9 +1,9 @@
 /*=========================================
-ファイル: assets/css/common.css
-説明: 全ページで共通して使用するCSS設定
+ファイル: assets/css/navigation.css
+説明: ヘッダーナビゲーション・ドロワーメニュー・フッター
 =========================================*/
 
-/* ナビゲーション */
+/* --- フローティングナビゲーション --- */
 .nav-float__btn {
     position: fixed;
     z-index: 1000; /* --- === 1000 === --- */
@@ -29,8 +29,7 @@
 }
 
 
-
-/* --- ハンバーガーボタンのスタイル --- */
+/* --- ハンバーガーボタン --- */
 .nav-toggle__btn { z-index: 1002; /* --- === 1002 === --- */ position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background: transparent; border: none; cursor: pointer; }
 .nav-toggle__btn span, .nav-toggle__btn span::before, .nav-toggle__btn span::after { content: ''; display: block; height: 3px; background-color: var(--color-background__black-grey); position: absolute; right: 0; left: auto; transform: none; transition: 0.3s ease-in-out; }
 .nav-toggle__btn span::before { width: 50px; }
@@ -66,28 +65,23 @@
     overflow: hidden;
 }
 
-
-/* メニューが開いたとき */
 .nav-drawer__dialog[open] {
     opacity: 1;
     visibility: visible;
 }
 
-/* 開き始めの状態 */
- @starting-style {
+@starting-style {
     .nav-drawer__dialog[open] {
         opacity: 0;
         visibility: hidden;
     }
 }
 
-/* バックドロップ */
 .nav-drawer__dialog::backdrop {
     display: none;
 }
 
-/* --- メニュー内部のレイアウト --- */
-
+/* --- ドロワー内部レイアウト --- */
 .nav-drawer__inner {
     display: flex;
     height: 100%;
@@ -152,11 +146,8 @@
     line-height: 1.7;
 }
 
-/*---footer---*/
-
+/* --- フッター --- */
 .site-footer__copy {
     text-align: center;
     padding: 10px 0;
 }
-
-/*---footer---*/

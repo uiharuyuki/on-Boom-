@@ -1,28 +1,7 @@
 /*=========================================
-ファイル: assets/css/base.css
-説明: 基本文字、配色、全体のスタイル
+ファイル: assets/css/global.css
+説明: 全体に適用するベーススタイル・タイポグラフィ・ユーティリティ
 =========================================*/
-
-
-:root {
-    --color-background__white: rgb(255 255 255);
-    --color-background__white-a: rgb(255 255 255 / 0.8);
-    --color-background__black-grey: rgb(51 51 51);
-    --color-background__grey-a: rgb(157 157 157);
-
-    --color-background__button: rgb(157 157 255);
-
-    --color-text__white: rgb(255 255 255);
-    --color-text__black: rgb(0 0 0);
-
-    --color-box-shadow: rgb(0 0 0 / 0.1);
-
-    --color-background__hover: rgb(240 240 240);
-
-    --color-border: rgb(255 255 255 / 0.3);
-
-    --color-scroll-indicator: rgb(21 132 184);
-}
 
 html {
     overflow-x: hidden;
@@ -50,11 +29,11 @@ h2 {
     text-transform: uppercase;
 }
 
-
 .text-util__small {
     font-size: clamp(0.625rem, 0.6667vw + 0.425rem, 0.875rem);
 }
 
+.util-height__dvh { height: 100dvh; }
 
 /* --- アニメーション軽減設定 --- */
 @media (prefers-reduced-motion: reduce) {
@@ -67,4 +46,3 @@ h2 {
         scroll-behavior: auto !important;
     }
 }
-/* --- アニメーション軽減設定 --- */

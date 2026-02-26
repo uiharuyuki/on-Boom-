@@ -1,12 +1,40 @@
 /*=========================================
-ファイル: assets/css/style.css
-説明: component.cssの固有バーツ（一度しか使用しないもの）を記載
+ファイル: assets/css/components.css
+説明: UIコンポーネントのスタイル
 =========================================*/
 
 
-/*---main visual--*/
+/* =====================
+   汎用パーツ
+   ===================== */
 
-/*   ---main visual character--*/
+.view-all__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid var(--color-background__black-grey);
+    color: var(--color-text__black);
+    border-radius: 100vmax;
+    padding: 10px 60px;
+    margin-inline: auto;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all__link:focus-visible { background-color: var(--color-background__hover); }
+
+@media (any-hover: hover) {
+    .view-all__link:hover { background-color: var(--color-background__hover); }
+}
+
+
+/* =====================
+   メインビジュアル
+   ===================== */
 
 .main-visual__character {
     position: absolute;
@@ -22,10 +50,6 @@
     object-fit: cover;
 }
 
-/*   ---main visual character--*/
-
-
-/*   ---site logo---*/
 .main-visual__logo img {
     position: absolute;
     bottom: 20px;
@@ -43,13 +67,10 @@
         left: 10px;
     }
 }
-/*   ---site logo---*/
 
-
-/*   ---SCROLL Indicator---*/
 .page-section__main-visual {
     position: relative;
-    margin-bottom: 200px;/*--- 下余白にはみ出るデザイン ---*/
+    margin-bottom: 200px; /* --- 下余白にはみ出るデザイン --- */
 }
 
 @media (width < 768px) {
@@ -58,9 +79,10 @@
     }
 }
 
+/* --- スクロールインジケーター --- */
 .scroll-guide__indicator {
     position: absolute;
-    bottom: -110px; /*--- 下余白にはみ出るデザイン ---*/
+    bottom: -110px; /* --- 下余白にはみ出るデザイン --- */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -68,7 +90,6 @@
     align-items: center;
     z-index: 20; /* --- === 20 === --- */
 }
-
 
 @media (width < 768px) {
     .scroll-guide__indicator {
@@ -126,15 +147,14 @@
         transform-origin: bottom;
     }
 }
-/*   ---SCROLL Indicator---*/
-
-/*---main visual--*/
 
 
-/*---about---*/
+/* =====================
+   About セクション
+   ===================== */
+
 .page-section__about { text-align: center; }
 
-/*ここのh2特有の設定*/
 .page-section__about h2 {
     font-size: clamp(1.25rem, 0.6667vw + 1.05rem, 1.5rem);
     padding: 0 0 clamp(2.1875rem, 0.8333vw + 1.9375rem, 2.5rem) 0;
@@ -164,12 +184,12 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-/* テキスト無限ループ */
-
-/*---about---*/
 
 
-/*---news---*/
+/* =====================
+   News カルーセル
+   ===================== */
+
 .page-section__news {
     overflow: hidden;
 }
@@ -183,7 +203,6 @@
 .news-carousel__container {
     position: relative;
     overflow: visible;
-    /* overflow: hidden; */
 }
 
 .news-carousel__track {
@@ -229,15 +248,10 @@
 }
 
 .news-carousel__content-001 { background-image: url(../images/carousel-track_001.png); }
-
 .news-carousel__content-002 { background-image: url(../images/carousel-track_002.png); }
-
 .news-carousel__content-003 { background-image: url(../images/carousel-track_003.png); }
-
 .news-carousel__content-004 { background-image: url(../images/carousel-track_004.png); }
-
 .news-carousel__content-005 { background-image: url(../images/carousel-track_005.png); }
-
 .news-carousel__content-006 { background-image: url(../images/carousel-track_006.png); }
 
 .news-carousel__content p {
@@ -296,18 +310,16 @@
     width: auto;
     height: 25px;
 }
-/*---news---*/
 
 
-/*--talents--*/
+/* =====================
+   Talents セクション
+   ===================== */
 
-/*      ---ボタン共通---*/
 .button-group {
     display: flex;
     align-items: center;
 }
-/*      ---ボタン共通---*/
-
 
 .page-section__talents .page-layout__container-talents {
     display: flex;
@@ -315,7 +327,6 @@
     align-items: center;
 }
 
-/*   ---左側の内容---*/
 .text-area__talents {
     align-self: flex-start;
     position: absolute;
@@ -332,7 +343,7 @@
     font-size: 3rem;
 }
 
-/*      ---衣装切り替えボタン---*/
+/* 衣装切り替えボタン */
 #sub-nav {
     gap: 12px;
 }
@@ -352,93 +363,78 @@
     object-fit: cover;
     display: block;
 }
-/*      ---衣装切り替えボタン---*/
 
-
-/*      ---プロフィール---*/
-    .talent-profile {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .talent-profile__item {
-        display: flex;
-        gap: 0.5rem;
-        align-items: baseline;
-    }
-
-    .talent-profile__item dt {
-        font-size: 0.75rem;
-        font-weight: bold;
-        min-width: 3.5em;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .talent-profile__item dd {
-        font-size: 0.9375rem;
-    }
-
-    .talent-links {
-        display: flex;
-        gap: 0.75rem;
-    }
-
-    .talent-links__item {
-        display: inline-flex;
-    }
-
-    .talent-links__icon {
-        width: 28px;
-        height: 28px;
-        object-fit: contain;
-    }
-
-#main-text { font-size: 1rem; }
-/*      ---プロフィール---*/
-
-/*   ---左側の内容---*/
-
-
-
-    .image-area img {
-      height: 700px;
-      aspect-ratio: 9/16;
-      object-fit: cover;
-    }
-
-.shape-container {
-    position: absolute;
-    /* skewX(-15deg) はデフォルト transform-origin(中心)から変形するため、
-       上辺の右端が height/2 * tan(15deg) だけ右にはみ出す。
-       その分だけ right をずらしてコンテナ右端（5%余白の内側）に収める。 */
-    right: calc(700px / 2 * tan(15deg));
+/* プロフィール */
+.talent-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.shape-container {
-  width: 300px;
-  height: 700px;
-  transform: skewX(-15deg);
-  border-radius: 20px;
-  overflow: hidden;
+.talent-profile__item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+}
 
-  /* 修正：背景色（または背景画像）は「形状を作る親要素」に持たせる */
-  background-color: #3b82f6;
+.talent-profile__item dt {
+    font-size: 0.75rem;
+    font-weight: bold;
+    min-width: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.talent-profile__item dd {
+    font-size: 0.9375rem;
+}
+
+.talent-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.talent-links__item {
+    display: inline-flex;
+}
+
+.talent-links__icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+#main-text { font-size: 1rem; }
+
+/* キャラクター画像 */
+.image-area img {
+    height: 700px;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+}
+
+/* 背景シェイプ */
+.shape-container {
+    position: absolute;
+    right: calc(700px / 2 * tan(15deg));
+    width: 300px;
+    height: 700px;
+    transform: skewX(-15deg);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #3b82f6;
 }
 
 .shape-content {
-  /* 修正：子要素はコンテンツの傾きを戻すことだけに専念させる */
-  transform: skewX(15deg);
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    transform: skewX(15deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*---キャラクター切り替えボタン---*/
+/* キャラクター切り替えボタン */
 #main-nav button {
     border: 3px solid transparent;
     background: none;
@@ -455,11 +451,3 @@
     display: block;
     display: grid;
 }
-/*---キャラクター切り替えボタン---*/
-
-/*--talents--*/
-/*--goods--*/
-
-
-
-/*--goods--*/
