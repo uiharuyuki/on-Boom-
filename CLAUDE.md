@@ -1,7 +1,5 @@
 @AGENTS.md
 
-## Always communicate in Japanese.
-
 ## Workflow Orchestration
 
 ### 1. Plan Node Default

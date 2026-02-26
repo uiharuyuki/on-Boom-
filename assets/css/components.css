@@ -247,12 +247,6 @@
     box-sizing: border-box;
 }
 
-.news-carousel__content-001 { background-image: url(../images/carousel-track_001.png); }
-.news-carousel__content-002 { background-image: url(../images/carousel-track_002.png); }
-.news-carousel__content-003 { background-image: url(../images/carousel-track_003.png); }
-.news-carousel__content-004 { background-image: url(../images/carousel-track_004.png); }
-.news-carousel__content-005 { background-image: url(../images/carousel-track_005.png); }
-.news-carousel__content-006 { background-image: url(../images/carousel-track_006.png); }
 
 .news-carousel__content p {
     font-size: 3.6cqw;
