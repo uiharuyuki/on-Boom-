@@ -15,20 +15,22 @@ initCarousel();
     const appData = [
       {
         id: 'main1', label: 'カテゴリ 1', text: 'カテゴリ1の詳細な説明テキストです。',
+        thumbnail: 'assets/images/aa.png', // #main-nav 横長ボタン用
         birthday: '1月1日',
         age: 18,
         height: '160cm',
         websites: [
-          { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
+          { url: '#', icon: 'assets/images/aa.png', label: 'ウェブサイト' }
         ],
         subItems: [
-          { label: '画像 1-A', img: 'assets/images/aa.png' },
-          { label: '画像 1-B', img: 'https://placehold.co/600x400/1d4ed8/FFF?text=Image+1-B' },
-          { label: '画像 1-C', img: 'https://placehold.co/600x400/1e40af/FFF?text=Image+1-C' }
+          { label: '画像 1-A', img: 'assets/images/aa.png', icon: 'assets/images/aa.png' },
+          { label: '画像 1-B', img: 'https://placehold.co/600x400/1d4ed8/FFF?text=Image+1-B', icon: 'https://placehold.co/56x56/1e40af/FFF?text=1B' },
+          { label: '画像 1-C', img: 'https://placehold.co/600x400/1e40af/FFF?text=Image+1-C', icon: 'https://placehold.co/56x56/1e3a8a/FFF?text=1C' }
         ]
       },
       {
         id: 'main2', label: 'カテゴリ 2', text: 'カテゴリ2に関するテキストデータです。ここも切り替わります。',
+        thumbnail: 'assets/images/main2-thumb.png',
         birthday: '3月15日',
         age: 20,
         height: '155cm',
@@ -36,13 +38,14 @@ initCarousel();
           { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
         ],
         subItems: [
-          { label: '画像 2-A', img: 'https://placehold.co/600x400/16a34a/FFF?text=Image+2-A' },
-          { label: '画像 2-B', img: 'https://placehold.co/600x400/15803d/FFF?text=Image+2-B' },
-          { label: '画像 2-C', img: 'https://placehold.co/600x400/166534/FFF?text=Image+2-C' }
+          { label: '画像 2-A', img: 'https://placehold.co/600x400/16a34a/FFF?text=Image+2-A', icon: 'https://placehold.co/56x56/16a34a/FFF?text=2A' },
+          { label: '画像 2-B', img: 'https://placehold.co/600x400/15803d/FFF?text=Image+2-B', icon: 'https://placehold.co/56x56/15803d/FFF?text=2B' },
+          { label: '画像 2-C', img: 'https://placehold.co/600x400/166534/FFF?text=Image+2-C', icon: 'https://placehold.co/56x56/166534/FFF?text=2C' }
         ]
       },
       {
         id: 'main3', label: 'カテゴリ 3', text: 'カテゴリ3が選択されています。サブボタンも再生成されます。',
+        thumbnail: 'assets/images/main3-thumb.png',
         birthday: '7月7日',
         age: 22,
         height: '165cm',
@@ -50,13 +53,14 @@ initCarousel();
           { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
         ],
         subItems: [
-          { label: '画像 3-A', img: 'https://placehold.co/600x400/dc2626/FFF?text=Image+3-A' },
-          { label: '画像 3-B', img: 'https://placehold.co/600x400/b91c1c/FFF?text=Image+3-B' },
-          { label: '画像 3-C', img: 'https://placehold.co/600x400/991b1b/FFF?text=Image+3-C' }
+          { label: '画像 3-A', img: 'https://placehold.co/600x400/dc2626/FFF?text=Image+3-A', icon: 'https://placehold.co/56x56/dc2626/FFF?text=3A' },
+          { label: '画像 3-B', img: 'https://placehold.co/600x400/b91c1c/FFF?text=Image+3-B', icon: 'https://placehold.co/56x56/b91c1c/FFF?text=3B' },
+          { label: '画像 3-C', img: 'https://placehold.co/600x400/991b1b/FFF?text=Image+3-C', icon: 'https://placehold.co/56x56/991b1b/FFF?text=3C' }
         ]
       },
       {
         id: 'main4', label: 'カテゴリ 4', text: '最後のカテゴリ4です。データ構造の規則性に従って処理されます。',
+        thumbnail: 'assets/images/main4-thumb.png',
         birthday: '11月30日',
         age: 19,
         height: '158cm',
@@ -64,9 +68,9 @@ initCarousel();
           { url: '#', icon: 'assets/images/icon-web.svg', label: 'ウェブサイト' }
         ],
         subItems: [
-          { label: '画像 4-A', img: 'https://placehold.co/600x400/9333ea/FFF?text=Image+4-A' },
-          { label: '画像 4-B', img: 'https://placehold.co/600x400/7e22ce/FFF?text=Image+4-B' },
-          { label: '画像 4-C', img: 'https://placehold.co/600x400/6b21a8/FFF?text=Image+4-C' }
+          { label: '画像 4-A', img: 'https://placehold.co/600x400/9333ea/FFF?text=Image+4-A', icon: 'https://placehold.co/56x56/9333ea/FFF?text=4A' },
+          { label: '画像 4-B', img: 'https://placehold.co/600x400/7e22ce/FFF?text=Image+4-B', icon: 'https://placehold.co/56x56/7e22ce/FFF?text=4B' },
+          { label: '画像 4-C', img: 'https://placehold.co/600x400/6b21a8/FFF?text=Image+4-C', icon: 'https://placehold.co/56x56/6b21a8/FFF?text=4C' }
         ]
       }
     ];
@@ -118,31 +122,39 @@ initCarousel();
         talentLinks.appendChild(a);
       });
 
-      // --- メインボタンの生成とレンダリング ---
-      mainNav.innerHTML = ''; // 一度クリアする
+      // --- メインボタンの生成とレンダリング（横長四角形画像） ---
+      mainNav.innerHTML = '';
       appData.forEach((data, index) => {
         const btn = document.createElement('button');
-        btn.textContent = data.label;
-        if (index === activeMainIndex) btn.classList.add('active'); // 選択状態のスタイリング
-        
+        btn.setAttribute('aria-label', data.label);
+        const img = document.createElement('img');
+        img.src = data.thumbnail;
+        img.alt = data.label;
+        btn.appendChild(img);
+        if (index === activeMainIndex) btn.classList.add('active');
+
         btn.addEventListener('click', () => {
-          activeMainIndex = index; // メインの状態を更新
-          activeSubIndex = 0;      // サブの状態をリセット（重要）
-          render();                // 再描画
+          activeMainIndex = index;
+          activeSubIndex = 0;
+          render();
         });
         mainNav.appendChild(btn);
       });
 
-      // --- サブボタンの生成とレンダリング ---
-      subNav.innerHTML = ''; // 一度クリアする
+      // --- サブボタンの生成とレンダリング（円形アイコン画像） ---
+      subNav.innerHTML = '';
       currentMain.subItems.forEach((sub, index) => {
         const btn = document.createElement('button');
-        btn.textContent = sub.label;
+        btn.setAttribute('aria-label', sub.label);
+        const img = document.createElement('img');
+        img.src = sub.icon;
+        img.alt = sub.label;
+        btn.appendChild(img);
         if (index === activeSubIndex) btn.classList.add('active');
 
         btn.addEventListener('click', () => {
-          activeSubIndex = index; // サブの状態を更新
-          render();               // 再描画
+          activeSubIndex = index;
+          render();
         });
         subNav.appendChild(btn);
       });
