@@ -174,7 +174,7 @@
     overflow: hidden;
 }
 
-.page-section__news .page-layout__container {
+.page-section__news .page-layout__container-talents {
     display: flex;
     flex-direction: column;
     row-gap: clamp(2.25rem, 4vw + 1.05rem, 3.75rem);
@@ -309,7 +309,7 @@
 /*      ---ボタン共通---*/
 
 
-.page-section__talents .page-layout__container {
+.page-section__talents .page-layout__container-talents {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -409,8 +409,8 @@
     }
 
 .shape-container {
-    align-self: flex-end;
     position: absolute;
+    right: 0;
 }
 
 .shape-container {

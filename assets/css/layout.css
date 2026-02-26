@@ -31,4 +31,10 @@ footer {
     margin-inline: auto;
 }
 
+/*---talents専用コンテナ---*/
+.page-layout__container-talents {
+    max-inline-size: 1200px;
+    margin-inline: auto;
+    position: relative;
+}
 
