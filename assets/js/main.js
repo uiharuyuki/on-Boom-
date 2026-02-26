@@ -78,6 +78,7 @@ initCarousel();
     // 3. DOM要素の取得
     const mainNav = document.getElementById('main-nav');
     const subNav = document.getElementById('sub-nav');
+    const mainTitle = document.getElementById('main-title');
     const mainText = document.getElementById('main-text');
     const displayImage = document.getElementById('display-image');
     const talentBirthday = document.getElementById('talent-birthday');
@@ -92,6 +93,7 @@ initCarousel();
       const currentSub = currentMain.subItems[activeSubIndex];
 
       // テキストと画像の更新
+      mainTitle.textContent = currentMain.label;
       mainText.textContent = currentMain.text;
       displayImage.src = currentSub.img;
 

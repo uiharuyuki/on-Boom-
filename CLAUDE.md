@@ -1,3 +1,5 @@
+@AGENTS.md
+
 ## Always communicate in Japanese.
 
 ## Workflow Orchestration

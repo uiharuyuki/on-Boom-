@@ -281,9 +281,8 @@
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     background-color: var(--color-background__button);
     color: var(--color-text__white);
     border-radius: 50%;
@@ -398,7 +397,61 @@
 
 /*--talents--*/
 
+/* カード全体のコンテナ（基準点） */
+.member-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* 任意のサイズ */
+  height: 600px;    /* 任意のサイズ */
+  margin: 0 auto;
+  overflow: visible; /* キャラクターが枠からはみ出す表現を許可する */
+}
 
+/* 背景の斜め図形 */
+.background-shape {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  background-color: #e5e7eb; /* 画像読み込み前のフォールバック色 */
+
+  /* clip-pathによる斜め切り抜き（座標はデザインに合わせて調整） */
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  
+  /* z-indexでキャラクターの背面に配置 */
+  z-index: 1; 
+}
+
+/* 背景図形内の画像 */
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 枠内を埋めるようにスケーリング */
+  
+  /* 画像自体をCSSで単色化する場合はここに filter 等を記述するが、
+     前述の通り、加工済みの画像ファイルを使用することを推奨する */
+}
+
+/* 前景のキャラクター立ち絵 */
+.foreground-character {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 60%; /* 背景図形と重なりつつ、外にはみ出すサイズ感 */
+  height: 100%;
+  
+  /* z-indexで背景の前面に配置 */
+  z-index: 2; 
+  display: flex;
+  align-items: flex-end;
+}
+
+.fg-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 /*--goods--*/
 
 
