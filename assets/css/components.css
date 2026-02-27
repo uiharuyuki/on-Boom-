@@ -317,6 +317,10 @@
     align-items: center;
 }
 
+#main-nav {
+    gap: 1rem;
+}
+
 .page-section__talents .page-layout__container-talents {
     display: flex;
     flex-direction: column;
@@ -405,7 +409,6 @@
 /* キャラクター画像 */
 .image-area img {
     height: 700px;
-    aspect-ratio: 9/16;
     object-fit: cover;
 }
 
@@ -431,19 +434,36 @@
 }
 
 /* キャラクター切り替えボタン */
+
 #main-nav button {
-    border: 3px solid transparent;
+    position: relative;
     background: none;
-    border-radius: 6px;
-    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
     flex-shrink: 0;
-    transition: border-color 0.2s;
+    padding: 0 3px 3px 3px;
+}
+
+#main-nav button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 60px;
+    border: 3px solid #000;
+    border-radius: 6px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 #main-nav button img {
     width: 120px;
-    height: 56px;
+    height: 80px;
     object-fit: cover;
     display: block;
-    display: grid;
+    position: relative;
+    z-index: 1;
 }
