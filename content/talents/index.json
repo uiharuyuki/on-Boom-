@@ -8,7 +8,8 @@
     "age": 17,
     "height": "162cm",
     "websites": [
-      { "url": "#", "icon": "assets/images/aa.png", "label": "ウェブサイト" }
+      { "url": "#", "icon": "youtube", "label": "YouTube" },
+      { "url": "#", "icon": "x", "label": "X" }
     ],
     "subItems": [
       { "label": "画像 1-A", "img": "assets/images/talents-momoka_001.png", "icon": "assets/images/talents-icon_001.png" },
@@ -25,7 +26,8 @@
     "age": 20,
     "height": "155cm",
     "websites": [
-      { "url": "#", "icon": "assets/images/icon-web.svg", "label": "ウェブサイト" }
+      { "url": "#", "icon": "youtube", "label": "YouTube" },
+      { "url": "#", "icon": "x", "label": "X" }
     ],
     "subItems": [
       { "label": "画像 2-A", "img": "https://placehold.co/600x400/16a34a/FFF?text=Image+2-A", "icon": "https://placehold.co/56x56/16a34a/FFF?text=2A" },
@@ -42,7 +44,8 @@
     "age": 22,
     "height": "165cm",
     "websites": [
-      { "url": "#", "icon": "assets/images/icon-web.svg", "label": "ウェブサイト" }
+      { "url": "#", "icon": "youtube", "label": "YouTube" },
+      { "url": "#", "icon": "x", "label": "X" }
     ],
     "subItems": [
       { "label": "画像 3-A", "img": "https://placehold.co/600x400/dc2626/FFF?text=Image+3-A", "icon": "https://placehold.co/56x56/dc2626/FFF?text=3A" },
@@ -59,7 +62,8 @@
     "age": 19,
     "height": "158cm",
     "websites": [
-      { "url": "#", "icon": "assets/images/icon-web.svg", "label": "ウェブサイト" }
+      { "url": "#", "icon": "youtube", "label": "YouTube" },
+      { "url": "#", "icon": "x", "label": "X" }
     ],
     "subItems": [
       { "label": "画像 4-A", "img": "https://placehold.co/600x400/9333ea/FFF?text=Image+4-A", "icon": "https://placehold.co/56x56/9333ea/FFF?text=4A" },

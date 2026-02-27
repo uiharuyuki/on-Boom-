@@ -20,7 +20,7 @@
     border-radius: 100vmax;
     padding: 5px 40px;
     margin-inline: auto;
-    margin-top: 2cap;
+    margin-top: 2.2cap;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 0.5px;
@@ -31,6 +31,10 @@
 
 @media (any-hover: hover) {
     .view-all__link:hover { background-color: var(--color-background__hover); }
+}
+
+#page-section__talents .view-all__link {
+    margin-top: calc(2.2cap + 20px);
 }
 
 
@@ -319,6 +323,9 @@
 
 #main-nav {
     gap: 1rem;
+    position: absolute;
+    bottom: -20px;
+    z-index: 30;
 }
 
 .page-section__talents .page-layout__container-talents {
@@ -330,6 +337,8 @@
 .text-area__talents {
     align-self: flex-start;
     position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .text-area {
@@ -401,10 +410,21 @@
 .talent-links__icon {
     width: 28px;
     height: 28px;
-    object-fit: contain;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain; /* <img> フォールバック用 */
 }
 
-#main-text { font-size: 1rem; }
+.talent-links__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+#main-text {
+    font-size: clamp(0.65rem, 1.2vw, 1rem);
+    width: clamp(220px, 30vw, 400px);
+}
 
 /* キャラクター画像 */
 .image-area img {
@@ -451,9 +471,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-
     height: 60px;
     border: 3px solid #000;
+    background-color: white;
     border-radius: 6px;
     z-index: 0;
     pointer-events: none;
@@ -461,7 +481,7 @@
 
 #main-nav button img {
     width: 120px;
-    height: 80px;
+    height: 110px;
     object-fit: cover;
     display: block;
     position: relative;
