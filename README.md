@@ -32,7 +32,10 @@ https://uiharuyuki.github.io/on-Boom-/
 
 # ロゴ
 - Illustrator
-
+ロゴ:
+CMYKのシアン、マゼンタ、イエロを使用、YouTubeのプラットホームや動画コンテンツを想起させるデザイン。
+「on boom!」:
+直線、曲線を基本的に使用して自作、「Futura」のような幾何学的なfontを意識、ビビットなグラディエーション。
 
 
 ## 主な活用方法

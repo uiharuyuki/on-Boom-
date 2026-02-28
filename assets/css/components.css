@@ -483,6 +483,7 @@
     width: 120px;
     height: 110px;
     object-fit: cover;
+    object-position: top;
     display: block;
     position: relative;
     z-index: 1;
