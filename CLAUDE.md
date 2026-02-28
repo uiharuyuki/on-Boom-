@@ -45,16 +45,6 @@
 5. **Document Results**: Add review section to `tasks/todo.md`
 6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
 
-## Auto-Memory Management
-- **メモリの保存先: プロジェクト直下の `.claude/memory/`**（PC間で共有するため）
-- `~/.claude/projects/.../memory/` は使わない。必ず `.claude/memory/MEMORY.md` を読み書きする
-- 会話開始時に `.claude/memory/MEMORY.md` を読み込んで過去の記憶を把握する
-- 会話の中で重要なパターン、ユーザーの好み、アーキテクチャ決定を発見したら **指示を待たずに** メモリファイルを更新する
-- ユーザーから修正・訂正を受けたら、その教訓を自動でメモリに記録する
-- 新しい情報を書く前に既存のメモリを確認し、重複を避ける
-- セッション固有の一時的な情報は書かない（永続的に価値があるもののみ）
-- 詳細情報は `.claude/memory/` 内に別ファイルを作り、MEMORY.md からリンクする
-
 ## Core Principles
 
 - **Simplicity First**: Make every change as simple as possible. Impact minimal code.
