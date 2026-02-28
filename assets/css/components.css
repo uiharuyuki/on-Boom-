@@ -60,7 +60,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 18vw;
+    width: calc(160px + 20vw);
     height: auto;
     z-index: 10; /* --- === 10 === --- */
     object-fit: contain;
@@ -68,8 +68,8 @@
 
 @media (width < 768px) {
     .main-visual__logo img {
-        width: 120px;
-        top: 10px;
+        width: 250px;
+        top: 13px;
         left: 10px;
     }
 }
