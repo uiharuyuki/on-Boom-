@@ -37,6 +37,27 @@
     margin-top: calc(2.2cap + 20px);
 }
 
+/* =====================
+   Goods セクション
+   ===================== */
+
+.goods-banner {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.goods-banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.page-section__goods .view-all__link {
+    margin-top: 1rem;
+}
 
 /* =====================
    メインビジュアル
@@ -485,6 +506,20 @@
     object-fit: cover;
     object-position: top;
     display: block;
+    position: relative;
+    z-index: 1;
+}
+
+#main-nav button .coming-soon-label {
+    width: 120px;
+    height: 60px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
     position: relative;
     z-index: 1;
 }

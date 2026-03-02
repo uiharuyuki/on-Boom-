@@ -60,17 +60,24 @@ export function initTalents(appData) {
     appData.forEach((data, index) => {
       const btn = document.createElement('button');
       btn.setAttribute('aria-label', data.label);
-      const img = document.createElement('img');
-      img.src = data.thumbnail;
-      img.alt = data.label;
-      btn.appendChild(img);
-      if (index === activeMainIndex) btn.classList.add('active');
-
-      btn.addEventListener('click', () => {
-        activeMainIndex = index;
-        activeSubIndex = 0;
-        render();
-      });
+      if (data.comingSoon) {
+        const span = document.createElement('span');
+        span.className = 'coming-soon-label';
+        span.textContent = 'coming soon...';
+        btn.appendChild(span);
+        btn.disabled = true;
+      } else {
+        const img = document.createElement('img');
+        img.src = data.thumbnail;
+        img.alt = data.label;
+        btn.appendChild(img);
+        if (index === activeMainIndex) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          activeMainIndex = index;
+          activeSubIndex = 0;
+          render();
+        });
+      }
       mainNav.appendChild(btn);
     });
 
