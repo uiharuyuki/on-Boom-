@@ -1,0 +1,110 @@
+/*=========================================
+ファイル: assets/css/page-news.css
+説明: Newsページ固有スタイル
+=========================================*/
+
+/* =====================
+   ニュースカード画像
+   ===================== */
+
+.news-card__image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    border-radius: 6px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    container-type: inline-size;
+}
+
+.news-card__image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3.5px solid var(--color-border);
+    border-radius: inherit;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.news-card__label {
+    font-size: 3.6cqw;
+    font-weight: 700;
+    color: var(--color-text__white);
+    background-color: var(--color-scroll-indicator);
+    padding: 2px 15px 2px 7px;
+    border-radius: 0 0 5cqw 0;
+    text-transform: uppercase;
+}
+
+/* =====================
+   ニュースカード本体
+   ===================== */
+
+.news-card {
+    transition: transform 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+}
+
+.news-card__body {
+    padding: 1rem 0.25rem;
+}
+
+.news-card__meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-card__category {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.news-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.news-card__excerpt {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-background__grey-a);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* =====================
+   もっと見るボタン
+   ===================== */
+
+.news-load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.news-load-more .view-all__link {
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.news-load-more .view-all__link[hidden] {
+    display: none;
+}

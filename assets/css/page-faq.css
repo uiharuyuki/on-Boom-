@@ -1,0 +1,45 @@
+/*=========================================
+ファイル: assets/css/page-faq.css
+説明: FAQページ固有のスタイル
+=========================================*/
+
+/* =====================
+   FAQ セクション
+   ===================== */
+
+.faq-section {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.faq-section .category-filter {
+    margin-bottom: 3rem;
+}
+
+/* =====================
+   CTA セクション（FAQ固有の余白調整）
+   ===================== */
+
+.faq-cta {
+    margin-top: 3rem;
+}
+
+.faq-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background__black-grey);
+    color: var(--color-text__white);
+    border: none;
+    border-radius: 100vmax;
+    padding: 12px 48px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.faq-cta__btn:hover,
+.faq-cta__btn:focus-visible {
+    opacity: 0.8;
+}

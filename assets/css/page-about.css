@@ -1,0 +1,65 @@
+/*=========================================
+ファイル: assets/css/page-about.css
+説明: About ページ固有のスタイル
+=========================================*/
+
+/* =====================
+   ミッションセクション
+   ===================== */
+
+.about-mission__strong {
+    font-size: clamp(1.75rem, 1.5vw + 1.25rem, 2.5rem);
+    white-space: nowrap;
+}
+
+.about-mission__body {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.about-mission__body p {
+    font-size: clamp(0.9375rem, 0.5vw + 0.8125rem, 1.0625rem);
+    line-height: 2.2;
+    margin-bottom: 1.5rem;
+}
+
+.about-mission__body p:last-child {
+    margin-bottom: 0;
+}
+
+/* =====================
+   事業領域セクション
+   ===================== */
+
+.about-business .support-card__icon {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-shape__blue);
+}
+
+/* =====================
+   会社情報セクション
+   ===================== */
+
+.about-company__list {
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+/* =====================
+   ポリシーリンクセクション
+   ===================== */
+
+.about-policy__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-policy__links .view-all__link {
+    margin-top: 0;
+}

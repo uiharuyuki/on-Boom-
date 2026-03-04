@@ -7,6 +7,9 @@
     "birthday": "2月11日",
     "age": 17,
     "height": "162cm",
+    "catchphrase": "あなたの隣で、ゆっくりと。",
+    "hashtags": ["#小鳥遊ももか", "#ももかの勉強部屋"],
+    "color": "#9d9dff",
     "websites": [
       { "url": "#", "icon": "youtube", "label": "YouTube" },
       { "url": "#", "icon": "x", "label": "X" }
@@ -25,6 +28,9 @@
     "birthday": "3月15日",
     "age": 20,
     "height": "155cm",
+    "catchphrase": "Coming soon...",
+    "hashtags": ["#カテゴリ2"],
+    "color": "#16a34a",
     "websites": [
       { "url": "#", "icon": "youtube", "label": "YouTube" },
       { "url": "#", "icon": "x", "label": "X" }
@@ -44,6 +50,9 @@
     "birthday": "7月7日",
     "age": 22,
     "height": "165cm",
+    "catchphrase": "Coming soon...",
+    "hashtags": [],
+    "color": "#999999",
     "websites": [
       { "url": "#", "icon": "youtube", "label": "YouTube" },
       { "url": "#", "icon": "x", "label": "X" }
@@ -63,6 +72,9 @@
     "birthday": "11月30日",
     "age": 19,
     "height": "158cm",
+    "catchphrase": "Coming soon...",
+    "hashtags": [],
+    "color": "#999999",
     "websites": [
       { "url": "#", "icon": "youtube", "label": "YouTube" },
       { "url": "#", "icon": "x", "label": "X" }
