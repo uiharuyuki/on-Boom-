@@ -166,7 +166,7 @@
 }
 
 .section-about__strong {
-    font-size: clamp(2.25rem, 0.6667vw + 2.05rem, 2.5rem);
+    font-size: clamp(1rem, 1.3333vh + 0.6rem, 1.5rem);
 }
 
 .page-section__about p {
