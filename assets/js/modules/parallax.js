@@ -5,9 +5,14 @@ export function initParallax() {
   const speed = 0.22;
   if (!image) return;
 
+  let ticking = false;
+
   window.addEventListener('scroll', () => {
-      requestAnimationFrame(() => {
-          image.style.transform = `translateY(${window.scrollY * -speed}px)`;
-      });
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      image.style.transform = `translateY(${window.scrollY * -speed}px)`;
+      ticking = false;
+    });
   });
 }

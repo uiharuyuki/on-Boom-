@@ -21,4 +21,11 @@
     --color-border: rgb(255 255 255 / 0.3);
 
     --color-scroll-indicator: rgb(21 132 184);
+
+    --color-shape__blue: rgb(157 157 255);
+    --color-shape__blue-a: rgb(157 157 255 / 0.2);
+    --color-shape__indicator-a: rgb(21 132 184 / 0.18);
+    --color-shape__grey-a: rgb(157 157 157 / 0.2);
+    --color-wave-text: rgb(223 223 223);
+    --color-text__grey-light: rgb(170 170 170);
 }

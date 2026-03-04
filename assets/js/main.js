@@ -14,12 +14,25 @@ initTextLoop();
 init();
 
 async function init() {
-  const [talentsData, newsData] = await Promise.all([
-    fetch('content/talents/index.json').then(r => r.json()),
-    fetch('content/news/index.json').then(r => r.json()),
-  ]);
+  try {
+    const [talentsRes, newsRes] = await Promise.all([
+      fetch('content/talents/index.json'),
+      fetch('content/news/index.json'),
+    ]);
 
-  initNews(newsData);
-  initCarousel(); // ニュースのDOM生成後に初期化
-  initTalents(talentsData);
+    if (!talentsRes.ok || !newsRes.ok) {
+      throw new Error(`HTTP error: talents=${talentsRes.status}, news=${newsRes.status}`);
+    }
+
+    const [talentsData, newsData] = await Promise.all([
+      talentsRes.json(),
+      newsRes.json(),
+    ]);
+
+    initNews(newsData);
+    initCarousel(); // ニュースのDOM生成後に初期化
+    initTalents(talentsData);
+  } catch (err) {
+    console.error('データの読み込みに失敗しました:', err);
+  }
 }

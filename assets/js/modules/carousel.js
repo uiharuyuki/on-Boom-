@@ -40,10 +40,14 @@ export function initCarousel() {
     }
   });
 
+  let resizeTimer;
   window.addEventListener('resize', () => {
-    currentIndex = 0;
-    updateCarousel();
-    updateButtons();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      currentIndex = 0;
+      updateCarousel();
+      updateButtons();
+    }, 150);
   });
 
   updateButtons();
