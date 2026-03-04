@@ -8,6 +8,8 @@
    汎用パーツ
    ===================== */
 
+.u-uppercase { text-transform: uppercase; }
+
 .view-all__link {
     display: flex;
     width: fit-content;
@@ -166,7 +168,8 @@
 }
 
 .section-about__strong {
-    font-size: clamp(1rem, 1.3333vh + 0.6rem, 1.5rem);
+    font-size: clamp(2.25rem, 0.6667vw + 2.05rem, 2.5rem);
+    white-space: nowrap;
 }
 
 .page-section__about p {
@@ -625,6 +628,10 @@
 
 .audition-heading {
     font-size: clamp(1.25rem, 1vw + 0.875rem, 1.75rem);
+}
+
+.audition-heading span {
+    text-transform: uppercase;
 }
 
 .audition-text {
