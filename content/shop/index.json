@@ -1,0 +1,92 @@
+[
+  {
+    "id": "shop-001",
+    "name": "小鳥遊ももか アクリルスタンド",
+    "price": 1980,
+    "category": "acrylic-stand",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Acrylic+Stand",
+    "featured": true
+  },
+  {
+    "id": "shop-002",
+    "name": "小鳥遊ももか 缶バッジセット（3個入り）",
+    "price": 880,
+    "category": "can-badge",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Can+Badge+Set",
+    "featured": true
+  },
+  {
+    "id": "shop-003",
+    "name": "on boom! ロゴTシャツ",
+    "price": 3980,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Logo+T-Shirt",
+    "featured": true
+  },
+  {
+    "id": "shop-004",
+    "name": "小鳥遊ももか ステッカーシート",
+    "price": 580,
+    "category": "sticker",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Sticker+Sheet",
+    "featured": false
+  },
+  {
+    "id": "shop-005",
+    "name": "on boom! パーカー",
+    "price": 5980,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Hoodie",
+    "featured": true
+  },
+  {
+    "id": "shop-006",
+    "name": "on boom! ロゴ缶バッジ",
+    "price": 480,
+    "category": "can-badge",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Logo+Badge",
+    "featured": false
+  },
+  {
+    "id": "shop-007",
+    "name": "小鳥遊ももか アクリルキーホルダー",
+    "price": 1280,
+    "category": "acrylic-stand",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Keychain",
+    "featured": true
+  },
+  {
+    "id": "shop-008",
+    "name": "on boom! ステッカーパック",
+    "price": 780,
+    "category": "sticker",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Sticker+Pack",
+    "featured": false
+  },
+  {
+    "id": "shop-009",
+    "name": "小鳥遊ももか バレンタインセット",
+    "price": 4980,
+    "category": "set",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/e879a0/FFF?text=Valentine+Set",
+    "featured": true
+  },
+  {
+    "id": "shop-010",
+    "name": "on boom! キャップ",
+    "price": 3480,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Cap",
+    "featured": false
+  }
+]

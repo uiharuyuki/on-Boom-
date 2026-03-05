@@ -1,0 +1,122 @@
+[
+  {
+    "id": "goods-001",
+    "name": "小鳥遊ももか アクリルスタンド",
+    "price": 1980,
+    "category": "acrylic-stand",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Acrylic+Stand",
+    "badge": "new",
+    "link": null
+  },
+  {
+    "id": "goods-002",
+    "name": "小鳥遊ももか 缶バッジセット（3個入り）",
+    "price": 880,
+    "category": "can-badge",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Can+Badge+Set",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-003",
+    "name": "on boom! ロゴTシャツ",
+    "price": 3980,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Logo+T-Shirt",
+    "badge": "new",
+    "link": null
+  },
+  {
+    "id": "goods-004",
+    "name": "小鳥遊ももか ステッカーシート",
+    "price": 580,
+    "category": "sticker",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Sticker+Sheet",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-005",
+    "name": "on boom! パーカー",
+    "price": 5980,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Hoodie",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-006",
+    "name": "小鳥遊ももか デビュー記念セット",
+    "price": 4980,
+    "category": "set",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Debut+Set",
+    "badge": "soldout",
+    "link": null
+  },
+  {
+    "id": "goods-007",
+    "name": "on boom! ロゴ缶バッジ",
+    "price": 480,
+    "category": "can-badge",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Logo+Badge",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-008",
+    "name": "小鳥遊ももか アクリルキーホルダー",
+    "price": 1280,
+    "category": "acrylic-stand",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Keychain",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-009",
+    "name": "on boom! ステッカーパック",
+    "price": 780,
+    "category": "sticker",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Sticker+Pack",
+    "badge": "new",
+    "link": null
+  },
+  {
+    "id": "goods-010",
+    "name": "小鳥遊ももか アパレルセット",
+    "price": 7980,
+    "category": "set",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/9d9dff/FFF?text=Apparel+Set",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-011",
+    "name": "on boom! キャップ",
+    "price": 3480,
+    "category": "apparel",
+    "talent": "all",
+    "image": "https://placehold.co/400x400/333333/FFF?text=Cap",
+    "badge": null,
+    "link": null
+  },
+  {
+    "id": "goods-012",
+    "name": "バレンタイン限定 缶バッジ",
+    "price": 680,
+    "category": "can-badge",
+    "talent": "momoka",
+    "image": "https://placehold.co/400x400/e879a0/FFF?text=Valentine+Badge",
+    "badge": "soldout",
+    "link": null
+  }
+]
