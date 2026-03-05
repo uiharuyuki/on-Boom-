@@ -15,9 +15,9 @@
       { "url": "#", "icon": "x", "label": "X" }
     ],
     "subItems": [
-      { "label": "画像 1-A", "img": "assets/images/talents-momoka_001.png", "icon": "assets/images/talents-icon_001.png" },
-      { "label": "画像 1-B", "img": "assets/images/talents-momoka_002.png", "icon": "assets/images/talents-icon_002.png" },
-      { "label": "画像 1-C", "img": "https://placehold.co/600x400/1e40af/FFF?text=Image+1-C", "icon": "https://placehold.co/56x56/1e3a8a/FFF?text=1C" }
+      { "label": "画像 1-A", "img": "assets/images/talents-momoka_001.png", "icon": "assets/images/talents-icon_001.png", "shapeImg": "assets/images/talents-momoka_001_background.png" },
+      { "label": "画像 1-B", "img": "assets/images/talents-momoka_002.png", "icon": "assets/images/talents-icon_002.png", "shapeImg": "" },
+      { "label": "画像 1-C", "img": "https://placehold.co/600x400/1e40af/FFF?text=Image+1-C", "icon": "https://placehold.co/56x56/1e3a8a/FFF?text=1C", "shapeImg": "" }
     ]
   },
   {

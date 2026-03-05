@@ -16,6 +16,7 @@ export function initTalents(appData) {
   const talentAge = document.getElementById('talent-age');
   const talentHeight = document.getElementById('talent-height');
   const talentLinks = document.getElementById('talent-links');
+  const shapeImage = document.getElementById('shape-image');
 
   function render() {
     const currentMain = appData[activeMainIndex];
@@ -24,6 +25,18 @@ export function initTalents(appData) {
     mainTitle.textContent = currentMain.label;
     mainText.textContent = currentMain.text;
     displayImage.src = currentSub.img;
+
+    // シェイプ内画像をサブナビと連動（個別背景画像）
+    if (shapeImage) {
+      if (currentSub.shapeImg) {
+        shapeImage.src = currentSub.shapeImg;
+        shapeImage.alt = currentSub.label;
+        shapeImage.style.display = '';
+      } else {
+        shapeImage.src = '';
+        shapeImage.style.display = 'none';
+      }
+    }
 
     talentBirthday.textContent = currentMain.birthday;
     talentAge.textContent = currentMain.age + '歳';

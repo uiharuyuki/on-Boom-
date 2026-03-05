@@ -460,6 +460,13 @@
     justify-content: center;
 }
 
+.shape-content__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
 /* キャラクター切り替えボタン */
 
 #main-nav button {
