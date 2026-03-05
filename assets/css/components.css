@@ -332,7 +332,7 @@
     gap: 1rem;
     position: absolute;
     bottom: -20px;
-    z-index: 30;
+    z-index: 200;/*---=== 200 ===---*/
 }
 
 .page-section__talents .page-layout__container-talents {
@@ -342,6 +342,7 @@
 }
 
 .text-area__talents {
+    z-index: 150;
     align-self: flex-start;
     position: absolute;
     left: 0;
@@ -433,6 +434,10 @@
     width: clamp(220px, 30vw, 400px);
 }
 
+.image-area {
+    z-index: 100;/*---=== 100 ===---*/
+}
+
 /* キャラクター画像 */
 .image-area img {
     height: 700px;
@@ -448,7 +453,6 @@
     transform: skewX(-15deg);
     border-radius: 20px;
     overflow: hidden;
-    background-color: var(--color-shape__blue);
 }
 
 .shape-content {
@@ -461,7 +465,8 @@
 }
 
 .shape-content__img {
-    width: 100%;
+    width: calc(100% + 700px * sin(15deg));
+    max-width: none;
     height: 100%;
     object-fit: cover;
     object-position: top;
