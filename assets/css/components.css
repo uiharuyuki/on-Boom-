@@ -446,9 +446,7 @@
 
 @media (width < 1200px) {
     .image-area {
-        align-self: flex-start;
-        margin-left: calc(600px - 5vw);
-        transform: translateX(-50%);
+        transform: translateX(12vw);
     }
 }
 
