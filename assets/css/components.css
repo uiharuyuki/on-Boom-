@@ -3,7 +3,28 @@
 説明: UIコンポーネントのスタイル
 =========================================*/
 
+section {
+    position: relative; /* 背景文字の基準位置にするため必須 */
+    overflow: hidden; /* はみ出した巨大な背景文字を隠す（横揺れ防止） */
+}
 
+    .background-text {
+      position: absolute; /* セクションの中央に絶対配置 */
+      top: 250px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      font-size: 15vw; /* 画面幅に応じた巨大な文字サイズ */
+      font-weight: 900;
+      white-space: nowrap; /* 文字を改行させない */
+      
+      /* 文字の中身を透明にし、縁だけを描画する */
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(0, 0, 0, 0.15);
+      
+      z-index: 1; /* コンテンツの裏に配置 */
+      user-select: none; /* テキストを選択できないようにする */
+    }
 /* =====================
    汎用パーツ
    ===================== */
