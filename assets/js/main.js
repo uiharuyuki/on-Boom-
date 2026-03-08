@@ -4,11 +4,13 @@ import { initTextLoop } from './modules/text-loop.js';
 import { initCarousel } from './modules/carousel.js';
 import { initNews } from './modules/news.js';
 import { initTalents } from './modules/talents.js';
+import { initBackgroundTextFit } from './modules/background-text-fit.js';
 
 // データに依存しないモジュールを即時初期化
 initParallax();
 initDrawer();
 initTextLoop();
+initBackgroundTextFit();
 
 // データ取得 → UI構築
 init();
