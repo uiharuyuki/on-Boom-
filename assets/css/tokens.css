@@ -28,4 +28,18 @@
     --color-shape__grey-a: rgb(157 157 157 / 0.2);
     --color-wave-text: rgb(223 223 223);
     --color-text__grey-light: rgb(170 170 170);
+
+    /* z-index tokens */
+    --z-background: -1;
+    --z-local-base: 0;
+    --z-local-front: 1;
+    --z-local-front-plus: 2;
+    --z-overlay-low: 10;
+    --z-overlay-mid: 20;
+    --z-talents-text: 50;
+    --z-talents-image: 100;
+    --z-talents-main-nav: 200;
+    --z-global-float-nav: 1000;
+    --z-global-drawer: 1001;
+    --z-global-menu-button: 1002;
 }

@@ -5,24 +5,24 @@
 
 section {
     position: relative; /* 背景文字の基準位置にするため必須 */
-    overflow: clip; /* はみ出した巨大な背景文字を隠す（横揺れ防止） */
+    overflow-x: clip; /* 横方向だけクリップして横スクロールを防ぐ */
+    overflow-y: visible; /* 背景文字やビジュアルの上下は見切れさせない */
 }
 
     .background-text {
       position: absolute;
-      font-size: 18vw;
       font-weight: 900;
       white-space: nowrap;
       color: var(--color-background__white);
-      -webkit-text-stroke: 2px rgba(0, 0, 0, 0.15);
+      -webkit-text-stroke: 4px rgba(0, 0, 0, 0.15);
       paint-order: stroke fill;
-      z-index: -1;
+      z-index: var(--z-background);
       user-select: none;
     }
 
     /* セクションごとの背景テキスト位置 */
     .page-section__about .background-text {
-      top: 250px;
+      top: 0px;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -109,7 +109,7 @@ section {
     left: 20px;
     width: calc(160px + 20vw);
     height: auto;
-    z-index: 10; /* --- === 10 === --- */
+    z-index: var(--z-overlay-low);
     object-fit: contain;
 }
 
@@ -124,6 +124,7 @@ section {
 .page-section__main-visual {
     position: relative;
     margin-bottom: 200px; /* --- 下余白にはみ出るデザイン --- */
+    overflow: visible;
 }
 
 @media (width < 768px) {
@@ -141,7 +142,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 20; /* --- === 20 === --- */
+    z-index: var(--z-overlay-mid); /* --- === 20 === --- */
 }
 
 @media (width < 768px) {
@@ -206,7 +207,10 @@ section {
    About セクション
    ===================== */
 
-.page-section__about { text-align: center; }
+.page-section__about {
+    text-align: center;
+    overflow: visible;
+}
 
 .page-section__about h2 {
     font-size: clamp(1.75rem, 0.6667vw + 1.55rem, 2rem);
@@ -347,7 +351,7 @@ section {
     width: 45px;
     height: 45px;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: var(--z-overlay-low);
     cursor: pointer;
     display: grid;
     place-items: center;
@@ -379,7 +383,7 @@ section {
     gap: 1rem;
     position: absolute;
     bottom: -20px;
-    z-index: 200;/*---=== 200 ===---*/
+    z-index: var(--z-talents-main-nav);/*---=== 200 ===---*/
 }
 
 .page-section__talents .page-layout__container-talents {
@@ -389,7 +393,7 @@ section {
 }
 
 .text-area__talents {
-    z-index: 50;
+    z-index: var(--z-talents-text);
     align-self: flex-start;
     position: absolute;
     left: 0;
@@ -482,7 +486,7 @@ section {
 }
 
 .image-area {
-    z-index: 100;/*---=== 100 ===---*/
+    z-index: var(--z-talents-image);/*---=== 100 ===---*/
 }
 
 /* キャラクター画像 */
@@ -548,7 +552,7 @@ section {
     border: 3px solid var(--color-text__black);
     background-color: var(--color-background__white);
     border-radius: 6px;
-    z-index: 0;
+    z-index: var(--z-local-base);
     pointer-events: none;
 }
 
@@ -559,7 +563,7 @@ section {
     object-position: top;
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: var(--z-local-front);
 }
 
 #main-nav button .coming-soon-label {
@@ -573,7 +577,7 @@ section {
     font-size: 0.85rem;
     color: var(--color-text__grey-light);
     position: relative;
-    z-index: 1;
+    z-index: var(--z-local-front);
 }
 
 
@@ -629,7 +633,7 @@ section {
 
 .audition-left h2 {
     position: relative;
-    z-index: 2;
+    z-index: var(--z-local-front-plus);
     text-align: center;
     font-size: clamp(2.5rem, 4vw + 1rem, 4rem);
     text-transform: uppercase;
@@ -638,7 +642,7 @@ section {
 
 .audition-subtitle {
     position: relative;
-    z-index: 2;
+    z-index: var(--z-local-front-plus);
     text-transform: uppercase;
     font-size: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
     letter-spacing: 0.15em;
@@ -650,7 +654,7 @@ section {
 .audition-shapes {
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: var(--z-local-front);
     pointer-events: none;
 }
 

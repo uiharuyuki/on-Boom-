@@ -10,12 +10,42 @@ function fitTextToWidth(element, targetWidth) {
   element.style.fontSize = `${fittedSize}px`;
 }
 
+function getResponsiveTargetWidth(element) {
+  const viewportWidth = window.innerWidth;
+  const desktopBreakpoint = Number.parseFloat(element.dataset.desktopBreakpoint ?? '1080');
+  const mobileBreakpoint = Number.parseFloat(element.dataset.mobileBreakpoint ?? '480');
+  const desktopRatio = Number.parseFloat(element.dataset.desktopRatio ?? '0.7');
+  const mobileRatio = Number.parseFloat(element.dataset.mobileRatio ?? '0.9');
+
+  if (viewportWidth >= desktopBreakpoint) {
+    return viewportWidth * desktopRatio;
+  }
+
+  if (viewportWidth <= mobileBreakpoint) {
+    return mobileBreakpoint * mobileRatio;
+  }
+
+  const progress = (viewportWidth - mobileBreakpoint) / (desktopBreakpoint - mobileBreakpoint);
+  const ratio = mobileRatio + (desktopRatio - mobileRatio) * progress;
+  return viewportWidth * ratio;
+}
+
 function fitGroup(elements) {
   if (!elements.length) return;
 
   const fixedWidth = Number.parseFloat(elements[0].dataset.equalWidthPx ?? '');
-  const ratio = Number.parseFloat(elements[0].dataset.widthRatio ?? '0.82');
-  const targetWidth = Number.isFinite(fixedWidth) ? fixedWidth : window.innerWidth * ratio;
+  const maxWidthPx = Number.parseFloat(elements[0].dataset.maxWidthPx ?? '');
+  const maxWidthRatio = Number.parseFloat(elements[0].dataset.maxWidthRatio ?? '');
+
+  const baseWidth = Number.isFinite(fixedWidth)
+    ? fixedWidth
+    : getResponsiveTargetWidth(elements[0]);
+  const maxWidth = Number.isFinite(maxWidthPx)
+    ? maxWidthPx
+    : Number.isFinite(maxWidthRatio)
+      ? window.innerWidth * maxWidthRatio
+      : Number.POSITIVE_INFINITY;
+  const targetWidth = Math.min(baseWidth, maxWidth);
 
   elements.forEach((element) => fitTextToWidth(element, targetWidth));
 }
