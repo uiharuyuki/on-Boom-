@@ -350,6 +350,25 @@
     z-index: var(--z-talents-main-nav);/*---=== 200 ===---*/
 }
 
+/* モバイル用 h2 / sub-nav：PCでは非表示 */
+.talents-mobile-top {
+    display: none;
+}
+
+@media (width < 768px) {
+    .talents-mobile-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 35px;
+    }
+
+    .text-area__talents > h2,
+    #sub-nav {
+        display: none;
+    }
+}
+
 .page-section__talents .page-layout__container-talents {
     display: flex;
     flex-direction: column;
@@ -376,8 +395,25 @@
 }
 
 /* 衣装切り替えボタン */
-#sub-nav {
+#sub-nav,
+#sub-nav-mobile {
     gap: 12px;
+}
+
+#sub-nav-mobile button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid var(--color-text__black);
+    background: none;
+}
+
+#sub-nav-mobile button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 #sub-nav button {
@@ -385,7 +421,7 @@
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--color-border);
+    border: 1.5px solid var(--color-text__black);
     background: none;
 }
 

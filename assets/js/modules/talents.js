@@ -9,6 +9,7 @@ export function initTalents(appData) {
 
   const mainNav = document.getElementById('main-nav');
   const subNav = document.getElementById('sub-nav');
+  const subNavMobile = document.getElementById('sub-nav-mobile');
   const mainTitle = document.getElementById('main-title');
   const mainText = document.getElementById('main-text');
   const displayImage = document.getElementById('display-image');
@@ -95,23 +96,26 @@ export function initTalents(appData) {
       mainNav.appendChild(btn);
     });
 
-    // サブボタン（衣装選択）
-    subNav.innerHTML = '';
-    currentMain.subItems.forEach((sub, index) => {
-      const btn = document.createElement('button');
-      btn.setAttribute('aria-label', sub.label);
-      const img = document.createElement('img');
-      img.src = sub.icon;
-      img.alt = sub.label;
-      btn.appendChild(img);
-      if (index === activeSubIndex) btn.classList.add('active');
+    // サブボタン（衣装選択）— PC用・モバイル用の両方に生成
+    const subNavTargets = [subNav, subNavMobile].filter(Boolean);
+    for (const nav of subNavTargets) {
+      nav.innerHTML = '';
+      currentMain.subItems.forEach((sub, index) => {
+        const btn = document.createElement('button');
+        btn.setAttribute('aria-label', sub.label);
+        const img = document.createElement('img');
+        img.src = sub.icon;
+        img.alt = sub.label;
+        btn.appendChild(img);
+        if (index === activeSubIndex) btn.classList.add('active');
 
-      btn.addEventListener('click', () => {
-        activeSubIndex = index;
-        render();
+        btn.addEventListener('click', () => {
+          activeSubIndex = index;
+          render();
+        });
+        nav.appendChild(btn);
       });
-      subNav.appendChild(btn);
-    });
+    }
   }
 
   render();
