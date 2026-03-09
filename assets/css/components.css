@@ -4,52 +4,52 @@
 =========================================*/
 
 section {
-    position: relative; /* 背景文字の基準位置にするため必須 */
-    overflow-x: clip; /* 横方向だけクリップして横スクロールを防ぐ */
-    overflow-y: visible; /* 背景文字やビジュアルの上下は見切れさせない */
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
-    .background-text {
-      position: absolute;
-      font-weight: 900;
-      white-space: nowrap;
-      color: var(--color-background__white);
-      -webkit-text-stroke: 4px rgba(0, 0, 0, 0.15);
-      paint-order: stroke fill;
-      z-index: var(--z-background);
-      user-select: none;
-    }
+.background-text {
+    position: absolute;
+    font-weight: 900;
+    white-space: nowrap;
+    color: var(--color-background__white);
+    -webkit-text-stroke: 4px rgba(0, 0, 0, 0.15);
+    paint-order: stroke fill;
+    z-index: var(--z-background);
+    user-select: none;
+}
 
-    /* セクションごとの背景テキスト位置 */
-    .page-section__about .background-text {
-      top: 0px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.page-section__about .background-text {
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .page-section__news .background-text {
-      top: 300px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.page-section__news .background-text {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .page-section__talents .background-text {
-      top: 185px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.page-section__talents .background-text {
+    top: 185px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .page-section__goods .background-text {
-      top: 200px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.page-section__goods .background-text {
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-    .page-section__audition .background-text {
-      top: 180px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+.page-section__audition .background-text {
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* =====================
    汎用パーツ
    ===================== */
@@ -253,8 +253,8 @@ section {
    ===================== */
 
 .page-section__news {
-    padding-top: 300px;
-    overflow: clip;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 .page-section__news .page-layout__container-talents {
@@ -378,10 +378,6 @@ section {
 /* =====================
    Talents セクション
    ===================== */
-
-.page-section__talents {
-    padding-top: 200px;
-}
 
 .button-group {
     display: flex;
@@ -594,10 +590,6 @@ section {
    Goods セクション
    ===================== */
 
-.page-section__goods {
-    padding-top: 200px;
-}
-
 .page-section__goods h2 {
     text-align: center;
 }
@@ -625,10 +617,6 @@ section {
 /* =====================
    Audition セクション
    ===================== */
-
-.page-section__audition {
-    padding-top: 200px;
-}
 
 .audition-layout {
     display: grid;

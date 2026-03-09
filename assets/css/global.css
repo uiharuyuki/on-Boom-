@@ -8,7 +8,6 @@ html {
     overflow-y: scroll;
 }
 
-/* font 480 - 1080 可変 */
 body {
     background-color: var(--color-background__white);
     color: var(--color-text__black);
