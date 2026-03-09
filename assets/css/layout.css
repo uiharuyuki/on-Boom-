@@ -22,7 +22,10 @@ footer {
     padding-top: 200px;
 }
 
-.page-section__news,
+.page-section__news {
+    padding-top: max(3.75rem, 7.6389vw + 1.4583rem);
+}
+
 .page-section__goods,
 .page-section__audition {
     padding-top: max(1.875rem, 9.7222vw - 1.0417rem);

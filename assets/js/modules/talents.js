@@ -25,6 +25,7 @@ export function initTalents(appData) {
     mainTitle.textContent = currentMain.label;
     mainText.textContent = currentMain.text;
     displayImage.src = currentSub.img;
+    displayImage.alt = `${currentMain.label} - ${currentSub.label}`;
 
     // シェイプ内画像をサブナビと連動（個別背景画像）
     if (shapeImage) {

@@ -4,7 +4,7 @@
 =========================================*/
 
 /* --- フローティングナビゲーション --- */
-.nav-float__btn {
+.nav-float {
     position: fixed;
     z-index: var(--z-global-float-nav); /* --- === 1000 === --- */
     background-color: var(--color-background__white-a);
@@ -20,26 +20,57 @@
 
 .nav-float__nav { top: 20px; right: 280px; }
 
-.nav-float__nav ul { display: flex; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; }
+.nav-float__nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+}
 
 .nav-float__shop { top: 20px; right: 120px; }
 
-@media (max-width: 767.49px) {
-    .nav-float__btn { display: none; }
+@media (width < 768px) {
+    .nav-float { display: none; }
 }
 
 
 /* --- ハンバーガーボタン --- */
-.nav-toggle__btn { z-index: var(--z-global-menu-button); position: fixed; top: 20px; right: 20px; width: 50px; height: 50px; background: transparent; border: none; cursor: pointer; }
-.nav-toggle__btn span, .nav-toggle__btn span::before, .nav-toggle__btn span::after { content: ''; display: block; height: 3px; background-color: var(--color-background__black-grey); position: absolute; right: 0; left: auto; transform: none; transition: 0.3s ease-in-out; }
-.nav-toggle__btn span::before { width: 50px; }
-.nav-toggle__btn span::after {  width: 20px; }
+.nav-toggle__btn {
+    z-index: var(--z-global-menu-button);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle__btn span,
+.nav-toggle__btn span::before,
+.nav-toggle__btn span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: var(--color-background__black-grey);
+    position: absolute;
+    right: 0;
+    left: auto;
+    transform: none;
+    transition: 0.3s ease-in-out;
+}
+
 .nav-toggle__btn span { width: 35px; top: 50%; transform: translate(-50%, -50%); }
-.nav-toggle__btn span::before { top: -10px; }
-.nav-toggle__btn span::after { top: 10px; }
+.nav-toggle__btn span::before { width: 50px; top: -10px; }
+.nav-toggle__btn span::after { width: 20px; top: 10px; }
+
 .nav-toggle__btn[aria-expanded="true"] span,
 .nav-toggle__btn[aria-expanded="true"] span::before,
-.nav-toggle__btn[aria-expanded="true"] span::after { opacity: 0; }
+.nav-toggle__btn[aria-expanded="true"] span::after {
+    opacity: 0;
+}
 
 /* --- ドロワーメニュー（dialog） --- */
 .nav-drawer__dialog {
@@ -97,20 +128,24 @@
     cursor: pointer;
 }
 
-.nav-drawer__left,
-.nav-drawer__right {
+.nav-drawer__left {
     flex: 1;
+    display: flex;
+    gap: 4rem;
     overflow-y: auto;
     scrollbar-width: none;
     padding: 80px 0;
 }
 
-.nav-drawer__left::-webkit-scrollbar,
-.nav-drawer__right::-webkit-scrollbar {
+.nav-drawer__left::-webkit-scrollbar {
     display: none;
 }
 
-@media (max-width: 768px) {
+.nav-drawer__right {
+    padding-top: 30px;
+}
+
+@media (width < 768px) {
     .nav-drawer__dialog {
         overflow-y: auto;
     }
@@ -120,8 +155,9 @@
         height: auto;
     }
 
-    .nav-drawer__left,
-    .nav-drawer__right {
+    .nav-drawer__left {
+        flex-direction: column;
+        gap: 0;
         overflow-y: visible;
     }
 }

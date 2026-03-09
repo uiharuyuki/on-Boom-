@@ -27,7 +27,7 @@ section {
 }
 
 .page-section__news .background-text {
-    top: 50px;
+    top: max(3.125rem, 8.3333vw + 0.625rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -39,13 +39,13 @@ section {
 }
 
 .page-section__goods .background-text {
-    top: 200px;
+    top: max(3.125rem, 10.4167vw);
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .page-section__audition .background-text {
-    top: 180px;
+    top: max(5.625rem, 6.25vw + 3.75rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -226,42 +226,10 @@ section {
     line-height: 3.2;
 }
 
-/* テキスト無限ループ */
-.wave-text__wrapper {
-    width: 100%;
-    padding: clamp(3.125rem, 3.3333vw + 2.125rem, 4.375rem) 0 clamp(0rem, 7.5vw - 2.25rem, 2.8125rem) 0;
-}
-
-.wave-text__svg {
-    width: 100%;
-    height: 200px;
-    display: block;
-}
-
-.wave-text__moving {
-    fill: var(--color-wave-text);
-    font-family: sans-serif;
-    font-size: clamp(3rem, 5.3333vw + 1.4rem, 5rem);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 
 /* =====================
    News カルーセル
    ===================== */
-
-.page-section__news {
-    overflow-x: clip;
-    overflow-y: visible;
-}
-
-.page-section__news .page-layout__container-talents {
-    display: flex;
-    flex-direction: column;
-    row-gap: clamp(2.25rem, 4vw + 1.05rem, 3.75rem);
-}
 
 .news-carousel__container {
     position: relative;
@@ -308,7 +276,6 @@ section {
     border: 3.5px solid var(--color-border);
     border-radius: inherit;
     pointer-events: none;
-    box-sizing: border-box;
 }
 
 
@@ -491,7 +458,7 @@ section {
 }
 
 .image-area {
-    z-index: var(--z-talents-image);/*---=== 100 ===---*/
+    z-index: var(--z-talents-image);
 }
 
 /* キャラクター画像 */
