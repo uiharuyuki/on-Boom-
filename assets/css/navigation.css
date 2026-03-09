@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1.25rem;
+    gap: 20px;
 }
 
 .nav-float__shop { top: 20px; right: 120px; }
@@ -131,7 +131,7 @@
 .nav-drawer__left {
     flex: 1;
     display: flex;
-    gap: 4rem;
+    gap: 64px;
     overflow-y: auto;
     scrollbar-width: none;
     padding: 80px 0;

@@ -21,7 +21,7 @@
 }
 
 .page-section__news .background-text {
-    top: clamp(3.125rem, 8.3333vw + 0.625rem, 10.625rem);
+    top: clamp(50px, 8.3333vw + 10px, 170px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -33,13 +33,13 @@
 }
 
 .page-section__goods .background-text {
-    top: clamp(3.125rem, 10.4167vw, 12.5rem);
+    top: clamp(50px, 10.4167vw, 200px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .page-section__audition .background-text {
-    top: clamp(5.625rem, 6.25vw + 3.75rem, 11.25rem);
+    top: clamp(90px, 6.25vw + 60px, 180px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -60,7 +60,7 @@
     border-radius: 100vmax;
     padding: 5px 40px;
     margin-inline: auto;
-    margin-top: 2.2cap;
+    margin-top: 25px;
     text-decoration: none;
     font-size: 1rem;
     letter-spacing: 0.5px;
@@ -74,7 +74,7 @@
 }
 
 #page-section__talents .view-all__link {
-    margin-top: calc(2.2cap + 20px);
+    margin-top: 45px;
 }
 
 /* =====================
@@ -206,7 +206,7 @@
 
 .page-section__about h2 {
     font-size: clamp(1.75rem, 0.6667vw + 1.55rem, 2rem);
-    padding: 0 0 clamp(2.1875rem, 0.8333vw + 1.9375rem, 2.5rem) 0;
+    padding: 0 0 clamp(35px, 0.8333vw + 31px, 40px) 0;
 }
 
 .section-about__strong {
@@ -287,7 +287,7 @@
 
 .news-carousel__meta {
     display: flex;
-    gap: 1.25rem;
+    gap: 20px;
     align-items: center;
     font-size: 0.875rem;
     padding-bottom: 8px;
@@ -344,7 +344,7 @@
 }
 
 #main-nav {
-    gap: 1rem;
+    gap: 16px;
     position: absolute;
     bottom: -20px;
     z-index: var(--z-talents-main-nav);/*---=== 200 ===---*/
@@ -367,8 +367,8 @@
 .text-area {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.6rem;
+    padding: 32px;
+    gap: 26px;
 }
 
 .text-area h3 {
@@ -400,12 +400,12 @@
 .talent-profile {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .talent-profile__item {
     display: flex;
-    gap: 0.5rem;
+    gap: 8px;
     align-items: baseline;
 }
 
@@ -423,7 +423,7 @@
 
 .talent-links {
     display: flex;
-    gap: 0.75rem;
+    gap: 12px;
 }
 
 .talent-links__item {
@@ -453,9 +453,13 @@
     z-index: var(--z-talents-image);
 }
 
-/* キャラクター画像 */
+/* キャラクター画像 & 背景シェイプ共通 */
+.page-layout__container-talents {
+    --talent-height: clamp(500px, 13.8889vw + 433.33px, 700px);
+}
+
 .image-area img {
-    height: clamp(31.25rem, 13.8889vw + 27.0833rem, 43.75rem);;
+    height: var(--talent-height);
     object-fit: cover;
 }
 
@@ -465,13 +469,11 @@
     }
 }
 
-
-/* 背景シェイプ */
 .shape-container {
     position: absolute;
-    right: calc(700px / 2 * tan(15deg));
-    width: clamp(13.125rem, 6.25vw + 11.25rem, 18.75rem);
-    height: clamp(30.625rem, 14.5833vw + 26.25rem, 43.75rem);
+    right: calc(var(--talent-height) / 2 * tan(15deg));
+    width: clamp(210px, 6.25vw + 180px, 300px);
+    height: clamp(490px, 14.5833vw + 420px, var(--talent-height));
     transform: skewX(-15deg);
     border-radius: 20px;
     overflow: hidden;
@@ -487,7 +489,7 @@
 }
 
 .shape-content__img {
-    width: calc(100% + 700px * sin(15deg));
+    width: calc(100% + var(--talent-height) * sin(15deg));
     max-width: none;
     height: 100%;
     object-fit: cover;
@@ -569,7 +571,7 @@
 }
 
 .page-section__goods .view-all__link {
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 
@@ -580,7 +582,7 @@
 .audition-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 48px;
     align-items: center;
 }
 
@@ -592,7 +594,7 @@
     align-items: center;
     justify-content: center;
     min-height: 320px;
-    padding: 2rem;
+    padding: 32px;
 }
 
 .audition-left h2 {
@@ -611,7 +613,7 @@
     font-size: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
     letter-spacing: 0.15em;
     color: var(--color-background__grey-a);
-    margin-top: 0.5rem;
+    margin-top: 8px;
 }
 
 /* --- 装飾図形 --- */
@@ -657,7 +659,7 @@
 .audition-right {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .audition-heading {
@@ -676,12 +678,12 @@
 .audition-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .audition-info__item {
     display: flex;
-    gap: 0.5rem;
+    gap: 8px;
     align-items: baseline;
 }
 
@@ -699,14 +701,14 @@
 
 .audition-right .view-all__link {
     margin-inline: 0;
-    margin-top: 0.5rem;
+    margin-top: 8px;
 }
 
 /* --- レスポンシブ --- */
 @media (width < 768px) {
     .audition-layout {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 32px;
     }
 
     .audition-left {
@@ -720,21 +722,21 @@
    ===================== */
 
 .site-footer {
-    padding: 2.5rem 0 1.5rem;
+    padding: 40px 0 24px;
 }
 
 .site-footer__logo {
     text-align: center;
     font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
     font-weight: 700;
-    padding-bottom: 1.5rem;
+    padding-bottom: 24px;
 }
 
 .site-footer__nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem 2.5rem;
+    gap: 24px 40px;
 }
 
 .site-footer__nav a {
@@ -749,8 +751,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
+    margin-top: 24px;
+    padding-top: 16px;
 }
 
 .site-footer__links {
@@ -775,7 +777,7 @@
 @media (width < 768px) {
     .site-footer__bottom {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 12px;
         align-items: center;
     }
 }
