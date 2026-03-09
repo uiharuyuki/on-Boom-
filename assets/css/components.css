@@ -3,12 +3,6 @@
 説明: UIコンポーネントのスタイル
 =========================================*/
 
-section {
-    position: relative;
-    overflow-x: clip;
-    overflow-y: visible;
-}
-
 .background-text {
     position: absolute;
     font-weight: 900;
@@ -27,7 +21,7 @@ section {
 }
 
 .page-section__news .background-text {
-    top: max(3.125rem, 8.3333vw + 0.625rem);
+    top: clamp(3.125rem, 8.3333vw + 0.625rem, 10.625rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -39,13 +33,13 @@ section {
 }
 
 .page-section__goods .background-text {
-    top: max(3.125rem, 10.4167vw);
+    top: clamp(3.125rem, 10.4167vw, 12.5rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .page-section__audition .background-text {
-    top: max(5.625rem, 6.25vw + 3.75rem);
+    top: clamp(5.625rem, 6.25vw + 3.75rem, 11.25rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -53,8 +47,6 @@ section {
 /* =====================
    汎用パーツ
    ===================== */
-
-.u-uppercase { text-transform: uppercase; }
 
 .view-all__link {
     display: flex;
@@ -463,7 +455,7 @@ section {
 
 /* キャラクター画像 */
 .image-area img {
-    height: 700px;
+    height: clamp(31.25rem, 13.8889vw + 27.0833rem, 43.75rem);;
     object-fit: cover;
 }
 
@@ -478,8 +470,8 @@ section {
 .shape-container {
     position: absolute;
     right: calc(700px / 2 * tan(15deg));
-    width: 300px;
-    height: 700px;
+    width: clamp(13.125rem, 6.25vw + 11.25rem, 18.75rem);
+    height: clamp(30.625rem, 14.5833vw + 26.25rem, 43.75rem);
     transform: skewX(-15deg);
     border-radius: 20px;
     overflow: hidden;
