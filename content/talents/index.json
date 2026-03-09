@@ -1,14 +1,14 @@
 [
   {
     "id": "main1",
-    "label": "カテゴリ 2",
-    "text": "カテゴリ2に関するテキストデータです。ここも切り替わります。",
+    "label": "鳴海 秋",
+    "text": "明るく人懐っこい性格。バスケ部に所属している。持ち前の運動神経の良さはゲームの世界でも健在。特にFPSゲームが得意で、仲間と連携を取りながら戦うチームプレーをこよなく愛している。",
     "thumbnail": "assets/images/talents-002.png",
-    "birthday": "3月15日",
-    "age": 20,
-    "height": "155cm",
+    "birthday": "9月15日",
+    "age": 18,
+    "height": "175cm",
     "catchphrase": "Coming soon...",
-    "hashtags": ["#カテゴリ2"],
+    "hashtags": ["#鳴海秋"],
     "color": "#16a34a",
     "websites": [
       { "url": "#", "icon": "youtube", "label": "YouTube" },
@@ -22,7 +22,7 @@
   },
   {
     "id": "main2",
-    "label": "小鳥遊ももか",
+    "label": "小鳥遊 ももか",
     "text": "おっとりとしたマイペースな性格、「ドジっ子」な一面と、やるべきことには真摯に向き合う真面目な努力家の一面を持っている。勉強や作業の時間を、ももかが隣で一緒に支えます。",
     "thumbnail": "assets/images/talents-001.png",
     "birthday": "2月11日",

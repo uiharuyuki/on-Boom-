@@ -1,7 +1,9 @@
-const ICONS = {
-  youtube: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 124"><path fill="#87CEEB" d="M172.32,19.36A22.12,22.12,0,0,0,156.76,3.7C143,0,88,0,88,0S33,0,19.24,3.7A22.12,22.12,0,0,0,3.68,19.36C0,33.18,0,62,0,62s0,28.82,3.68,42.64A22.12,22.12,0,0,0,19.24,120.3C33,124,88,124,88,124s55,0,68.76-3.7a22.12,22.12,0,0,0,15.56-15.66C176,90.82,176,62,176,62S176,33.18,172.32,19.36Z"/><polygon fill="#fff" points="70 88.17 116 62 70 35.83 70 88.17"/></svg>`,
-  x: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"><path fill="#87CEEB" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>`,
-};
+function getIcons(color) {
+  return {
+    youtube: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 124"><path fill="${color}" d="M172.32,19.36A22.12,22.12,0,0,0,156.76,3.7C143,0,88,0,88,0S33,0,19.24,3.7A22.12,22.12,0,0,0,3.68,19.36C0,33.18,0,62,0,62s0,28.82,3.68,42.64A22.12,22.12,0,0,0,19.24,120.3C33,124,88,124,88,124s55,0,68.76-3.7a22.12,22.12,0,0,0,15.56-15.66C176,90.82,176,62,176,62S176,33.18,172.32,19.36Z"/><polygon fill="#fff" points="70 88.17 116 62 70 35.83 70 88.17"/></svg>`,
+    x: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"><path fill="${color}" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>`,
+  };
+}
 
 export function initTalents(appData) {
   let activeMainIndex = 0;
@@ -45,6 +47,7 @@ export function initTalents(appData) {
     talentHeight.textContent = currentMain.height;
 
     // ウェブサイトリンク
+    const icons = getIcons(currentMain.color || '#87CEEB');
     talentLinks.innerHTML = '';
     currentMain.websites.forEach(site => {
       const a = document.createElement('a');
@@ -54,10 +57,10 @@ export function initTalents(appData) {
       a.className = 'talent-links__item';
       a.setAttribute('aria-label', site.label);
 
-      if (ICONS[site.icon]) {
+      if (icons[site.icon]) {
         const span = document.createElement('span');
         span.className = 'talent-links__icon';
-        span.innerHTML = ICONS[site.icon];
+        span.innerHTML = icons[site.icon];
         a.appendChild(span);
       } else {
         const img = document.createElement('img');

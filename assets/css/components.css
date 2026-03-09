@@ -347,7 +347,7 @@
     gap: 16px;
     position: absolute;
     bottom: -20px;
-    z-index: var(--z-talents-main-nav);/*---=== 200 ===---*/
+    z-index: var(--z-talents-main-nav);
 }
 
 /* モバイル用 h2 / sub-nav：PCでは非表示 */
@@ -386,12 +386,12 @@
 .text-area {
     display: flex;
     flex-direction: column;
-    padding: 32px;
-    gap: 26px;
+    padding: 0 32px;
+    gap: 6px;
 }
 
 .text-area h3 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw + 0.3rem, 3rem);
 }
 
 /* 衣装切り替えボタン */
@@ -436,7 +436,7 @@
 .talent-profile {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: clamp(0.25rem, 0.6667vw + 0.05rem, 0.5rem);
 }
 
 .talent-profile__item {
@@ -481,8 +481,8 @@
 }
 
 #main-text {
-    font-size: clamp(0.65rem, 1.2vw, 1rem);
-    width: clamp(220px, 30vw, 400px);
+    font-size: 1rem;
+    width: clamp(9.375rem, 34.7222vw - 1.0417rem, 25rem);
 }
 
 .image-area {
@@ -501,7 +501,13 @@
 
 @media (width < 1200px) {
     .image-area {
-        transform: translateX(12vw);
+        transform: translateX(6vw);
+    }
+}
+
+@media (width < 768px) {
+    .image-area {
+        transform: translateX(16vw);
     }
 }
 
@@ -513,6 +519,12 @@
     transform: skewX(-15deg);
     border-radius: 20px;
     overflow: hidden;
+}
+
+@media (width < 768px) {
+    .shape-container {
+        right: calc(var(--talent-height) / 2 * tan(15deg) - 140px);
+    }
 }
 
 .shape-content {
@@ -817,3 +829,4 @@
         align-items: center;
     }
 }
+
