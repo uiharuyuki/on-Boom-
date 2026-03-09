@@ -27,7 +27,7 @@
 }
 
 .page-section__talents .background-text {
-    top: 185px;
+    top: clamp(2.8125rem, 9.7222vw - 0.1042rem, 11.5625rem);
     left: 50%;
     transform: translate(-50%, -50%);
 }
