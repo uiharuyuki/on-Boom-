@@ -4,7 +4,7 @@ function escapeHTML(str) {
   return div.innerHTML;
 }
 
-export function initNews(news) {
+function initNews(news) {
   const track = document.querySelector('.news-carousel__track');
   if (!track) return;
 

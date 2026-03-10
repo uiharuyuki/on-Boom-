@@ -69,3 +69,7 @@ CMYKのシアン、マゼンタ、イエロを使用、YouTubeのプラットホ
 # claudeCode
 - JavaScript コーディング全般。
 - cssのclass命名形式一括変更「○○-○○__○○の形式にすべて変更」など。
+
+
+
+/sync-json

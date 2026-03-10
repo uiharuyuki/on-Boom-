@@ -5,7 +5,7 @@ function getIcons(color) {
   };
 }
 
-export function initTalents(appData) {
+function initTalents(appData) {
   let activeMainIndex = 0;
   let activeSubIndex = 0;
 

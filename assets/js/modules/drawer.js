@@ -1,4 +1,4 @@
-export function initDrawer() {
+function initDrawer() {
   const dialog = document.getElementById('nav-drawer__dialog');
   const openBtn = document.getElementById('nav-drawer__open');
   const closeBtn = document.getElementById('nav-drawer__close');

@@ -50,7 +50,7 @@ function fitGroup(elements) {
   elements.forEach((element) => fitTextToWidth(element, targetWidth));
 }
 
-export function initBackgroundTextFit() {
+function initBackgroundTextFit() {
   const targets = Array.from(document.querySelectorAll('.background-text'));
   if (!targets.length) return;
 

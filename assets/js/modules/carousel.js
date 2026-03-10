@@ -1,4 +1,4 @@
-export function initCarousel() {
+function initCarousel() {
   const track = document.querySelector('.news-carousel__track');
   const slides = document.querySelectorAll('.news-carousel__slide');
   const nextBtn = document.querySelector('.news-carousel__next');

@@ -1,4 +1,4 @@
-export function initParallax() {
+function initParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const image = document.querySelector('.main-visual__parallax');
