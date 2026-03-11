@@ -84,8 +84,7 @@
 .main-visual__character {
     position: absolute;
     top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 .main-visual__character img {
@@ -93,6 +92,28 @@
     min-height: 400px;
     max-inline-size: none;
     object-fit: cover;
+}
+
+/* PC: 左右配置 */
+.main-visual__character--left {
+    left: 5%;
+}
+
+.main-visual__character--right {
+    right: -12%;
+}
+
+/* モバイル: 左のみ表示（SP画像1枚） */
+@media (width < 768px) {
+    .main-visual__character {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-visual__character--right {
+        display: none;
+    }
 }
 
 .main-visual__logo img {

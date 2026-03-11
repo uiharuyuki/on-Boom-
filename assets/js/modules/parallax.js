@@ -1,12 +1,12 @@
 function initParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const image = document.querySelector('.main-visual__parallax');
+  const images = Array.from(document.querySelectorAll('.main-visual__parallax'));
   const speed = 0.15;
 
   const bgTexts = Array.from(document.querySelectorAll('.background-text'));
 
-  if (!image && !bgTexts.length) return;
+  if (!images.length && !bgTexts.length) return;
 
   // 背景テキストのパララックス係数（小さいほど遅く動く）
   const bgTextFactor = 0.1;
@@ -17,8 +17,8 @@ function initParallax() {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(() => {
-      if (image) {
-        image.style.transform = `translateY(${window.scrollY * -speed}px)`;
+      for (const img of images) {
+        img.style.transform = `translateY(${window.scrollY * -speed}px)`;
       }
 
       const viewportBottom = window.innerHeight;

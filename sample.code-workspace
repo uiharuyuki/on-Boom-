@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../sample"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../niray"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "on-boom"
+	}
+}
