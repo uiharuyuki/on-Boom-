@@ -83,12 +83,10 @@
 
 .main-visual__character {
     position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
 }
 
 .main-visual__character img {
-    height: 105vh;
+    height: 55vh;
     min-height: 400px;
     max-inline-size: none;
     object-fit: cover;
@@ -96,12 +94,24 @@
 
 /* PC: 左右配置 */
 .main-visual__character--left {
-    left: 5%;
+    left: 12%;
+    top: 53%;                    
+    transform: translateY(-50%);                                                                                                                                                                           
 }
 
 .main-visual__character--right {
-    right: -12%;
+    left: 30%;
+    top: 40%;
+    transform: translateY(-50%);
 }
+
+.main-visual__character--left img {
+    height: 60vh;
+}   
+.main-visual__character--right img {
+    height: 85vh;
+}
+
 
 /* モバイル: 左のみ表示（SP画像1枚） */
 @media (width < 768px) {
@@ -109,6 +119,10 @@
         left: 50%;
         right: auto;
         transform: translate(-50%, -50%);
+    }
+
+    .main-visual__character img {
+        height: 105vh;
     }
 
     .main-visual__character--right {
