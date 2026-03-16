@@ -1,7 +1,6 @@
 // データに依存しないモジュールを即時初期化
 initParallax();
 initDrawer();
-initBackgroundTextFit();
 
 // グローバル変数からデータを取得 → UI構築
 // (index.html 内の <script> タグで window.__TALENTS_DATA__, window.__NEWS_DATA__ として埋め込み済み)

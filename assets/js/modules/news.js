@@ -35,7 +35,7 @@ function initNews(news) {
     time.textContent = item.dateDisplay;
 
     const category = document.createElement('span');
-    category.className = 'news-carousel__category';
+    category.className = `news-carousel__category news-carousel__category--${item.category}`;
     category.textContent = item.category;
 
     meta.appendChild(time);

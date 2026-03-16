@@ -3,45 +3,31 @@
 説明: UIコンポーネントのスタイル
 =========================================*/
 
-.background-text {
+#page-layout__wrapper {
+    background-color: var(--color-background__white);
+}
+
+.bg-base-area {
+    position: relative;
+    background-color: var(--color-background__base);
+    background-image: url(../images/base.png);
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position: left 300px;
+    background-attachment: scroll;
+}
+
+.bg-base-area::after {
+    content: "";
     position: absolute;
-    font-weight: 900;
-    white-space: nowrap;
-    color: var(--color-background__white);
-    -webkit-text-stroke: 4px rgba(0, 0, 0, 0.15);
-    paint-order: stroke fill;
-    z-index: var(--z-background);
-    user-select: none;
-}
-
-.page-section__about .background-text {
-    top: -100px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.page-section__news .background-text {
-    top: clamp(50px, 8.3333vw + 10px, 170px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.page-section__talents .background-text {
-    top: clamp(2.8125rem, 9.7222vw - 0.1042rem, 11.5625rem);
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.page-section__goods .background-text {
-    top: clamp(50px, 10.4167vw, 200px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.page-section__audition .background-text {
-    top: clamp(90px, 6.25vw + 60px, 180px);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: inherit;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    translate: 0 100%;
+    pointer-events: none;
 }
 
 /* =====================
@@ -142,9 +128,11 @@
 
 @media (width < 768px) {
     .main-visual__logo img {
+        position: fixed;
         width: 250px;
         top: 13px;
         left: 10px;
+        z-index: var(--z-global-float-nav);
     }
 }
 
@@ -289,7 +277,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: var(--color-background__base);
     position: relative;
 }
 
@@ -332,6 +320,19 @@
 .news-carousel__category {
     text-transform: uppercase;
     font-weight: bold;
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 9999px;
+    color: var(--color-text__white);
+    font-size: 0.75rem;
+}
+
+.news-carousel__category--goods {
+    background-color: rgb(100 200 235);
+}
+
+.news-carousel__category--news {
+    background-color: rgb(240 160 60);
 }
 
 .news-carousel__title {
