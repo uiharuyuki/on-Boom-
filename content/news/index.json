@@ -13,7 +13,7 @@
   },
   {
     "id": "002",
-    "date": "2026-02-14",
+    "date": "2026-01-14",
     "dateDisplay": "2026.01.14",
     "category": "news",
     "label": "official news",
@@ -25,26 +25,26 @@
   },
   {
     "id": "003",
-    "date": "2026-02-14",
+    "date": "2025-12-11",
     "dateDisplay": "2025.12.11",
     "category": "goods",
     "label": "official shop",
-    "title": "",
+    "title": "ウィンターグッズ近日公開",
     "image": "assets/images/news/carousel-track_003.png",
     "link": null,
-    "excerpt": "",
+    "excerpt": "新作ウィンターグッズの詳細は近日公開予定です。ラインナップや販売時期は続報をお待ちください。",
     "tags": ["goods"]
   },
   {
     "id": "004",
-    "date": "2026-02-14",
+    "date": "2025-10-02",
     "dateDisplay": "2025.10.02",
     "category": "goods",
     "label": "official shop",
-    "title": "○○",
+    "title": "オフィシャルショップ準備中",
     "image": "assets/images/news/carousel-track_004.png",
     "link": null,
-    "excerpt": "",
+    "excerpt": "オフィシャルショップのオープンに向けて準備を進めています。公開時期や取扱商品は続報をお待ちください。",
     "tags": ["goods"]
   }
 ]

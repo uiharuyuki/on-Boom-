@@ -8,6 +8,7 @@
 }
 
 .bg-base-area {
+    display: flow-root;
     position: relative;
     background-color: var(--color-background__base);
     background-image: url(../images/base.png);
@@ -17,15 +18,22 @@
     background-attachment: scroll;
 }
 
+@media (width < 768px) {
+    .bg-base-area {
+        background-image: none;
+    }
+}
+
 .bg-base-area::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: clamp(100px, 13.8889vw + 33.3333px, 300px);
     background-color: inherit;
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    border-bottom: 2px solid #c4c4c4;
     translate: 0 100%;
     pointer-events: none;
 }
@@ -483,7 +491,7 @@
 }
 
 .talent-profile__item dt {
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 1.2308vw + 0.3808rem, 1.15rem);
     font-weight: bold;
     min-width: 3.5em;
     text-transform: uppercase;
@@ -491,7 +499,7 @@
 }
 
 .talent-profile__item dd {
-    font-size: 0.9375rem;
+    font-size: clamp(0.8rem, 1.2308vw + 0.4308rem, 1.2rem);
 }
 
 .talent-links {
@@ -518,7 +526,7 @@
 }
 
 #main-text {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 0.2222vw + 0.7333rem, 1rem);
     width: clamp(9.375rem, 34.7222vw - 1.0417rem, 25rem);
 }
 

@@ -25,7 +25,7 @@ footer {
 .page-layout__main { flex-grow: 1; }
 
 .page-section__talents {
-    padding-top: calc(80px + clamp(50px, 10.4167vw, 200px));
+    padding-top: clamp(130px, 22.2222vw + 23.3333px, 450px);
 }
 
 .page-section__news {
@@ -34,7 +34,7 @@ footer {
 
 .page-section__goods,
 .page-section__audition {
-    padding-top: clamp(30px, 9.7222vw - 16.67px, 170px);
+    padding-top: clamp(30px, 6.25vw + 0px, 120px);
 }
 
 .page-layout__container {
