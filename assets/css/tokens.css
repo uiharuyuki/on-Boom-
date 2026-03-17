@@ -30,6 +30,10 @@
     --color-shape__grey-a: rgb(157 157 157 / 0.2);
     --color-text__grey-light: rgb(170 170 170);
 
+    --color-border__section: rgb(196 196 196);
+    --color-category__goods: rgb(100 200 235);
+    --color-category__news: rgb(240 160 60);
+
     /* z-index tokens */
     --z-background: -1;
     --z-local-base: 0;
