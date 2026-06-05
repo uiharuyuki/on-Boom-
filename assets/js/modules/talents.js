@@ -17,16 +17,20 @@ function initTalents() {
       el.toggleAttribute('hidden', Number(el.dataset.talent) !== activeTalent);
     });
 
-    // キャラクター切り替えボタンのアクティブ状態
+    // キャラクター切り替えボタンのアクティブ状態（見た目＋支援技術向けの選択状態）
     mainButtons.forEach((btn) => {
-      btn.classList.toggle('is-active', Number(btn.dataset.talent) === activeTalent);
+      const isActive = Number(btn.dataset.talent) === activeTalent;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
     });
 
     // 衣装ボタンのアクティブ状態（現在のキャラクターの該当衣装のみ）
     root.querySelectorAll('.outfit-btn').forEach((btn) => {
       const group = btn.closest('[data-talent]');
       const talent = group ? Number(group.dataset.talent) : NaN;
-      btn.classList.toggle('is-active', talent === activeTalent && Number(btn.dataset.outfit) === activeOutfit);
+      const isActive = talent === activeTalent && Number(btn.dataset.outfit) === activeOutfit;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
     });
 
     // キャラクター画像・背景シェイプ画像の表示切り替え

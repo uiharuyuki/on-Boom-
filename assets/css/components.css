@@ -270,6 +270,11 @@
     container-type: inline-size;
 }
 
+/* リンク付きスライドのアンカーをブロック化（リンク有無でレイアウトを揃える） */
+.news-carousel__slide a {
+    display: block;
+}
+
 @media (width < 1200px) { .news-carousel__slide { flex: 0 0 calc(100% / 2); } }
 
 @media (width < 768px) { .news-carousel__slide { flex: 0 0 100%; } }
@@ -455,6 +460,14 @@
     border: 1.5px solid var(--color-text__black);
     background: none;
     padding: 0;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+/* 選択中の衣装 */
+.outfit-btn.is-active {
+    border-color: var(--color-background__button);
+    border-width: 2.5px;
 }
 
 .outfit-btn img {
@@ -587,6 +600,10 @@
     padding: 0 3px 3px 3px;
 }
 
+#main-nav button:not([disabled]) {
+    cursor: pointer;
+}
+
 #main-nav button::after {
     content: '';
     position: absolute;
@@ -599,6 +616,12 @@
     border-radius: 6px;
     z-index: var(--z-local-base);
     pointer-events: none;
+    transition: border-color 0.2s ease;
+}
+
+/* 選択中のキャラクター */
+#main-nav button.is-active::after {
+    border-color: var(--color-background__button);
 }
 
 #main-nav button img {
