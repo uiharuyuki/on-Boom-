@@ -36,6 +36,9 @@ h2 {
 
 .util-height__dvh { height: 100dvh; }
 
+/* hidden属性を確実に効かせる（display:flex等の指定に上書きされないように） */
+[hidden] { display: none !important; }
+
 /* --- アニメーション軽減設定 --- */
 @media (prefers-reduced-motion: reduce) {
     *,

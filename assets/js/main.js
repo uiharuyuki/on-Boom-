@@ -1,16 +1,7 @@
-// データに依存しないモジュールを即時初期化
+// 各モジュールを初期化
+// コンテンツは index.html に直接記述済みのため、データの読み込みは不要。
+// 各JSは「表示の切り替え」や「アニメーション」などの挙動のみを担当する。
 initParallax();
 initDrawer();
-
-// グローバル変数からデータを取得 → UI構築
-// (index.html 内の <script> タグで window.__TALENTS_DATA__, window.__NEWS_DATA__ として埋め込み済み)
-const talentsData = window.__TALENTS_DATA__;
-const newsData = window.__NEWS_DATA__;
-
-if (talentsData && newsData) {
-  initNews(newsData);
-  initCarousel(); // ニュースのDOM生成後に初期化
-  initTalents(talentsData);
-} else {
-  console.error('データの読み込みに失敗しました: インラインデータが見つかりません');
-}
+initCarousel(); // ニュースのスライドはHTMLに記述済み
+initTalents();

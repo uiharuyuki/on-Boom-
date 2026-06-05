@@ -197,8 +197,64 @@
                         </button>
                         <!--right-button-->
 
-                        <!--carousel-->
-                        <div class="news-carousel__track"></div>
+                        <!--carousel（スライドはHTMLに直接記述。carousel.jsは表示制御のみ担当）-->
+                        <div class="news-carousel__track">
+
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content" style="background-image:url('assets/images/news/carousel-track_001.png')">
+                                    <p>official shop</p>
+                                </div>
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
+                                        <time datetime="2026-02-14">2026.02.14</time>
+                                        <span class="news-carousel__category news-carousel__category--goods">goods</span>
+                                    </div>
+                                    <p class="news-carousel__title">バレンタイン記念グッズ発売！</p>
+                                </div>
+                            </div>
+
+                            <div class="news-carousel__slide">
+                                <a href="index.html">
+                                    <div class="news-carousel__content" style="background-image:url('assets/images/news/carousel-track_002.png')">
+                                        <p>official news</p>
+                                    </div>
+                                    <div class="news-carousel__text-wrap">
+                                        <div class="news-carousel__meta">
+                                            <time datetime="2026-01-14">2026.01.14</time>
+                                            <span class="news-carousel__category news-carousel__category--news">news</span>
+                                        </div>
+                                        <p class="news-carousel__title">デザインコンテスト『SKYWARD』開催決定!</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content" style="background-image:url('assets/images/news/carousel-track_003.png')">
+                                    <p>official shop</p>
+                                </div>
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
+                                        <time datetime="2025-12-11">2025.12.11</time>
+                                        <span class="news-carousel__category news-carousel__category--goods">goods</span>
+                                    </div>
+                                    <p class="news-carousel__title">ウィンターグッズ近日公開</p>
+                                </div>
+                            </div>
+
+                            <div class="news-carousel__slide">
+                                <div class="news-carousel__content" style="background-image:url('assets/images/news/carousel-track_004.png')">
+                                    <p>official shop</p>
+                                </div>
+                                <div class="news-carousel__text-wrap">
+                                    <div class="news-carousel__meta">
+                                        <time datetime="2025-10-02">2025.10.02</time>
+                                        <span class="news-carousel__category news-carousel__category--goods">goods</span>
+                                    </div>
+                                    <p class="news-carousel__title">オフィシャルショップ準備中</p>
+                                </div>
+                            </div>
+
+                        </div>
                         <!--carousel-->
 
                     </div>
@@ -215,51 +271,103 @@
             <!--/.bg-base-area-->
 
             <!--talents-->
+            <!--
+                コンテンツはHTMLに直接記述（SEO・JS無効時にも表示・初期表示のちらつき防止）。
+                JS（talents.js）は data-talent / data-outfit 属性を見て表示の切り替えのみを担当する。
+            -->
             <section id="page-section__talents" class="page-section__talents">
 
                 <div class="talents-mobile-top">
                     <h2 class="talents-mobile-heading">talents</h2>
-                    <div class="button-group" id="sub-nav-mobile"></div>
+                    <!--衣装切り替え（モバイル）: タレントごとのグループを切り替え表示-->
+                    <div class="button-group" id="sub-nav-mobile">
+                        <div class="outfit-nav" data-talent="0">
+                            <button class="outfit-btn is-active" data-outfit="0" aria-label="画像 2-A"><img src="assets/images/talents/aki/icon_001.png" alt="画像 2-A"></button>
+                            <button class="outfit-btn" data-outfit="1" aria-label="画像 2-B"><img src="assets/images/talents/aki/icon_002.png" alt="画像 2-B"></button>
+                            <button class="outfit-btn" data-outfit="2" aria-label="画像 2-C"><img src="assets/images/talents/aki/icon_003.png" alt="画像 2-C"></button>
+                        </div>
+                        <div class="outfit-nav" data-talent="1" hidden>
+                            <button class="outfit-btn is-active" data-outfit="0" aria-label="画像 1-A"><img src="assets/images/talents/momoka/icon_001.png" alt="画像 1-A"></button>
+                            <button class="outfit-btn" data-outfit="1" aria-label="画像 1-B"><img src="assets/images/talents/momoka/icon_002.png" alt="画像 1-B"></button>
+                            <button class="outfit-btn" data-outfit="2" aria-label="画像 1-C"><img src="assets/images/talents/momoka/icon_003.png" alt="画像 1-C"></button>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <div class="page-layout__container-talents">
                     <div class="text-area__talents">
                         <h2>talents</h2>
-                        <div class="text-area">
-                            <h3 id="main-title">テキスト読み込み中...</h3>
-                            <div class="button-group" id="sub-nav"></div>
+
+                        <!--鳴海 秋-->
+                        <div class="text-area" data-talent="0">
+                            <h3>鳴海 秋</h3>
+                            <div class="outfit-nav outfit-nav--pc">
+                                <button class="outfit-btn is-active" data-outfit="0" aria-label="画像 2-A"><img src="assets/images/talents/aki/icon_001.png" alt="画像 2-A"></button>
+                                <button class="outfit-btn" data-outfit="1" aria-label="画像 2-B"><img src="assets/images/talents/aki/icon_002.png" alt="画像 2-B"></button>
+                                <button class="outfit-btn" data-outfit="2" aria-label="画像 2-C"><img src="assets/images/talents/aki/icon_003.png" alt="画像 2-C"></button>
+                            </div>
                             <dl class="talent-profile">
-                                <div class="talent-profile__item">
-                                    <dt>誕生日</dt>
-                                    <dd id="talent-birthday">-</dd>
-                                </div>
-                                <div class="talent-profile__item">
-                                    <dt>年齢</dt>
-                                    <dd id="talent-age">-</dd>
-                                </div>
-                                <div class="talent-profile__item">
-                                    <dt>身長</dt>
-                                    <dd id="talent-height">-</dd>
-                                </div>
+                                <div class="talent-profile__item"><dt>誕生日</dt><dd>9月15日</dd></div>
+                                <div class="talent-profile__item"><dt>年齢</dt><dd>18歳</dd></div>
+                                <div class="talent-profile__item"><dt>身長</dt><dd>175cm</dd></div>
                             </dl>
-                            <div id="talent-links" class="talent-links"></div>
-                            <p id="main-text">テキスト読み込み中...</p>
+                            <div class="talent-links">
+                                <a class="talent-links__item" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span class="talent-links__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 124"><path fill="#16a34a" d="M172.32,19.36A22.12,22.12,0,0,0,156.76,3.7C143,0,88,0,88,0S33,0,19.24,3.7A22.12,22.12,0,0,0,3.68,19.36C0,33.18,0,62,0,62s0,28.82,3.68,42.64A22.12,22.12,0,0,0,19.24,120.3C33,124,88,124,88,124s55,0,68.76-3.7a22.12,22.12,0,0,0,15.56-15.66C176,90.82,176,62,176,62S176,33.18,172.32,19.36Z"/><polygon fill="#fff" points="70 88.17 116 62 70 35.83 70 88.17"/></svg></span></a>
+                                <a class="talent-links__item" href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><span class="talent-links__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"><path fill="#16a34a" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg></span></a>
+                            </div>
+                            <p class="main-text">明るく人懐っこい性格。バスケ部に所属している。持ち前の運動神経の良さはゲームの世界でも健在。特にFPSゲームが得意で、仲間と連携を取りながら戦うチームプレーをこよなく愛している。</p>
+                        </div>
+
+                        <!--小鳥遊 ももか-->
+                        <div class="text-area" data-talent="1" hidden>
+                            <h3>小鳥遊 ももか</h3>
+                            <div class="outfit-nav outfit-nav--pc">
+                                <button class="outfit-btn is-active" data-outfit="0" aria-label="画像 1-A"><img src="assets/images/talents/momoka/icon_001.png" alt="画像 1-A"></button>
+                                <button class="outfit-btn" data-outfit="1" aria-label="画像 1-B"><img src="assets/images/talents/momoka/icon_002.png" alt="画像 1-B"></button>
+                                <button class="outfit-btn" data-outfit="2" aria-label="画像 1-C"><img src="assets/images/talents/momoka/icon_003.png" alt="画像 1-C"></button>
+                            </div>
+                            <dl class="talent-profile">
+                                <div class="talent-profile__item"><dt>誕生日</dt><dd>2月11日</dd></div>
+                                <div class="talent-profile__item"><dt>年齢</dt><dd>17歳</dd></div>
+                                <div class="talent-profile__item"><dt>身長</dt><dd>162cm</dd></div>
+                            </dl>
+                            <div class="talent-links">
+                                <a class="talent-links__item" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span class="talent-links__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 124"><path fill="#9d9dff" d="M172.32,19.36A22.12,22.12,0,0,0,156.76,3.7C143,0,88,0,88,0S33,0,19.24,3.7A22.12,22.12,0,0,0,3.68,19.36C0,33.18,0,62,0,62s0,28.82,3.68,42.64A22.12,22.12,0,0,0,19.24,120.3C33,124,88,124,88,124s55,0,68.76-3.7a22.12,22.12,0,0,0,15.56-15.66C176,90.82,176,62,176,62S176,33.18,172.32,19.36Z"/><polygon fill="#fff" points="70 88.17 116 62 70 35.83 70 88.17"/></svg></span></a>
+                                <a class="talent-links__item" href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><span class="talent-links__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"><path fill="#9d9dff" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg></span></a>
+                            </div>
+                            <p class="main-text">おっとりとしたマイペースな性格、「ドジっ子」な一面と、やるべきことには真摯に向き合う真面目な努力家の一面を持っている。勉強や作業の時間を、ももかが隣で一緒に支えます。</p>
                         </div>
                     </div>
 
                     <div class="image-area">
-                        <img id="display-image" alt="タレント画像">
+                        <img data-talent="0" data-outfit="0" src="assets/images/talents/aki/outfit_001.png" alt="鳴海 秋 - 画像 2-A" loading="lazy">
+                        <img data-talent="0" data-outfit="1" src="assets/images/talents/aki/outfit_002.png" alt="鳴海 秋 - 画像 2-B" loading="lazy" hidden>
+                        <img data-talent="0" data-outfit="2" src="assets/images/talents/aki/outfit_003.png" alt="鳴海 秋 - 画像 2-C" loading="lazy" hidden>
+                        <img data-talent="1" data-outfit="0" src="assets/images/talents/momoka/outfit_001.png" alt="小鳥遊 ももか - 画像 1-A" loading="lazy" hidden>
+                        <img data-talent="1" data-outfit="1" src="assets/images/talents/momoka/outfit_002.png" alt="小鳥遊 ももか - 画像 1-B" loading="lazy" hidden>
+                        <img data-talent="1" data-outfit="2" src="assets/images/talents/momoka/outfit_003.png" alt="小鳥遊 ももか - 画像 1-C" loading="lazy" hidden>
                     </div>
 
                     <div class="shape-container">
                         <div class="shape-content">
-                            <img id="shape-image" src="" alt="" class="shape-content__img">
+                            <img class="shape-content__img" data-talent="0" data-outfit="0" src="assets/images/talents/aki/background_001.png" alt="画像 2-A" loading="lazy">
+                            <img class="shape-content__img" data-talent="0" data-outfit="1" src="assets/images/talents/aki/background_002.png" alt="画像 2-B" loading="lazy" hidden>
+                            <img class="shape-content__img" data-talent="0" data-outfit="2" src="assets/images/talents/aki/background_003.png" alt="画像 2-C" loading="lazy" hidden>
+                            <img class="shape-content__img" data-talent="1" data-outfit="0" src="assets/images/talents/momoka/background_001.png" alt="画像 1-A" loading="lazy" hidden>
+                            <img class="shape-content__img" data-talent="1" data-outfit="1" src="assets/images/talents/momoka/background_002.png" alt="画像 1-B" loading="lazy" hidden>
+                            <img class="shape-content__img" data-talent="1" data-outfit="2" src="assets/images/talents/momoka/background_003.png" alt="画像 1-C" loading="lazy" hidden>
                         </div>
                     </div>
 
-                    <div class="button-group" id="main-nav"></div>
+                    <!--キャラクター切り替え-->
+                    <div class="button-group" id="main-nav">
+                        <button class="is-active" data-talent="0" aria-label="鳴海 秋"><img src="assets/images/talents/aki/thumbnail.png" alt="鳴海 秋"></button>
+                        <button data-talent="1" aria-label="小鳥遊 ももか"><img src="assets/images/talents/momoka/thumbnail.png" alt="小鳥遊 ももか"></button>
+                        <button disabled aria-label="coming soon"><span class="coming-soon-label">coming soon...</span></button>
+                        <button disabled aria-label="coming soon"><span class="coming-soon-label">coming soon...</span></button>
+                    </div>
                 </div>
-                
+
                 <a href="index.html" class="view-all__link">view all</a>
 
             </section>
@@ -354,17 +462,10 @@
 
     </div>
 
-    <!--content data (inline for file:// compatibility)-->
-    <script>
-    window.__TALENTS_DATA__ = [{"id":"main1","label":"鳴海 秋","text":"明るく人懐っこい性格。バスケ部に所属している。持ち前の運動神経の良さはゲームの世界でも健在。特にFPSゲームが得意で、仲間と連携を取りながら戦うチームプレーをこよなく愛している。","thumbnail":"assets/images/talents/aki/thumbnail.png","birthday":"9月15日","age":18,"height":"175cm","catchphrase":"Coming soon...","hashtags":["#鳴海秋"],"color":"#16a34a","websites":[{"url":"#","icon":"youtube","label":"YouTube"},{"url":"#","icon":"x","label":"X"}],"subItems":[{"label":"画像 2-A","img":"assets/images/talents/aki/outfit_001.png","icon":"assets/images/talents/aki/icon_001.png","shapeImg":"assets/images/talents/aki/background_001.png"},{"label":"画像 2-B","img":"assets/images/talents/aki/outfit_002.png","icon":"assets/images/talents/aki/icon_002.png","shapeImg":"assets/images/talents/aki/background_002.png"},{"label":"画像 2-C","img":"assets/images/talents/aki/outfit_003.png","icon":"assets/images/talents/aki/icon_003.png","shapeImg":"assets/images/talents/aki/background_003.png"}]},{"id":"main2","label":"小鳥遊 ももか","text":"おっとりとしたマイペースな性格、「ドジっ子」な一面と、やるべきことには真摯に向き合う真面目な努力家の一面を持っている。勉強や作業の時間を、ももかが隣で一緒に支えます。","thumbnail":"assets/images/talents/momoka/thumbnail.png","birthday":"2月11日","age":17,"height":"162cm","catchphrase":"あなたの隣で、ゆっくりと。","hashtags":["#小鳥遊ももか","#ももかの勉強部屋"],"color":"#9d9dff","websites":[{"url":"#","icon":"youtube","label":"YouTube"},{"url":"#","icon":"x","label":"X"}],"subItems":[{"label":"画像 1-A","img":"assets/images/talents/momoka/outfit_001.png","icon":"assets/images/talents/momoka/icon_001.png","shapeImg":"assets/images/talents/momoka/background_001.png"},{"label":"画像 1-B","img":"assets/images/talents/momoka/outfit_002.png","icon":"assets/images/talents/momoka/icon_002.png","shapeImg":"assets/images/talents/momoka/background_002.png"},{"label":"画像 1-C","img":"assets/images/talents/momoka/outfit_003.png","icon":"assets/images/talents/momoka/icon_003.png","shapeImg":"assets/images/talents/momoka/background_003.png"}]},{"id":"main3","comingSoon":true,"label":"coming soon...","text":"","thumbnail":"","birthday":"","age":"00","height":"","catchphrase":"Coming soon...","hashtags":[],"color":"","websites":[{"url":"#","icon":"youtube","label":"YouTube"},{"url":"#","icon":"x","label":"X"}],"subItems":[{"label":"画像 3-A","img":"","icon":"","shapeImg":""},{"label":"画像 3-B","img":"","icon":"","shapeImg":""},{"label":"画像 3-C","img":"","icon":"","shapeImg":""}]},{"id":"main4","comingSoon":true,"label":"coming soon...","text":"","thumbnail":"","birthday":"","age":"00","height":"","catchphrase":"Coming soon...","hashtags":[],"color":"","websites":[{"url":"#","icon":"youtube","label":"YouTube"},{"url":"#","icon":"x","label":"X"}],"subItems":[{"label":"画像 4-A","img":"","icon":"","shapeImg":""},{"label":"画像 4-B","img":"","icon":"","shapeImg":""},{"label":"画像 4-C","img":"","icon":"","shapeImg":""}]}];
-    window.__NEWS_DATA__ = [{"id":"001","date":"2026-02-14","dateDisplay":"2026.02.14","category":"goods","label":"official shop","title":"バレンタイン記念グッズ発売！","image":"assets/images/news/carousel-track_001.png","link":null,"excerpt":"バレンタインデーを記念した限定グッズが登場。アクリルスタンドやクリアファイルなど、ここでしか手に入らないアイテムをお届けします。","tags":["goods"]},{"id":"002","date":"2026-01-14","dateDisplay":"2026.01.14","category":"news","label":"official news","title":"デザインコンテスト『SKYWARD』開催決定!","image":"assets/images/news/carousel-track_002.png","link":"index.html","excerpt":"ファンの皆さまの創造力を発揮できるデザインコンテストを開催。入賞作品はオフィシャルグッズとして商品化予定です。","tags":["news","event"]},{"id":"003","date":"2025-12-11","dateDisplay":"2025.12.11","category":"goods","label":"official shop","title":"ウィンターグッズ近日公開","image":"assets/images/news/carousel-track_003.png","link":null,"excerpt":"新作ウィンターグッズの詳細は近日公開予定です。ラインナップや販売時期は続報をお待ちください。","tags":["goods"]},{"id":"004","date":"2025-10-02","dateDisplay":"2025.10.02","category":"goods","label":"official shop","title":"オフィシャルショップ準備中","image":"assets/images/news/carousel-track_004.png","link":null,"excerpt":"オフィシャルショップのオープンに向けて準備を進めています。公開時期や取扱商品は続報をお待ちください。","tags":["goods"]}];
-    </script>
-
-    <!--js modules-->
+    <!--js modules（コンテンツはHTMLに記述済み。JSは表示の切り替え等の挙動のみ）-->
     <script defer src="assets/js/modules/parallax.js"></script>
     <script defer src="assets/js/modules/drawer.js"></script>
     <script defer src="assets/js/modules/carousel.js"></script>
-    <script defer src="assets/js/modules/news.js"></script>
     <script defer src="assets/js/modules/talents.js"></script>
     <script defer src="assets/js/main.js"></script>
 </body>
